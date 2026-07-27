@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">CDoctor</string>
+    <string name="ERROR_CODE_system_error">系统错误</string>
+    <string name="ERROR_CODE_fail">失败</string>
+    <string name="ERROR_CODE_not_registed">没有注册</string>
+    <string name="ERROR_CODE_lost_param">缺少参数</string>
+    <string name="ERROR_CODE_not_active">没有激活</string>
+    <string name="ERROR_CODE_password_error">密码错误</string>
+    <string name="ERROR_CODE_account_existed">账号已存在</string>
+    <string name="ERROR_CODE_credit_card_exist">信用卡已存在</string>
+    <string name="ERROR_CODE_not_login">没有登录</string>
+    <string name="ERROR_CODE_save_data_error">保存信息失败</string>
+    <string name="account_activated">已激活</string>
+    <string name="other_error">其他错误</string>
+    <string name="ERROR_CODE_has_already_activate">已激活</string>
+    <string name="schedul_has_expired">预约时间已过期</string>
+    <string name="pay_fail">订单支付失败</string>
+    <string name="not_login">未登录</string>
+    <string name="card_info_error">信用卡信息错误</string>
+    <string name="create_preorder_error">创建预支付订单失败</string>
+    <string name="available_count_0">预约数已满</string>
+    <string name="appt_has_expired">预约已过期</string>
+    <string name="no_such_state">没有找到该州信息</string>
+    <string name="insure_exited">保险已存在</string>
+    <string name="insurance_error">保险信息有误，请核对后再试</string>
+    <string name="this_appointment_not_available">该笔预约不可用</string>
+    <string name="ERROR_CODE_code_error">The code is error</string>
+</resources>

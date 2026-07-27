@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:amazon="http://schemas.amazon.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <permission
+        android:name="com.cybermed.cdoc_patient.permission.RECEIVE_ADM_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Permissions for glucose and BP -->
+   <!-- <uses-permission android:name="android.permission.health.READ_BLOOD_GLUCOSE" />
+    <uses-permission android:name="android.permission.health.READ_BLOOD_PRESSURE" />-->
+
+
+    <!-- Optional: For other health data you might want -->
+    <!--<uses-permission android:name="android.permission.health.READ_HEART_RATE" />-->
+    <!--<uses-permission android:name="android.permission.health.READ_STEPS" />-->
+    <!--<uses-permission android:name="android.permission.health.READ_SLEEP" />-->
+    <!--<uses-permission android:name="android.permission.health.READ_WEIGHT"/>-->
+    <!--<uses-permission android:name="android.permission.health.READ_HEIGHT"/>-->
+    <!--<uses-permission android:name="android.permission.health.READ_BODY_TEMPERATURE"/>-->
+    <!--<uses-permission android:name="android.permission.health.READ_EXERCISE"/>-->
+    <!--<uses-permission android:name="android.permission.health.READ_DISTANCE"/>-->
+    <!--<uses-permission android:name="android.permission.health.READ_RESPIRATORY_RATE"/>-->
+    <!--<uses-permission android:name="android.permission.health.READ_OXYGEN_SATURATION"/>--><!--
+    <uses-permission android:name="android.permission.health.READ_VO2_MAX"/>
+    <uses-permission android:name="android.permission.health.READ_HEART_RATE_VARIABILITY"/>
+    <uses-permission android:name="android.permission.health.READ_TOTAL_CALORIES_BURNED"/>
+    <uses-permission android:name="android.permission.health.READ_BASAL_METABOLIC_RATE"/>
+    <uses-permission android:name="android.permission.health.READ_BODY_FAT"/>
+    <uses-permission android:name="android.permission.health.READ_RESTING_HEART_RATE"/>
+    <uses-permission android:name="android.permission.health.READ_LEAN_BODY_MASS"/>-->
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="36" />
+
+
+   <!-- <queries>
+        <package android:name="com.google.android.apps.healthdata" />
+
+        &lt;!&ndash;
+             This is required such that the app can query and resolve packages that have written
+             Health Connect data, and obtain their friendly App Name and Icon to show for data
+             attribution in the app
+        &ndash;&gt;
+        <intent>
+            <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+        </intent>
+    </queries>-->
+
+    <uses-permission android:name="com.cybermed.cdoc_patient.permission.RECEIVE_ADM_MESSAGE" />
+    <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /><!--
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+<!--
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:node="remove"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:node="remove"/>
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <application
+        android:name=".common.CDoctor2Application"
+        android:allowBackup="true"
+        android:enableOnBackInvokedCallback="true"
+        android:exported="true"
+        android:icon="${appIcon}"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon"
+        tools:targetApi="tiramisu">
+        <!--<activity
+            android:name=".me.vitalcheck.BMIGraphActivity"
+            android:exported="false" />-->
+        <!-- <activity android:name=".login.homeScreen.HomeActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <amazon:enable-feature
+            android:name="com.amazon.device.messaging"
+            android:required="false" />
+
+        <service
+            android:name="com.onesignal.notifications.services.ADMMessageHandlerJob"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.onesignal.notifications.services.ADMMessageHandler"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.onesignal.notifications.receivers.ADMMessageReceiver"
+            android:exported="true"
+            android:permission="com.amazon.device.messaging.permission.SEND">
+            <intent-filter>
+                <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+                <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+
+                <!-- Replace the name in the category tag with your app's package name. -->
+                <category android:name="com.cybermed.cdoc_patient" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.onesignal.NotificationServiceExtension"
+            android:value="com.cybermed.cdoc_patient.notification.MyNotificationExtenderService" />
+
+        <activity
+            android:name=".login.onBoarding.OnBoardingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".bluetooth.IC.BPActivity"
+            android:exported="true" />
+        <activity
+            android:name=".bluetooth.IC.OxiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".bluetooth.IC.ScaleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".bluetooth.Miscellaneous.TaiDocGlucometerActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.onesignal.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_onesignal_default" />
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".login.WelcomeActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--
+               The app needs to handle this intent and display an appropriate privacy policy
+               explaining how the user's data will be used and handled.
+
+               This intent is sent to the app when the user clicks on the "privacy policy" link
+               in the Health Connect permissions dialog.
+           -->
+          <!--  <intent-filter>
+                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+            </intent-filter>-->
+
+            <!-- Permission handling for Android 14 -->
+        <!--    <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE"/>
+                <category android:name="android.intent.category.HEALTH_PERMISSIONS"/>
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".Tablet_Mode.WelcomeActivityTablet"
+            android:enabled="false"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".common.CommonAsyncTaskActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".main.FragmentMainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".doctor.VideoCallActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:showOnLockScreen="true" />
+        <activity
+            android:name=".common.PushActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.signup.SignUpActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!--
+<service
+            android:name=".notification.MyNotificationReceivedHandler"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.onesignal.INotificationServiceExtension" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".notification.MyNotificationExtenderService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.onesignal.INotificationServiceExtension" />
+            </intent-filter>
+        </service>
+        -->
+        <service
+            android:name=".common.LogoutService"
+            android:exported="false" />
+        <service
+            android:name=".common.MusicPlayer"
+            android:exported="false" />
+        <service
+            android:name=".bluetooth.iHealth_Devices.BluetoothVitalService"
+            android:exported="false" />
+        <service
+            android:name=".bluetooth.Miscellaneous.iHealthService"
+            android:exported="true" />
+        <service
+            android:name=".bluetooth.ContourService"
+            android:exported="false" />
+        <service
+            android:name=".bluetooth.contour_services.BGMeterGattService"
+            android:exported="false" />
+        <service
+            android:name=".main.TabletDataService"
+            android:exported="false" /> <!-- <meta-data -->
+        <service
+            android:name=".signalr.SignalRService"
+            android:enabled="true"
+            android:exported="false" /> <!-- android:name="PUSH_APPID" -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:exported="false"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:exported="false"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="sqip.SQUARE_APPLICATION_ID"
+            android:exported="false"
+            android:value="sq0idp-dnUO2yvG850WcyF5kE3OKg" />
+
+        <activity
+            android:name=".maps.MapsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_maps" />
+
+        <receiver
+            android:name=".bluetooth.iHealth_Devices.BluetoothRestartReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="BluetoothRestartReceiver" />
+            </intent-filter>
+        </receiver> <!-- <service android:name=".notification.azure.MyInstanceIDService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service -->
+        <!-- android:name=".notification.azure.RegistrationIntentService" -->
+        <!-- android:exported="false"> -->
+        <!-- </service> -->
+        <!-- <receiver android:name="com.microsoft.windowsazure.notifications.NotificationsBroadcastReceiver" -->
+        <!-- android:permission="com.google.android.c2dm.permission.SEND"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+        <!-- <category android:name="com.cybermed.cdoc" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity
+            android:name=".login.LoginSettingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".bluetooth.Miscellaneous.ConnectDevices"
+            android:exported="true" />
+        <activity
+            android:name=".camera.ImageSelectActivity"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name=".bluetooth.iHealth_Devices.smartwatch.swUtil.BleService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.picker.gallery.view.PickerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- <provider -->
+        <!-- android:name="androidx.core.content.FileProvider" -->
+        <!-- android:authorities="com.cdoc.android.fileprovider" -->
+        <!-- android:exported="false" -->
+        <!-- android:grantUriPermissions="true" -->
+        <!-- tools:replace="android:authorities"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
+        <!-- android:resource="@xml/file_paths" -->
+        <!-- tools:replace="android:resource" /> -->
+        <!-- </provider> -->
+        <activity
+            android:name=".main.chat.ChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".camera.customcamera.view.CameraActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- Incoming call -->
+        <service android:name=".notification.NotificationService.CallNotificationService" />
+
+        <receiver
+            android:name=".notification.NotificationService.CallNotificationActionReceiver"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="ConstantApp.CALL_RECEIVE_ACTION" />
+                <action android:name="ConstantApp.CALL_CANCEL_ACTION" />
+                <action android:name="ConstantApp.CALL_NO_ANSWER" />
+                <action android:name="ConstantApp.INCOMING_CALL" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

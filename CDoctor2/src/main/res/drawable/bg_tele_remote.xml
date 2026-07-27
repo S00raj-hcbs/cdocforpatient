@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="false" android:textColor="@color/color_98b3c2" android:drawable="@drawable/ic_bg_remote">
+<!--        <shape>-->
+<!--            <corners android:bottomLeftRadius="10dp" android:topLeftRadius="10dp"  />-->
+<!--            <solid android:color="@color/white"/>-->
+<!--            <stroke android:width="3px" android:color="@color/color_98b3c2" />-->
+<!--        </shape>-->
+    </item>
+    <item android:state_selected="true"  android:textColor="@color/color_007ec0" android:drawable="@drawable/ic_bg_telehealth">
+<!--        <shape>-->
+<!--            <corners android:bottomLeftRadius="10dp" android:topLeftRadius="10dp"/>-->
+<!--            <solid android:color="@color/color_80cbe8ff"/>-->
+<!--            <stroke android:width="3px" android:color="@color/color_007ec0"/>-->
+<!--        </shape>-->
+    </item>
+</selector>

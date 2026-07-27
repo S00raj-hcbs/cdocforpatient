@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_60sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Sender Name -->
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textColor="@color/black_2_1"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:textSize="@dimen/_9sdp" />
+
+                <!-- Message Bubble -->
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/message_recieve_bg"
+                        android:backgroundTint="#ecfafb"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="@dimen/_6sdp"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:textColor="@color/black_2_1"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_2sdp" />
+                    <TextView
+                        android:id="@+id/textNameImage"
+                        android:layout_width="@dimen/_23sdp"
+                        android:layout_height="@dimen/_23sdp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_circle_bfeee"
+                        android:backgroundTint="@color/gray_0_1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/gray_0_4"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:textSize="@dimen/_9sdp"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/txtMessage"
+                        android:layout_toEndOf="@+id/textNameImage"
+                        >
+                        <!-- Message Time -->
+                        <TextView
+                            android:id="@+id/txtTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/black_2_1"
+                            android:textSize="@dimen/_9sdp"
+                            app:layout_constraintTop_toBottomOf="@id/txtMessage"
+                            app:layout_constraintStart_toStartOf="@id/txtMessage"
+                            android:layout_marginTop="@dimen/_3sdp" />
+
+                        <!-- Message Status -->
+                        <TextView
+                            android:id="@+id/txtStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/black_2_1"
+                            android:textSize="@dimen/_9sdp"
+                            android:text="Read"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@id/txtMessage"
+                            app:layout_constraintStart_toEndOf="@id/txtDate" />
+                    </LinearLayout>
+                    <!-- Sender Initials -->
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</layout>

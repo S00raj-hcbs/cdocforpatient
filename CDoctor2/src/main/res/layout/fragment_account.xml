@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_0_2"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/custom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/account_info_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_14sdp"
+                    android:paddingTop="@dimen/_18sdp"
+                    android:paddingEnd="@dimen/_14sdp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideLine1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="@dimen/_100sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/account_info_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_information_heading"
+                        android:textColor="@color/dark_slate_blue"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/username_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_information_username"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/account_info_heading" />
+
+
+                    <TextView
+                        android:id="@+id/editMail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="@string/regist_email"
+                        android:text="@string/Lab_Report"
+                        android:textColor="@drawable/edit_text_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="@id/username_heading"
+                        app:layout_constraintStart_toStartOf="@id/guideLine1"
+                        app:layout_constraintTop_toTopOf="@id/username_heading" />
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="0dp"
+                        android:layout_height="0.8dp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@color/color_8f8f8f"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/guideLine1"
+                        app:layout_constraintTop_toBottomOf="@id/editMail" />
+
+
+                    <TextView
+                        android:id="@+id/password_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_password"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/username_heading" />
+
+                    <Button
+                        android:id="@+id/tv_change_pwd"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:background="@drawable/bg_outline_blue"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_information_change_password"
+                        android:textColor="@color/azure"
+                        android:textSize="@dimen/_10sdp"
+                        android:textAllCaps="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/password_heading"
+                        app:layout_constraintStart_toStartOf="@id/guideLine1"
+                        app:layout_constraintTop_toTopOf="@id/password_heading"
+                        />
+
+                    <TextView
+                        android:id="@+id/clinic_code_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_service_code"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/password_heading" />
+
+                    <Button
+                        android:id="@+id/change_service_code"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_change_service_code"
+                        android:background="@drawable/bg_outline_blue"
+                        android:textColor="@color/azure"
+                        android:textSize="@dimen/_10sdp"
+                        android:textAllCaps="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/clinic_code_heading"
+                        app:layout_constraintStart_toStartOf="@id/guideLine1"
+                        app:layout_constraintTop_toTopOf="@id/clinic_code_heading" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="0dp"
+                        android:layout_height="0.8dp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@color/color_8f8f8f"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@id/guideLine1"
+                        app:layout_constraintTop_toBottomOf="@id/change_service_code" />
+
+
+                    <TextView
+                        android:id="@+id/first_name_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_first_name"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clinic_code_heading" />
+
+                    <EditText
+                        android:id="@+id/editFirstName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="@string/regist_firstname"
+                        android:maxLength="25"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_color"
+                        android:textColorHint="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="@id/first_name_heading"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/guideLine1"
+                        app:layout_constraintTop_toTopOf="@id/first_name_heading" />
+
+
+                    <TextView
+                        android:id="@+id/last_name_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_last_name"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/first_name_heading" />
+
+                    <EditText
+                        android:id="@+id/editLastName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="@string/regist_lastname"
+                        android:maxLength="25"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_color"
+                        android:textColorHint="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="@id/last_name_heading"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/guideLine1"
+                        app:layout_constraintTop_toTopOf="@id/last_name_heading" />
+
+
+                    <TextView
+                        android:id="@+id/gender_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_gender"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/last_name_heading" />
+
+                    <TextView
+                        android:id="@+id/tvMale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/regist_male"
+                        android:textColor="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="@id/gender_heading"
+                        app:layout_constraintStart_toEndOf="@id/guideLine1"
+                        app:layout_constraintTop_toTopOf="@id/gender_heading" />
+
+
+                    <TextView
+                        android:id="@+id/tvFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:padding="@dimen/_4sdp"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:text="@string/regist_female"
+                        android:textColor="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/gender_heading"
+                        app:layout_constraintStart_toEndOf="@id/tvMale"
+                        app:layout_constraintTop_toTopOf="@id/gender_heading" />
+
+                    <TextView
+                        android:id="@+id/tvOther"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/other"
+                        android:textColor="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/_4sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/gender_heading"
+                        app:layout_constraintStart_toEndOf="@id/tvFemale"
+                        app:layout_constraintTop_toTopOf="@id/gender_heading" />
+
+
+                    <TextView
+                        android:id="@+id/dob_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_dob"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/gender_heading" />
+
+
+                    <EditText
+                        android:id="@+id/txtBirth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="@string/regist_dob"
+                        android:onClick="onSelectBirthClick"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_color"
+                        android:textColorHint="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="@id/dob_heading"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/guideLine1"
+                        app:layout_constraintTop_toTopOf="@id/dob_heading" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_31sdp"
+                    android:background="@color/color_c0ddee" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:paddingStart="@dimen/_14sdp"
+                    android:paddingEnd="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_40sdp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideLine2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="@dimen/_100sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/account_contact_info_btn"
+                        android:src="@drawable/fluent_info_16_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@id/account_contact_heading"
+                        app:layout_constraintTop_toTopOf="@id/account_contact_heading"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/account_contact_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_contact_label"
+                        android:textColor="@color/dark_slate_blue"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/phone_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_23sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/account_phone"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/account_contact_heading" />
+
+
+                    <TextView
+                        android:id="@+id/address_line_1_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/address_line_1"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/phone_heading" />
+
+                    <TextView
+                        android:id="@+id/address_line_2_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/address_line_2"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/address_line_1_heading" />
+
+                    <TextView
+                        android:id="@+id/city_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/city_colon"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/address_line_2_heading" />
+
+
+                    <TextView
+                        android:id="@+id/state_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/state_colon"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/city_heading" />
+
+                    <TextView
+                        android:id="@+id/zip_code_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/zipcode_colon"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/state_heading" />
+
+
+                    <EditText
+                        android:id="@+id/infoPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="@string/regist_phone"
+                        android:inputType="phone"
+                        android:maxLength="12"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_color"
+                        android:textColorHint="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="@id/phone_heading"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/guideLine2"
+                        app:layout_constraintTop_toTopOf="@id/phone_heading" />
+
+                    <EditText
+                        android:id="@+id/infoAddr1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="@string/account_address_line1"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_color"
+                        android:textColorHint="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="@id/address_line_1_heading"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/guideLine2"
+                        app:layout_constraintTop_toTopOf="@id/address_line_1_heading" />
+
+                    <EditText
+                        android:id="@+id/infoAddr2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="@string/account_address_line2"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_color"
+                        android:textColorHint="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="@id/address_line_2_heading"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/guideLine2"
+                        app:layout_constraintTop_toTopOf="@id/address_line_2_heading" />
+
+                    <EditText
+                        android:id="@+id/editCity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="@string/regist_city"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_color"
+                        android:textColorHint="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="@id/city_heading"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/guideLine2"
+                        app:layout_constraintTop_toTopOf="@id/city_heading" />
+
+                    <EditText
+                        android:id="@+id/editState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="@string/regist_state"
+                        android:inputType="text"
+                        android:maxLength="2"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_color"
+                        android:textColorHint="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="@id/state_heading"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/guideLine2"
+                        app:layout_constraintTop_toTopOf="@id/state_heading" />
+
+                    <EditText
+                        android:id="@+id/editZipCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="@string/regist_zip"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_color"
+                        android:textColorHint="@color/color_8f8f8f"
+                        android:textSize="@dimen/_10sdp"
+                        android:focusable="false"
+                        app:layout_constraintBottom_toBottomOf="@id/zip_code_heading"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/guideLine2"
+                        app:layout_constraintTop_toTopOf="@id/zip_code_heading" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

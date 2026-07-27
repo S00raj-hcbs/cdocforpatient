@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.cybermed.cdoc_patient.login.viewmodel.SignUpVM" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:hint="@string/enter_you_email"
+                app:errorText="@{vm.emailError}"
+                app:errorTextAppearance="@style/errorTextApprearance"
+                android:textColorHint="@color/color_6896ae"
+                app:hintTextAppearance="@style/customHintApprearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:drawableStart="@drawable/ic_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:paddingBottom="@dimen/_13sdp"
+                    android:singleLine="true"
+                    android:drawablePadding="@dimen/_13sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textColorHighlight="@color/azure"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="@={vm.email}"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/password"
+                android:layout_below="@+id/input_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/regist_enter_password"
+                    app:errorText="@{vm.passwordError}"
+                    android:textColorHint="@color/color_6896ae"
+                    app:endIconDrawable="@drawable/show_password_selector"
+                    app:endIconTint="#173462"
+                    app:endIconMode="password_toggle"
+                    app:errorTextAppearance="@style/errorTextApprearance"
+                    app:hintTextAppearance="@style/customHintApprearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editPwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890./!@#$%^"
+                        android:drawableStart="@drawable/ic_password"
+                        android:drawablePadding="@dimen/_13sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="textPassword"
+                        android:maxLength="13"
+                        android:paddingBottom="@dimen/_13sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textColorHighlight="@color/azure"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="@={vm.password}"
+                        android:tag="0"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/password_reveal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:src="@{vm.passwordView?@drawable/sign_up_unhide_pass:@drawable/ic_password_hide}"
+                    android:tag="0"
+                  />
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_confirm_pwd"
+                android:layout_below="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:hint="@string/regist_confirm_password"
+                app:errorEnabled="false"
+                app:errorText="@{vm.confirmPasswordError}"
+                android:textColorHint="@color/color_6896ae"
+                app:endIconDrawable="@drawable/show_password_selector"
+                app:endIconTint="#173462"
+                app:endIconMode="password_toggle"
+                app:errorTextAppearance="@style/errorTextApprearance"
+                app:hintTextAppearance="@style/customHintApprearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890./!@#$%^"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="@dimen/_13sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:maxLength="13"
+                    android:paddingBottom="@dimen/_13sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textColorHighlight="@color/azure"
+                    android:textSize="@dimen/_10sdp"
+                    android:inputType="textPassword"
+                    android:text="@={vm.confirmPassword}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_phone"
+                android:layout_below="@+id/input_confirm_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:hint="@string/mob_num"
+                app:errorEnabled="true"
+                app:errorText="@{vm.mobileError}"
+                android:textColorHint="@color/color_6896ae"
+                app:errorTextAppearance="@style/errorTextApprearance"
+                app:hintTextAppearance="@style/customHintApprearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/infoPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_mobile"
+                    android:drawablePadding="@dimen/_13sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:paddingBottom="@dimen/_13sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textColorHighlight="@color/azure"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="@={vm.mobile}"
+                    app:textChangedListener='@{"test"}' />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/nextSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_38sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/selector_blue_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal"
+                bind:email="@{vm.email}"
+                bind:password="@{vm.password}"
+                bind:confirmPassword="@{vm.confirmPassword}"
+                bind:mobile="@{vm.mobile}" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</layout>

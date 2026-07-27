@@ -1,0 +1,80 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-parcelize'
+
+android {
+    compileSdk 36
+    defaultConfig {
+        minSdkVersion 15
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {}
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17" // or "11" / "1.8"
+    }
+    publishNonDefault true
+
+    flavorDimensions "app"
+    productFlavors {
+        cdoc {
+            dimension "app"
+
+            buildConfigField "String", "LOCAL_WEBSERVICE_URL", "\"http://localhost:52738/WS/WebService_CDOC.asmx\""
+            buildConfigField "String", "WEBSERVICE_URL", "\"https://portal.cybermedehr.com/ws/webservice_cdoc.asmx\""
+            buildConfigField "String", "WEBSERVICE_URL_PROVIDER", "\"https://login.cybermedehr.com/ws/webservice_cdoc.asmx\""
+            buildConfigField "String", "QA_WEBSERVICE_URL", "\"https://qaportal.cybermedehr.com/ws/webservice_cdoc.asmx\""
+
+            buildConfigField "String", "NAMESPACE", "\"http://cdoconline.com/\""
+        }
+        dokita {
+            dimension "app"
+            buildConfigField "String", "WEBSERVICE_URL", "\"http://portal.emx.md/webservice.asmx\""
+
+        }
+        cybermedi8 {
+            dimension "app"
+            buildConfigField "String", "WEBSERVICE_URL", "\"http://portal.cybermedi8.com/ws/webservice_cdoc.asmx\""
+            buildConfigField "String", "NAMESPACE", "\"http://cdoconline.com/\""
+        }
+    }
+    namespace 'com.cdfortis.datainterface'
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+        targetSdk 36
+    }
+    testOptions {
+        targetSdk 36
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api files('libs/ksoap2-android-assembly-3.6.1-jar-with-dependencies.jar')
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.0.0'
+    implementation "androidx.core:core-ktx:1.10.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //implementing RxAndroid and RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+}
+repositories {
+    mavenCentral()
+}

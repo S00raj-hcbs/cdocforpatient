@@ -1,0 +1,1444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#edf8f6">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/toolBar"
+                    layout="@layout/custom_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_46sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/relVitalOffice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tabs"
+                    android:layout_marginBottom="@dimen/_18sdp">
+
+
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/add_device_btn">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textInform2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="start"
+                                android:text="Data shown is collected from a connected compatible device."
+                                android:textColor="@color/black_2_1"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="normal"
+                                android:visibility="visible"
+                                />
+                            <RelativeLayout
+                                android:id="@+id/rel_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textInform2"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/latest_reading"
+                                    android:textColor="@color/black_2_1"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textStyle="normal"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/txt_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_horizontal"
+                                    android:text=""
+                                    android:textColor="@color/black_2_1"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textStyle="normal"
+                                    android:visibility="visible" />
+                            </RelativeLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvVital"
+                                android:layout_below="@+id/rel_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:nestedScrollingEnabled="false"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:layout_marginHorizontal="@dimen/_4sdp"
+                                android:visibility="visible"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/button_BMI"
+                                android:layout_width="match_parent"
+                                android:layout_below="@+id/rvVital"
+                                android:layout_height="@dimen/_80sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                app:cardCornerRadius="@dimen/_3sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/text_BMIvalue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_bold"
+
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:layout_marginBottom="@dimen/_8sdp"
+                                        android:textColor="@color/black_2_1"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:text="@string/healthy_bmi_range_18_5_kg_m_25_kg_m"
+                                        android:layout_marginBottom="@dimen/_15sdp"
+                                        android:textColor="@color/black_2_1"
+                                        android:textSize="@dimen/_10sdp" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </RelativeLayout>
+
+                    </ScrollView>
+                    <RelativeLayout
+                        android:id="@+id/add_device_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="#0295E2"
+                        android:layout_alignParentBottom="true"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:visibility="visible"
+                        android:paddingBottom="@dimen/_12sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:drawablePadding="@dimen/_9sdp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/add_new_measurement"
+                            android:textColor="@color/white_0_2"
+                            android:textSize="@dimen/_12sdp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeRefreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/toolBar"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:orientation="horizontal"
+                    android:id="@+id/tabs"
+                    android:visibility="visible"
+                    android:layout_below="@+id/toolBar"
+                    android:background="@color/color_2499d5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/lin_Clinic_vital"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/textOfficeVisit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/office_visit"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:paddingHorizontal="@dimen/_4sdp"
+                                android:textColor="@color/white_0_2"
+                                android:fontFamily="@font/roboto_medium"
+                                android:textSize="@dimen/_11sdp"/>
+
+                            <View
+                                android:id="@+id/view_office"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_2sdp"
+                                android:background="@color/white_0_2"
+                                android:layout_alignParentBottom="true"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/lin_device_vital"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/textMedicalDevice"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/medical_device"
+                                android:singleLine="true"
+                                android:paddingHorizontal="@dimen/_4sdp"
+                                android:textSize="@dimen/_11sdp"
+                                android:textColor="@color/black_2_1"
+                                android:gravity="center"
+                                />
+
+                            <View
+                                android:id="@+id/view_device"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_2sdp"
+                                android:background="@color/white_0_2"
+                                android:layout_alignParentBottom="true"/>
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/lin_google_fit_vital"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/textHealthConnect"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/google_fit"
+                                android:singleLine="true"
+                                android:paddingHorizontal="@dimen/_4sdp"
+                                android:textSize="@dimen/_11sdp"
+                                android:textColor="@color/black_2_1"
+                                android:gravity="center"
+                                />
+
+                            <View
+                                android:id="@+id/view_google_fit"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_2sdp"
+                                android:background="@color/white_0_2"
+                                android:layout_alignParentBottom="true"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <ScrollView
+                    android:id="@+id/scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tabs"
+                    android:visibility="gone"
+                    android:layout_above="@+id/add_device_btn">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                     <!--   <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_6sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal"
+                                android:text="Latest Reading :"
+                                android:textColor="@color/black_2_1"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="normal"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/txt_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_6sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal"
+                                android:text=""
+                                android:textColor="@color/black_2_1"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="normal"
+                                android:visibility="visible" />
+                        </RelativeLayout>-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:gravity="center_horizontal"
+                            android:text="Temperature (Fever)"
+                            android:textColor="@color/black_2_1"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="normal"
+                            android:visibility="visible" />
+
+                        <RelativeLayout
+                            android:id="@+id/rel_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/black_2_1"
+                                android:textSize="@dimen/_35sdp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal"
+                                android:src="@drawable/temperatureicon"
+                                android:textStyle="normal"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_265sdp"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_height"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_4sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_3sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="@string/vitals_height"
+                                            android:textColor="#ad5dc0"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:padding="@dimen/_4sdp"
+                                            android:layout_marginVertical="@dimen/_4sdp"
+                                            android:src="@drawable/height_vc" />
+
+                                        <TextView
+                                            android:id="@+id/txt_height"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_bold"
+                                            android:layout_marginBottom="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_weight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_4sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_3sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="@string/weight"
+                                            android:textColor="#ad5dc0"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:padding="@dimen/_4sdp"
+                                            android:layout_marginVertical="@dimen/_4sdp"
+                                            android:src="@drawable/weight_vc" />
+
+                                        <TextView
+                                            android:id="@+id/txt_weight"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_bold"
+                                            android:layout_marginBottom="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_hc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_4sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_3sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="HC"
+                                            android:textColor="#ad5dc0"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:padding="@dimen/_2sdp"
+                                            android:layout_marginVertical="@dimen/_4sdp"
+                                            android:src="@drawable/hc_vc" />
+
+                                        <TextView
+                                            android:id="@+id/txt_hc"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_bold"
+                                            android:layout_marginBottom="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_marginBottom="@dimen/_1sdp"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_bp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_4sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_3sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="BP"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:textColor="#ad5dc0"
+                                            android:textSize="@dimen/_10sdp" />
+
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:padding="@dimen/_4sdp"
+                                            android:layout_marginVertical="@dimen/_4sdp"
+                                            android:src="@drawable/bp_vc" />
+
+                                        <TextView
+                                            android:id="@+id/txt_bp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_bold"
+                                            android:layout_marginBottom="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_bmi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_4sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_3sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="BMI"
+                                            android:textColor="#ad5dc0"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:padding="@dimen/_4sdp"
+                                            android:layout_marginVertical="@dimen/_4sdp"
+                                            android:src="@drawable/bmi_vc" />
+
+                                        <TextView
+                                            android:id="@+id/txt_bmi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_bold"
+                                            android:layout_marginBottom="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_pulse"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_4sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_3sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="Pulse"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:textColor="#ad5dc0"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:padding="@dimen/_4sdp"
+                                            android:layout_marginVertical="@dimen/_4sdp"
+                                            android:src="@drawable/pulse_vc" />
+
+                                        <TextView
+                                            android:id="@+id/txt_pulse"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="@dimen/_4sdp"
+                                            android:fontFamily="@font/roboto_bold"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_glucose"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_4sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_3sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="Glucose"
+                                            android:textColor="#ad5dc0"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:padding="@dimen/_4sdp"
+                                            android:layout_marginVertical="@dimen/_4sdp"
+                                            android:src="@drawable/glucometer_vc" />
+
+                                        <TextView
+                                            android:id="@+id/txt_glucose"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="@dimen/_4sdp"
+                                            android:fontFamily="@font/roboto_bold"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_PF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_4sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_3sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="Peak_Flow"
+                                            android:textColor="#ad5dc0"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:padding="@dimen/_4sdp"
+                                            android:layout_marginVertical="@dimen/_4sdp"
+                                            android:src="@drawable/pf_vc" />
+
+                                        <TextView
+                                            android:id="@+id/txt_pf"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_bold"
+                                            android:layout_marginBottom="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_hgb"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_4sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_3sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="HGB"
+                                            android:textColor="#ad5dc0"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:padding="@dimen/_4sdp"
+                                            android:layout_marginVertical="@dimen/_4sdp"
+                                            android:src="@drawable/hgb_vc" />
+
+                                        <TextView
+                                            android:id="@+id/txt_hgb"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_bold"
+                                            android:layout_marginBottom="@dimen/_4sdp"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+<!--
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button_BMI"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:cardCornerRadius="@dimen/_3sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/text_BMIvalue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_bold"
+
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp"
+                                    android:textColor="@color/black_2_1"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:text="Healthy BMI range: 18.5 kg/m² - 25 kg/m²"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:textColor="@color/black_2_1"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+-->
+
+                        <TextView
+                            android:id="@+id/tv_bp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center_horizontal"
+                            android:text="BP"
+                            android:textColor="@color/black_2_1"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/lin_bp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_10sdp">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:background="@color/white_0_2"
+                                android:layout_margin="@dimen/_2sdp"
+                                app:cardElevation="@dimen/_6sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+                                    <LinearLayout
+                                        android:id="@+id/ll_btn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_2sdp"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_marginEnd="@dimen/_2sdp"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:orientation="horizontal"
+                                        android:visibility="visible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        android:background="@drawable/bg_outline_blue_immunization"
+                                        android:backgroundTint="#dde6eb"
+                                        android:paddingHorizontal="@dimen/_2sdp"
+                                        app:layout_constraintTop_toBottomOf="@id/top_layout">
+
+                                        <Button
+                                            android:id="@+id/weightBtn"
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/whiteselectedtab"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:layout_marginVertical="@dimen/_2sdp"
+                                            android:text="Weight"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black_2_1"
+                                            android:textSize="@dimen/_9sdp" />
+
+                                        <View
+                                            android:layout_width="@dimen/_1sdp"
+                                            android:layout_height="match_parent"
+                                            android:background="#cad1d7"
+                                            android:layout_marginTop="@dimen/_6sdp"
+                                            android:layout_marginBottom="@dimen/_6sdp" />
+
+                                        <Button
+                                            android:id="@+id/bpBtn"
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_weight="1"
+                                            android:layout_marginVertical="@dimen/_2sdp"
+                                            android:background="@drawable/whiteselectedtab"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="BP"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black_2_1"
+                                            android:textSize="@dimen/_9sdp"
+                                            android:textStyle="normal" />
+
+                                        <View
+                                            android:layout_width="@dimen/_1sdp"
+                                            android:layout_height="match_parent"
+                                            android:background="#cad1d7"
+                                            android:layout_marginTop="@dimen/_6sdp"
+                                            android:layout_marginBottom="@dimen/_6sdp" />
+
+                                        <Button
+                                            android:id="@+id/glucloseBtn"
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_weight="1"
+                                            android:layout_marginVertical="@dimen/_2sdp"
+                                            android:background="@drawable/whiteselectedtab"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="Glucose"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black_2_1"
+                                            android:textSize="@dimen/_9sdp"
+                                            android:textStyle="normal" />
+
+                                        <View
+                                            android:layout_width="@dimen/_1sdp"
+                                            android:layout_height="match_parent"
+                                            android:background="#cad1d7"
+                                            android:layout_marginTop="@dimen/_6sdp"
+                                            android:layout_marginBottom="@dimen/_6sdp" />
+
+                                        <Button
+                                            android:id="@+id/hrBtn"
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_weight="1"
+                                            android:layout_marginVertical="@dimen/_2sdp"
+                                            android:background="@drawable/whiteselectedtab"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="HeartRate"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black_2_1"
+                                            android:textSize="@dimen/_9sdp"
+                                            android:textStyle="normal" />
+
+                                        <View
+                                            android:layout_width="@dimen/_1sdp"
+                                            android:layout_height="match_parent"
+                                            android:background="#cad1d7"
+                                            android:layout_marginTop="@dimen/_6sdp"
+                                            android:layout_marginBottom="@dimen/_6sdp" />
+
+                                        <Button
+                                            android:id="@+id/oxiBtn"
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_weight="1"
+                                            android:layout_marginVertical="@dimen/_2sdp"
+                                            android:background="@drawable/whiteselectedtab"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:text="Oximeter"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black_2_1"
+                                            android:textSize="@dimen/_9sdp"
+                                            android:textStyle="normal" />
+                                    </LinearLayout>
+
+                                    <!--<androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        app:cardElevation="@dimen/_6sdp">
+
+
+
+                                    </androidx.cardview.widget.CardView>-->
+                                    <com.github.mikephil.charting.charts.LineChart
+                                        android:id="@+id/Chart"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_150sdp"
+                                        android:layout_marginStart="@dimen/_4sdp"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:layout_marginEnd="@dimen/_4sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </ScrollView>
+                <ScrollView
+                    android:id="@+id/scrollViewHealthConnect"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/tabs"
+                    android:layout_marginBottom="@dimen/_45sdp"
+                    android:visibility="gone">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_20sdp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="start"
+                                android:text="Health information displayed in this application should not be used as a substitute for professional medical advice."
+                                android:textColor="@color/black_2_1"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="normal"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal"
+                                android:text="@string/vitals"
+                                android:textColor="@color/black_2_1"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="normal"
+                                android:visibility="visible" />
+                          <!--  <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginHorizontal="@dimen/_8sdp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:cardCornerRadius="@dimen/_8sdp">-->
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvHealthConnectVital"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:nestedScrollingEnabled="false"
+                                    android:layout_marginTop="@dimen/_4sdp"
+                                    android:layout_marginHorizontal="@dimen/_4sdp"
+                                    android:visibility="visible"/>
+                           <!-- </androidx.cardview.widget.CardView>-->
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal"
+                                android:text="Activity / Workouts"
+                                android:textColor="@color/black_2_1"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="normal"
+                                android:visibility="visible" />
+
+
+                            <!--<androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginHorizontal="@dimen/_8sdp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:cardCornerRadius="@dimen/_8sdp">-->
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvHealthConnectActivity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:nestedScrollingEnabled="false"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:layout_marginHorizontal="@dimen/_4sdp"
+                                android:visibility="visible"/>
+                          <!--  </androidx.cardview.widget.CardView>-->
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal"
+                                android:text="Body Measurements"
+                                android:textColor="@color/black_2_1"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="normal"
+                                android:visibility="visible" />
+
+
+                           <!-- <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginHorizontal="@dimen/_8sdp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:cardCornerRadius="@dimen/_8sdp">-->
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvHealthConnectBodyMeasurement"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:nestedScrollingEnabled="false"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:layout_marginHorizontal="@dimen/_4sdp"
+                                android:visibility="visible"/>
+                           <!-- </androidx.cardview.widget.CardView>-->
+                        </LinearLayout>
+
+
+
+
+
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/textErrorHealthconnect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="No health data available.\n\nTo view health information, please grant Health Connect permissions from Settings."
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/black_2_1"
+                    android:visibility="gone"/>
+              <!--  <RelativeLayout
+                    android:id="@+id/add_device_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_18sdp"
+                    android:background="#0295E2"
+                    android:layout_alignParentBottom="true"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:visibility="gone"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:drawablePadding="@dimen/_9sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Add New Measurement"
+                        android:textColor="@color/white_0_2"
+                        android:textSize="@dimen/_12sdp" />
+                </RelativeLayout>-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintDevice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_below="@+id/tabs">
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/top_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@color/azure"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:padding="@dimen/_20sdp"
+                        tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:id="@+id/vital_ic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:src="@drawable/vital_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/vital_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/monitor_and_record_your_vitals_signs"
+                            android:textColor="@color/white_0_2"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/vital_ic"
+                            app:layout_constraintTop_toTopOf="@id/vital_ic" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:background="@drawable/bg_white_outline"
+                            android:paddingTop="@dimen/_7sdp"
+                            android:paddingBottom="@dimen/_7sdp"
+                            app:layout_constraintEnd_toEndOf="@id/vital_heading"
+                            app:layout_constraintStart_toStartOf="@id/vital_heading"
+                            app:layout_constraintTop_toBottomOf="@id/vital_heading">
+
+                            <TextView
+                                android:id="@+id/rpmAddDeviceBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:drawablePadding="@dimen/_7sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/add_device"
+                                android:textColor="@color/white_0_2"
+                                android:textSize="@dimen/_11sdp"
+                                app:drawableStartCompat="@drawable/ic_add" />
+                        </RelativeLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/no_device_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_ecf6fb"
+                        android:visibility="gone"
+                        tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:id="@+id/no_device_ic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:src="@drawable/no_devices_ic"
+                            app:layout_constraintBottom_toTopOf="@id/add_device_title"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/add_device_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Add a device"
+                            android:textColor="@color/dark_slate_blue"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/add_device_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_46sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_46sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Please add a device to measure and record your vital data which can be shared with doctor."
+                            android:textAlignment="center"
+                            android:textColor="#4f4f4f"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/add_device_title" />
+
+                        <RelativeLayout
+                            android:id="@+id/add_device_btns"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:layout_marginBottom="@dimen/_38sdp"
+                            android:background="@drawable/selector_blue_bg"
+                            android:paddingTop="@dimen/_9sdp"
+                            android:paddingBottom="@dimen/_9sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:drawablePadding="@dimen/_9sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/add_device"
+                                android:textColor="@color/white_0_2"
+                                android:textSize="@dimen/_12sdp"
+                                app:drawableStartCompat="@drawable/ic_add" />
+                        </RelativeLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/textInform"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="Data shown is collected from a connected compatible device."
+                        android:textColor="@color/black_2_1"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/top_view"
+                        app:layout_constraintBottom_toTopOf="@id/pager"
+                        />
+                    <FrameLayout
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@color/color_ecf6fb"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textInform" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <RelativeLayout
+                    android:id="@+id/add_refresh_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_18sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#0295E2"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:visibility="gone"
+                    android:paddingBottom="@dimen/_12sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:drawablePadding="@dimen/_9sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/send_to_cybermed"
+                        android:textColor="@color/white_0_2"
+                        android:textSize="@dimen/_12sdp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

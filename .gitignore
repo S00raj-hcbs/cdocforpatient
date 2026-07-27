@@ -1,0 +1,14 @@
+*.iml
+.gradle
+local.properties
+.idea
+.DS_Store
+build
+/captures
+.externalNativeBuild
+keystore.properties
+app/keystore.jks
+gradlew
+gradlew.bat
+/textwatcher-library
+/CDoctor2/cdoc/release/CDoctor2-cdoc-release.aab

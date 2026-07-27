@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="/storage/emulated/0" path="."/>
+    <files-path path="images/" name="myimages" />
+    <external-cache-path name="external_cache" path="." />
+
+    <!-- Define the directory for files in the internal storage -->
+    <files-path name="internal_files" path="images/" />
+
+    <!-- Optionally, define the external storage path if needed -->
+    <external-path name="external_storage" path="." />
+</paths>

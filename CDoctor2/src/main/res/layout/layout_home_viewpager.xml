@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.cybermed.cdoc_patient.main.MainActVm" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0_4"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            app:viewPager="@{vm}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_above="@+id/tab_layout"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:clipToPadding="false"
+            android:layoutDirection="ltr" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:layoutDirection="ltr"
+            app:tabBackground="@drawable/home_slider_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            />
+    </RelativeLayout>
+</layout>

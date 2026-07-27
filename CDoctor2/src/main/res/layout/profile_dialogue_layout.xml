@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_14sdp">
+
+        <LinearLayout
+            android:id="@+id/lin_doc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="@dimen/_15sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:src="@drawable/ic_doc"/>
+
+            <TextView
+                android:id="@+id/doc_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="normal"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:textColor="@color/gray_2_5"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:background="@color/gray_0_4"
+            android:layout_below="@+id/lin_doc"/>
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:textStyle="normal"
+            android:layout_below="@+id/view_line"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/gray_0_4"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/call_details"/>
+
+        <ImageView
+            android:id="@+id/call_img"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_below="@id/txt_title"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:src="@drawable/ic_incoming" />
+
+        <TextView
+            android:id="@+id/callType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_title"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_toEndOf="@id/call_img"
+            android:fontFamily="@font/roboto_medium"
+            android:text=""
+            android:textColor="@color/color_8f8f8f"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="normal"
+            />
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_title"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/color_8f8f8f"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="normal"
+            />
+
+
+        <TextView
+            android:id="@+id/textCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/call_img"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/color_8f8f8f"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="normal"
+            />
+
+        <TextView
+            android:id="@+id/textAns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textCharge"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:text=""
+            android:textColor="@color/color_8f8f8f"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="normal"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:layout_below="@id/textAns">
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="0.5"
+                android:background="@drawable/bg_login_btn_selector"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/view_profile"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

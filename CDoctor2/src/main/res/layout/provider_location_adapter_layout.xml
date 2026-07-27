@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/viewParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center|start">
+        <RadioButton
+            android:id="@+id/radio_card"
+            style="@style/CdocRadioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/color_4f4f4f"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
+
+
+
+        <TextView
+            android:id="@+id/locationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textStyle="normal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:textColor="@color/black_2_1"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_2sdp"/>
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:background="@color/gray_0_7"/>
+
+</LinearLayout>

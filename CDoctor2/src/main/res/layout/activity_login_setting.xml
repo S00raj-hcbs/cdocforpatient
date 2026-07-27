@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginSettingActivity"
+    android:background="@color/gray_background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/ToolBarStyle"
+        android:background="@color/defaultColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:text="@string/language_settings_title"
+            android:textColor="@color/white_0_2"
+            android:textSize="20sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/changeLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginTop="20dp"
+        android:background="@color/white_0_2">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/loginsetting_language"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:text="@string/about_change_language"
+            android:layout_weight="0.5"/>
+
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/languageSpinner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"></com.jaredrummler.materialspinner.MaterialSpinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white_0_2"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/changeLanguage"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/contact_us_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/loginsetting_contact"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/contact_us_cell"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/gray_background"/>
+
+        <LinearLayout
+            android:id="@+id/about_us_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/loginsetting_about"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/about_us_cell"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/login_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_setting_back"
+        android:text="@string/back_to_login_btn"
+        android:textStyle="bold"
+        android:textColor="@color/login_back_orange"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@color/login_gray_background"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

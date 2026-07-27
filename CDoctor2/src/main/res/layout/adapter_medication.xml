@@ -1,0 +1,164 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_0_2"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imgTabIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:src="@drawable/img_med" />
+
+            <LinearLayout
+                android:id="@+id/medicine_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toStartOf="@+id/txtdate"
+                android:layout_toRightOf="@id/imgTabIcon"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/medicineName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_11sdp"
+                    android:layout_toRightOf="@id/imgTabIcon"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="bjbjbjhbjhhjhjbhjbjhbhjbjhbbhbhjbjsh"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/up_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_11sdp"
+                    android:layout_toStartOf="@+id/txtdate"
+                    android:layout_toEndOf="@id/medicineName"
+                    android:src="@drawable/img_arrow"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/down_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_11sdp"
+                    android:layout_toStartOf="@+id/txtdate"
+                    android:layout_toEndOf="@+id/medicineName"
+                    android:src="@drawable/ic_down_arrow"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="1 Apr 2021"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal" />
+            <!--            </LinearLayout>-->
+
+
+            <TextView
+                android:id="@+id/med_drug_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/medicine_lay"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_toEndOf="@id/imgTabIcon"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/color_8f8f8f"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/med_drug_info"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_12sdp">
+
+
+                <TextView
+                    android:id="@+id/tv_dosage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/med_drug_info"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/dosage"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/dosage_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/med_drug_info"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/tv_dosage"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+
+                    />
+
+                <Button
+                    android:id="@+id/reminderTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgTabIcon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/bg_login_btn_selector"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:paddingEnd="@dimen/_9sdp"
+                    android:text="@string/set_reminder"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_alarm" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

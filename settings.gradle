@@ -1,0 +1,15 @@
+include ':blesdk_1963'
+include ':signalr-client-sdk'
+include ':CDoctor2'
+include ':DataInterface'
+include 'MPChartLib'
+include 'gallerypicker'
+dependencyResolutionManagement{
+    repositories{
+        maven { url "https://jitpack.io" }
+    }
+}
+include ':s1blelibrary'
+include ':oxiblelibrary'
+include ':ekglibrary'
+include ':bp1blelibrary'

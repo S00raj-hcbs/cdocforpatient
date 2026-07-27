@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_4sdp"
+    android:paddingBottom="@dimen/_4sdp"
+    android:layout_marginStart="@dimen/_34sdp"
+    android:textColor="@color/color_4f4f4f"
+    android:fontFamily="@font/roboto_regular"
+    android:textSize="@dimen/_10sdp"
+    tools:text="Dummy text">
+
+</TextView>

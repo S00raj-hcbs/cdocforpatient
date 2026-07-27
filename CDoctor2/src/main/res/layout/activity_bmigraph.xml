@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".me.vitalcheck.BMIGraphActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_ecf6fb"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolBar"
+                layout="@layout/custom_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_46sdp" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolBar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_250sdp"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <com.github.anastr.speedviewlib.SpeedView
+                            android:id="@+id/speedView"
+                            android:layout_width="@dimen/_210sdp"
+                            android:layout_height="@dimen/_200sdp"
+                            app:sv_markColor="#00ffffff"
+                            app:sv_indicatorColor="#000000"
+                            app:sv_centerCircleColor="#000000"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            app:sv_centerCircleRadius="@dimen/_14sdp"
+                            app:sv_speedTextColor="#000000"
+                            app:sv_withTremble="false"
+                            app:sv_tickPadding="@dimen/_4sdp"
+                            app:sv_tickNumber="5"
+                            app:sv_textSize="@dimen/_10sdp"
+                            android:layout_centerInParent="true"
+                            app:sv_maxSpeed="100"
+                            app:sv_tickTextFormat="FLOAT"
+                            app:sv_unit=""
+                            app:sv_speedTextSize="0dp"
+                            app:sv_unitTextColor="@color/transparent"
+                            android:layout_gravity="center_horizontal"
+                            app:sv_indicator="NormalIndicator"
+                            app:sv_indicatorWidth="@dimen/_7sdp"
+                            tools:ignore="MissingConstraints" />
+                        <ImageView
+                            android:layout_width="@dimen/_240sdp"
+                            android:layout_height="@dimen/_240sdp"
+                            android:src="@drawable/graphovertext"
+                            android:layout_centerInParent="true"/>
+
+                        <TextView
+                            android:id="@+id/text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_2_1"
+                            android:layout_alignParentBottom="true"
+                            android:textColorHighlight="@color/black_2_1"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="@dimen/_20sdp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_2_1"
+                        android:textColorHighlight="@color/black_2_1"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginHorizontal="@dimen/_14sdp"
+                        android:text="Healthy BMI range: 18.5 kg/m² - 25 kg/m²"
+                        android:textSize="@dimen/_13sdp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/gray_2_5"
+                        android:layout_marginHorizontal="@dimen/_14sdp"/>
+                    <TextView
+                        android:id="@+id/text_weightRange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_2_1"
+                        android:textColorHighlight="@color/black_2_1"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginHorizontal="@dimen/_14sdp"
+                        android:textSize="@dimen/_13sdp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/gray_2_5"
+                        android:layout_marginHorizontal="@dimen/_14sdp"/>
+
+                    <TextView
+                        android:id="@+id/textWeightLossGain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_2_1"
+                        android:textColorHighlight="@color/black_2_1"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginHorizontal="@dimen/_14sdp"
+                        android:textSize="@dimen/_13sdp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/gray_2_5"
+                        android:layout_marginHorizontal="@dimen/_14sdp"/>
+                    <TextView
+                        android:id="@+id/textBMIPrime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_2_1"
+                        android:textColorHighlight="@color/black_2_1"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginHorizontal="@dimen/_14sdp"
+                        android:textSize="@dimen/_13sdp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/gray_2_5"
+                        android:layout_marginHorizontal="@dimen/_14sdp"/>
+                    <TextView
+                        android:id="@+id/textPonderalIndex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_2_1"
+                        android:textColorHighlight="@color/black_2_1"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginHorizontal="@dimen/_14sdp"
+                        android:textSize="@dimen/_13sdp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/gray_2_5"
+                        android:layout_marginHorizontal="@dimen/_14sdp"/>
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

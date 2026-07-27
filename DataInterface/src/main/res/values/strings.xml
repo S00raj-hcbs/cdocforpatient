@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">CDoctor</string>
+    <string name="ERROR_CODE_system_error">System Error</string>
+    <string name="ERROR_CODE_fail">Fail</string>
+    <string name="ERROR_CODE_not_registed">Account not regist</string>
+    <string name="ERROR_CODE_lost_param">Miss some param</string>
+    <string name="ERROR_CODE_not_active">The account not activited</string>
+    <string name="ERROR_CODE_password_error">Password error</string>
+    <string name="ERROR_CODE_account_existed">Email has been registered</string>
+    <string name="ERROR_CODE_credit_card_exist">Credit card already exist</string>
+    <string name="ERROR_CODE_not_login">Not login</string>
+    <string name="ERROR_CODE_save_data_error">Saving data failed</string>
+    <string name="account_activated">Account has been activated</string>
+    <string name="other_error">Other Error</string>
+    <string name="ERROR_CODE_has_already_activate">Has already be actived</string>
+    <string name="ERROR_CODE_code_error">The code is error</string>
+    <string name="schedul_has_expired">The time slot is no longer available.</string>
+    <string name="pay_fail">The payment is unsuccessful</string>
+    <string name="not_login">Please login first.</string>
+    <string name="card_info_error">The credit card information is invalid.</string>
+    <string name="create_preorder_error">Create pre-order error!</string>
+    <string name="available_count_0">No more available appointments!</string>
+    <string name="appt_has_expired">The appointment has expired.</string>
+    <string name="no_such_state">No such state.</string>
+    <string name="insure_exited">The insurance has exited</string>
+    <string name="insurance_error">The insurance information is illegitimate</string>
+    <string name="this_appointment_not_available">This appointment not available.</string>
+</resources>

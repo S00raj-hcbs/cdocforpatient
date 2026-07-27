@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/view_not_connected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linear_quit"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/searching_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/turn_on_your_stemoscope"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableTopCompat="@drawable/stemo_turn" />
+
+                <TextView
+                    android:id="@+id/txt_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_45sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center|top"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:text="@string/please_turn_on_your_stemoscope_to_start_recording"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_quit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:background="@drawable/bg_outline_trans_blue"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/iot_quit"
+                android:textAllCaps="false"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_stemo_connected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:src="@drawable/ic_stemo_wave"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/view_recording"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_38sdp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone">
+
+                <com.visualizer.amplitude.AudioRecordView
+                    android:id="@+id/sound_wave_visualizer"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_stemo_wave"
+                    app:chunkAlignTo="bottom"
+                    app:chunkColor="#2196F3"
+                    app:chunkMaxHeight="60dp"
+                    app:chunkMinHeight="2dp"
+                    app:chunkSpace="3dp"
+                    app:chunkWidth="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/recording"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_14sdp"
+                    app:drawableStartCompat="@drawable/ic_red_offline" />
+
+                <TextView
+                    android:id="@+id/timeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:drawableStart="@drawable/ic_timer"
+                    android:textColor="@color/color_4f4f4f"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="12 sec"
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/_5sdp" />
+
+
+            </LinearLayout>
+            <!--    <LinearLayout-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:orientation="vertical"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/linear_bg"-->
+            <!--        app:layout_constraintBottom_toTopOf="@+id/guideline159"-->
+            <!--        app:layout_constraintEnd_toStartOf="@+id/guideline14"-->
+            <!--        app:layout_constraintStart_toStartOf="@+id/guideline13"-->
+            <!--        app:layout_constraintTop_toTopOf="@+id/guideline158">-->
+
+            <TextView
+                android:id="@+id/indicateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/stemoscope_guide"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline54" />
+
+            <TextView
+                android:id="@+id/indicateText_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/stemo_instruction"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/indicateText" />
+
+            <Button
+                android:id="@+id/recordBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_38sdp"
+                android:background="@drawable/bg_login_btn_selector"
+                android:enabled="false"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:tag="0"
+                android:text="@string/stemoscope_record_btn"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <!--    &lt;!&ndash;        <TextView&ndash;&gt;-->
+            <!--    &lt;!&ndash;            android:id="@+id/hintText"&ndash;&gt;-->
+            <!--    &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--    &lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+            <!--    &lt;!&ndash;            android:text="(You can click on the empty circle to select your stemoscope position)"&ndash;&gt;-->
+            <!--    &lt;!&ndash;            android:textSize="@dimen/mostRecentDataSize"&ndash;&gt;-->
+            <!--    &lt;!&ndash;            app:layout_constraintBottom_toTopOf="@+id/batteryLevel"&ndash;&gt;-->
+            <!--    &lt;!&ndash;            app:layout_constraintEnd_toStartOf="@+id/guideline14"&ndash;&gt;-->
+            <!--    &lt;!&ndash;            app:layout_constraintStart_toStartOf="@+id/guideline13"&ndash;&gt;-->
+            <!--    &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/indicateText" />&ndash;&gt;-->
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/batteryLevel"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_gravity="center"-->
+            <!--        android:gravity="center"-->
+            <!--        android:text="Battery Level"-->
+            <!--        android:textSize="@dimen/bluetoothInstruction"-->
+            <!--        app:layout_constraintBottom_toTopOf="@+id/guideline20"-->
+            <!--        app:layout_constraintEnd_toStartOf="@+id/guideline14"-->
+            <!--        app:layout_constraintStart_toStartOf="@+id/guideline13"-->
+            <!--        app:layout_constraintTop_toTopOf="@+id/guideline159" />-->
+
+
+            <ImageView
+                android:id="@+id/heart_point"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/heartpoint_3"
+                app:layout_constraintBottom_toTopOf="@+id/guideline54"
+                app:layout_constraintEnd_toStartOf="@+id/guideline14"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline13"
+                app:layout_constraintTop_toTopOf="@+id/guideline158"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.41" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline159"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.79" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline158"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.19" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.6" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.92" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.98" />
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toTopOf="@+id/guideline42"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/heart_point_btn1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/guideline80"
+                app:layout_constraintEnd_toStartOf="@id/guideline78"
+                app:layout_constraintStart_toStartOf="@id/guideline13"
+                app:layout_constraintTop_toTopOf="@id/guideline18" />
+
+            <FrameLayout
+                android:id="@+id/heart_point_btn2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/guideline80"
+                app:layout_constraintEnd_toStartOf="@id/guideline14"
+                app:layout_constraintStart_toStartOf="@id/guideline78"
+                app:layout_constraintTop_toTopOf="@id/guideline18" />
+
+            <FrameLayout
+                android:id="@+id/heart_point_btn3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/guideline54"
+                app:layout_constraintEnd_toStartOf="@id/guideline79"
+                app:layout_constraintStart_toStartOf="@id/guideline13"
+                app:layout_constraintTop_toTopOf="@id/guideline80" />
+
+            <FrameLayout
+                android:id="@+id/heart_point_btn4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/guideline54"
+                app:layout_constraintEnd_toStartOf="@id/guideline14"
+                app:layout_constraintStart_toStartOf="@id/guideline79"
+                app:layout_constraintTop_toTopOf="@id/guideline80" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline76"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline77"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.6" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline78"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline79"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.40" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

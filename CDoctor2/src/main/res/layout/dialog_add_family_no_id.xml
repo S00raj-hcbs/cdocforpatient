@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+          <LinearLayout
+              android:id="@+id/lin_email2"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:visibility="visible">
+              <ImageView
+                  android:id="@+id/imgClose"
+                  android:layout_width="@dimen/_20sdp"
+                  android:layout_height="@dimen/_20sdp"
+                  android:src="@drawable/ic_signup_cross"
+                  android:layout_gravity="end"
+                  android:padding="@dimen/_2sdp"
+                  android:layout_marginEnd="@dimen/_12sdp"
+                  android:layout_marginTop="@dimen/_12sdp"/>
+
+              <EditText
+                  android:id="@+id/email_txt"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/_18sdp"
+                  android:layout_marginRight="@dimen/_18sdp"
+                  android:paddingBottom="@dimen/_15sdp"
+                  android:paddingStart="@dimen/_5sdp"
+                  android:gravity="center_vertical"
+                  android:hint="@string/family_member_email_hint"
+                  android:textColorHint="@color/color_6896ae"
+                  android:textColor="@color/color_4f4f4f"
+                  android:textSize="@dimen/_10sdp"
+                  android:singleLine="true"
+                  android:imeOptions="actionDone"
+                  android:fontFamily="@font/roboto_regular"
+                  />
+          </LinearLayout>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/card_user"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_18sdp"
+               android:visibility="gone"
+               android:layout_marginTop="@dimen/_18sdp"
+               android:layout_marginEnd="@dimen/_18sdp"
+               android:layout_marginBottom="@dimen/_2sdp">
+
+
+               <RelativeLayout
+                   android:id="@+id/front_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center"
+                   android:background="#f2f2f7"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:id="@+id/img_profile"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/profile_family"
+                       android:layout_marginTop="@dimen/_8sdp"
+                       android:layout_marginStart="@dimen/_10sdp"/>
+
+
+
+                   <TextView
+                       android:id="@+id/rep_name"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="@dimen/_10sdp"
+                       android:layout_marginBottom="@dimen/_2sdp"
+                       android:layout_marginTop="@dimen/_8sdp"
+                       android:gravity="center_vertical"
+                       android:maxLines="1"
+                       android:textColor="@color/color_4f4f4f"
+                       android:textSize="@dimen/_12sdp"
+                       android:fontFamily="@font/roboto_medium"
+                       android:text=""
+                       android:layout_toEndOf="@+id/img_profile"
+                       />
+
+                   <TextView
+                       android:id="@+id/rep_account"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="@dimen/_10sdp"
+                       android:gravity="center_vertical"
+                       android:maxLines="1"
+                       android:textColor="@color/color_4f4f4f"
+                       android:fontFamily="@font/roboto_medium"
+                       android:textSize="@dimen/_10sdp"
+                       android:text=""
+                       android:layout_toEndOf="@+id/img_profile"
+                       android:layout_below="@+id/rep_name"
+                       android:layout_marginBottom="@dimen/_9sdp"/>
+
+
+                   <ImageView
+                       android:id="@+id/icon_online_status"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_marginEnd="@dimen/dimen_16dp"
+                       android:src="@drawable/current_icon"
+                       android:layout_alignParentEnd="true"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:visibility="gone" />
+
+
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+
+       </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/error_select_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="@string/family_member_email_error"
+            android:textColor="@color/red_2_1"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_18sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:textColorHint="@color/color_6896ae"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/family_member_pwd_hint"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/password_hide_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_7sdp"
+                android:paddingStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:tag="0"
+                android:src="@drawable/pass_hide" />
+
+        </RelativeLayout>
+
+
+        <!--    <com.isapanah.awesomespinner.AwesomeSpinner-->
+        <!--        android:id="@+id/spinner_relationship"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="50dp"-->
+        <!--        android:layout_marginTop="25dp"-->
+        <!--        android:layout_marginLeft="25dp"-->
+        <!--        android:layout_marginRight="25dp"-->
+        <!--        app:spinnerDirection="ltr"-->
+        <!--        app:spinnerHint="@string/family_member_relation_hint" />-->
+
+        <TextView
+            android:id="@+id/error_select_relationship"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="@string/incorrect_password"
+            android:textColor="@color/red_2_1"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/btn_add_family"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/bg_login_btn_selector"
+            android:gravity="center"
+            android:text="@string/add_family_member"
+            android:textAllCaps="false"
+            android:textColor="@color/white_0_2" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

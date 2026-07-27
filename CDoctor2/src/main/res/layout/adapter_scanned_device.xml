@@ -1,0 +1,73 @@
+<layout>
+
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/card_smartwatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/device_icon"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/blood_pressure_ic" />
+
+            <TextView
+                android:id="@+id/device_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/device_icon"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Blood pressure"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/device_cybermed_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/device_type"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_toEndOf="@+id/device_icon"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Blood pressure"
+                android:textColor="@color/color_8f8f8f"
+                android:textSize="@dimen/_10sdp" />
+
+            <Button
+                android:id="@+id/root_view"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_below="@+id/device_type"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_login_btn_selector"
+                android:drawableStart="@drawable/ic_add"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="Add Device"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_10sdp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

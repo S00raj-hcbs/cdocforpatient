@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.cybermed.cdoc_patient.doctor.docDetail.DocBookingVm" />
+
+        <import type="com.cybermed.cdoc_patient.doctor.docDetail.model.FontTypes" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/rv_apptdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{() -> vm.updateVal(0)}"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@{vm.calDayDate.calenderDayDateList.get(0).dayOfWeek}"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_8sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:backgroundTint="@{vm.calDayDate.calenderDayDateList.get(0).selected?@color/dark_slate_blue:@color/color_ecf6fb}"
+                app:cardCornerRadius="@dimen/_14sdp">
+
+                <TextView
+                    font="@{vm.calDayDate.calenderDayDateList.get(0).selected?FontTypes.BOLD:FontTypes.MEDIUM}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="@{vm.calDayDate.calenderDayDateList.get(0).dateOfWeek}"
+                    android:textColor="@{vm.calDayDate.calenderDayDateList.get(0).selected?@color/white_0_2:@color/dark_slate_blue}"
+                    android:textSize="@dimen/_12sdp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{() -> vm.updateVal(1)}"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@{vm.calDayDate.calenderDayDateList.get(1).dayOfWeek}"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_8sdp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:backgroundTint="@{vm.calDayDate.calenderDayDateList.get(1).selected?@color/dark_slate_blue:@color/color_ecf6fb}"
+                app:cardCornerRadius="@dimen/_14sdp">
+
+                <TextView
+                    font="@{vm.calDayDate.calenderDayDateList.get(1).selected?FontTypes.BOLD:FontTypes.MEDIUM}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@{vm.calDayDate.calenderDayDateList.get(1).dateOfWeek}"
+                    android:textColor="@{vm.calDayDate.calenderDayDateList.get(1).selected?@color/white_0_2:@color/dark_slate_blue}"
+                    android:textSize="@dimen/_12sdp" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{() -> vm.updateVal(2)}"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@{vm.calDayDate.calenderDayDateList.get(2).dayOfWeek}"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_8sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:backgroundTint="@{vm.calDayDate.calenderDayDateList.get(2).selected?@color/dark_slate_blue:@color/color_ecf6fb}"
+                app:cardCornerRadius="@dimen/_14sdp">
+
+                <TextView
+                    font="@{vm.calDayDate.calenderDayDateList.get(2).selected?FontTypes.BOLD:FontTypes.MEDIUM}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@{vm.calDayDate.calenderDayDateList.get(2).dateOfWeek}"
+                    android:textColor="@{vm.calDayDate.calenderDayDateList.get(2).selected?@color/white_0_2:@color/dark_slate_blue}"
+                    android:textSize="@dimen/_12sdp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{() -> vm.updateVal(3)}"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@{vm.calDayDate.calenderDayDateList.get(3).dayOfWeek}"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_8sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:backgroundTint="@{vm.calDayDate.calenderDayDateList.get(3).selected?@color/dark_slate_blue:@color/color_ecf6fb}"
+                app:cardCornerRadius="@dimen/_14sdp">
+
+                <TextView
+                    font="@{vm.calDayDate.calenderDayDateList.get(3).selected?FontTypes.BOLD:FontTypes.MEDIUM}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@{vm.calDayDate.calenderDayDateList.get(3).dateOfWeek}"
+                    android:textColor="@{vm.calDayDate.calenderDayDateList.get(3).selected?@color/white_0_2:@color/dark_slate_blue}"
+                    android:textSize="@dimen/_12sdp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{() -> vm.updateVal(4)}"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@{vm.calDayDate.calenderDayDateList.get(4).dayOfWeek}"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_8sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:backgroundTint="@{vm.calDayDate.calenderDayDateList.get(4).selected?@color/dark_slate_blue:@color/color_ecf6fb}"
+                app:cardCornerRadius="@dimen/_14sdp">
+
+                <TextView
+                    font="@{vm.calDayDate.calenderDayDateList.get(4).selected?FontTypes.BOLD:FontTypes.MEDIUM}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@{vm.calDayDate.calenderDayDateList.get(4).dateOfWeek}"
+                    android:textColor="@{vm.calDayDate.calenderDayDateList.get(4).selected?@color/white_0_2:@color/dark_slate_blue}"
+                    android:textSize="@dimen/_12sdp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{() -> vm.updateVal(5)}"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@{vm.calDayDate.calenderDayDateList.get(5).dayOfWeek}"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_8sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:backgroundTint="@{vm.calDayDate.calenderDayDateList.get(5).selected?@color/dark_slate_blue:@color/color_ecf6fb}"
+                app:cardCornerRadius="@dimen/_14sdp">
+
+                <TextView
+                    font="@{vm.calDayDate.calenderDayDateList.get(5).selected?FontTypes.BOLD:FontTypes.MEDIUM}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@{vm.calDayDate.calenderDayDateList.get(5).dateOfWeek}"
+                    android:textColor="@{vm.calDayDate.calenderDayDateList.get(5).selected?@color/white_0_2:@color/dark_slate_blue}"
+                    android:textSize="@dimen/_12sdp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{() -> vm.updateVal(6)}"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@{vm.calDayDate.calenderDayDateList.get(6).dayOfWeek}"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_8sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:backgroundTint="@{vm.calDayDate.calenderDayDateList.get(6).selected?@color/dark_slate_blue:@color/color_ecf6fb}"
+                app:cardCornerRadius="@dimen/_14sdp">
+
+                <TextView
+                    font="@{vm.calDayDate.calenderDayDateList.get(6).selected?FontTypes.BOLD:FontTypes.MEDIUM}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@{vm.calDayDate.calenderDayDateList.get(6).dateOfWeek}"
+                    android:textColor="@{vm.calDayDate.calenderDayDateList.get(6).selected?@color/white_0_2:@color/dark_slate_blue}"
+                    android:textSize="@dimen/_12sdp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

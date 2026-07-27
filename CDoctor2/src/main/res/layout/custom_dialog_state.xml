@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/closeBtn"
+        android:src="@drawable/img_close_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select State"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/dark_slate_blue"
+        android:textSize="@dimen/_12sdp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listItems"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_178sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_below="@id/title"
+        tools:listitem="@layout/custom_state_items" />
+
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<layout>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/providerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_toEndOf="@+id/img_profile"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Dr. Samantha Williamson"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_doc" />
+
+
+            <ImageView
+                android:id="@+id/call_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chargeType"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:layout_toEndOf="@+id/img_profile"
+                android:src="@drawable/ic_incoming" />
+
+            <TextView
+                android:id="@+id/callType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chargeType"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_toEndOf="@id/call_img"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Incoming Call"
+                android:textColor="@color/color_8f8f8f"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal"
+                />
+
+
+            <TextView
+                android:id="@+id/talkMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chargeType"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Duration : 30s"
+                android:textColor="@color/color_8f8f8f"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/chargeType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/dimen_4dp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_below="@+id/providerName"
+                android:layout_toEndOf="@+id/img_profile"
+                android:textColor="@color/color_8f8f8f"
+                android:text="No charges"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_regular"
+
+                />
+
+            <TextView
+                android:id="@+id/chargeAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/timeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="2:00 PM"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

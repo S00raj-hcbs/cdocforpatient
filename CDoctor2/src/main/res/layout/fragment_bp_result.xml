@@ -1,0 +1,155 @@
+<layout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/custom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp" />
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/lay_resultbp"
+                    layout="@layout/bp_result_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_40sdp" />
+
+                <LinearLayout
+                    android:id="@+id/linearResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lay_resultbp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text='@{@string/sys+":"}'
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/txt_sys_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Sys"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text='@{@string/dia+":"}'
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/txt_dia_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Sys"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <ImageView
+                        android:id="@+id/imginfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:src="@drawable/fluent_info_16_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearPulse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearResult"
+                    android:layout_above="@+id/btn_view_history"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_40sdp"
+                    android:background="@drawable/ic_star_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_23sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Pulse:"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/txt_pulse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="28"
+                        android:textColor="@color/dark_slate_blue"
+                        android:textSize="@dimen/_22sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/vitals_bpm"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_view_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_38sdp"
+                    android:background="@drawable/bg_login_btn_selector"
+                    android:drawableEnd="@drawable/ic_white_arrow"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:text="@string/view_full_history"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</layout>

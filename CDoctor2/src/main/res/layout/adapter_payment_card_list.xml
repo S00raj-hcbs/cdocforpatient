@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_parent"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_59sdp"
+    android:orientation="vertical"
+    android:background="@color/color_ecf6fb"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_58sdp"
+        android:orientation="horizontal"
+        android:gravity="center|start">
+        <RadioButton
+            android:id="@+id/radio_card"
+            style="@style/CdocRadioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="bjkvbf"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/color_4f4f4f"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/imgCardType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_credit_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/cardNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textStyle="normal"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black_2_1"
+            android:layout_weight="1"
+            android:text="@string/ending_in_1564"
+            android:layout_marginStart="@dimen/_12sdp"/>
+
+        <ImageView
+            android:id="@+id/deleteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@drawable/ic_delete"
+            android:gravity="end" />
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:background="@color/black_2_1"/>
+
+</LinearLayout>

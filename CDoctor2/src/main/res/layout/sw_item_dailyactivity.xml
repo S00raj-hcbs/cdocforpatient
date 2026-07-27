@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="java.util.Map" />
+
+        <variable
+            name="DeviceKey"
+            type="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.smartwatch.swUtil.SWKeyConstant" />
+
+        <variable
+            name="map"
+            type="Map&lt;String, String&gt;" />
+
+        <variable
+            name="isConnected"
+            type="androidx.lifecycle.MutableLiveData&lt;Boolean&gt;" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginTop="@dimen/_28sdp"
+        android:id="@+id/parent_daily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_act"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/daily_activity"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/text_totalDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sw_title_bg_outline"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/total_step"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableStartCompat="@drawable/sw_footsteps" />
+
+                <TextView
+                    android:id="@+id/text_totalTotalStep"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sw_data_bg_outline"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_15sdp"
+                    android:text="@{map.get(DeviceKey.Step)}"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/ic_right_arrow_transparent" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/sw_title_bg_outline"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/time_key"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableStartCompat="@drawable/sw_clock" />
+
+                <TextView
+                    android:id="@+id/text_totalTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sw_data_bg_outline"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_15sdp"
+                    android:text='@{map.get(DeviceKey.ExerciseMinutes)+" sec"}'
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/ic_right_arrow_transparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/sw_title_bg_outline"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/distance"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableStartCompat="@drawable/sw_distance" />
+
+                <TextView
+                    android:id="@+id/text_totalDistance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sw_data_bg_outline"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_15sdp"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/ic_right_arrow_transparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_calories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/sw_title_bg_outline"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/calories"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableStartCompat="@drawable/sw_calories" />
+
+                <TextView
+                    android:id="@+id/text_totalCal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sw_data_bg_outline"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_15sdp"
+                    android:text='@{map.get(DeviceKey.Calories)+" kcal"}'
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/ic_right_arrow_transparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/sw_title_bg_outline"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/goal"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableStartCompat="@drawable/sw_goal" />
+
+                <TextView
+                    android:id="@+id/text_totalGoal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sw_data_bg_outline"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_15sdp"
+                    android:text='@{map.get(DeviceKey.Goal)}'
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/ic_right_arrow_transparent" />
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+</layout>

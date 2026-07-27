@@ -1,0 +1,296 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ecf6fb"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azure"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_arrow"
+        app:theme="@style/ThemeOverlay.AppCompat">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/white_0_2"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_14sdp" />
+
+        <ImageView
+            android:id="@+id/refreshBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:src="@drawable/ic_refresh_white_36dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/filterBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:padding="2dp"
+            android:visibility="gone"
+            android:src="@drawable/filter_icon" />
+
+        <ImageView
+            android:id="@+id/searchImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:padding="2dp"
+            android:src="@drawable/ic_baseline_search_24"
+            android:visibility="gone" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/_10sdp"
+        android:enabled="true"
+        android:focusable="true"
+        android:fontFamily="@font/roboto_medium"
+        android:hint="@string/search_by_first_or_last_name"
+        android:includeFontPadding="true"
+        android:ellipsize="end"
+        android:paddingBottom="@dimen/_15sdp"
+        android:lines="1"
+        android:textColor="@color/color_4f4f4f"
+        android:textColorHint="@color/color_6896ae"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/filtersTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/filterSpecialityTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_radius"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_2sdp">
+
+            <TextView
+                android:id="@+id/filterSpecialtyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/specialty"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/_8sdp" />
+
+            <ImageView
+                android:id="@+id/filterSpecialtyCloseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_toEndOf="@id/filterSpecialtyText"
+                android:src="@drawable/ic_close_filter" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/filterLanguageTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_radius"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_2sdp">
+
+            <TextView
+                android:id="@+id/filterLanguageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/language"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/_8sdp" />
+
+            <ImageView
+                android:id="@+id/filterLanguageCloseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_toEndOf="@id/filterLanguageText"
+                android:src="@drawable/ic_close_filter" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/filterStateTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_radius"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_2sdp">
+
+            <TextView
+                android:id="@+id/filterStateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/state"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/_8sdp" />
+
+            <ImageView
+                android:id="@+id/filterStateCloseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_toEndOf="@id/filterStateText"
+                android:src="@drawable/ic_close_filter" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/color_ecf6fb">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/color_ecf6fb"
+                android:dividerHeight="@dimen/_3sdp"
+                android:scrollbars="none" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/emptyNote"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_marginBottom="50dp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/no_doctors_are_available_in_this_area"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/no_doc_avail" />
+
+        <TextView
+            android:id="@+id/emptyFilter"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/no_doctors_are_found_under_the_selected_filters"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone"
+            app:drawableTopCompat="@drawable/no_doc_avail" />
+
+        <LinearLayout
+            android:id="@+id/linear_searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgSearchImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_inprogress" />
+
+            <TextView
+                android:id="@+id/txtSearchTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/find_your_doctor"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/txtSearchMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/search_doctors_by_name_for_consultation"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

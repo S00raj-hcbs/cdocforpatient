@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_0_2"
+        android:orientation="vertical">
+
+       <include
+           android:id="@+id/toolbar"
+           layout="@layout/toolbar"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_46sdp"/>
+
+        <include
+            android:id="@+id/view_pager"
+            layout="@layout/slider_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_margin="@dimen/_8sdp" />
+
+        <TextView
+            android:id="@+id/txt_what"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="@string/what_is_normal_blood_presure"
+            android:textColor="@color/sign_up_selected"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_what_Ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_what"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="@string/what_is_"
+            android:textColor="@color/loginDefaultColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_what_Ans"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="@string/what_my_value_means"
+            android:textColor="@color/sign_up_selected"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_val_Ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_value"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="@string/what_value_mean"
+            android:textColor="@color/loginDefaultColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_improve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_val_Ans"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="@string/how_to_improve_it"
+            android:textColor="@color/sign_up_selected"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_improve"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:text="@string/how_to_improve"
+            android:textColor="@color/loginDefaultColor"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
+</layout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_0_1">#1c61dd</color>
+    <color name="blue_0_2">#001133</color>
+    <color name="blue_0_3">#1ebbf7</color>
+    <color name="blue_0_4">#a3384dff</color>
+    <color name="blue_0_5">#a11c61dd</color>
+    <color name="blue_0_6">#a10b42a6</color>
+    <color name="blue_0_7">#0b31a6</color>
+    <color name="blue_0_8">#2d75f8</color>
+    <color name="blue_0_9">#0944ad</color>
+    <color name="blue_0_10">#e8effc</color>
+    <color name="blue_0_11">#6e8ec7</color>
+    <color name="blue_0_12">#166685</color>
+    <color name="blue_0_13">#103C89</color>
+    <color name="blue_0_14">#3d8ebb</color>
+
+    <color name="white_0_1">#fefefe</color>
+    <color name="white_0_2">#ffffff</color>
+
+    <color name="gray_0_1">#e1e1e1</color>
+    <color name="gray_0_2">#dddbd6</color>
+    <color name="gray_0_3">#fbf9f4</color>
+    <color name="gray_0_4">#888888</color>
+    <color name="gray_0_5">#f7f9f8</color>
+    <color name="gray_0_6">#cdcdcd</color>
+    <color name="gray_0_7">#c7c7c7</color>
+    <color name="gray_0_8">#d5d8db</color>
+    <color name="gray_0_9">#61000000</color>
+    <color name="gray_0_10">#70000000</color>
+    <color name="gray_0_11">#f0f0f0</color>
+    <color name="gray_0_12">#f7f7f7</color>
+    <color name="gray_0_13">#a4a4a4</color>
+
+
+    <color name="blue_2_1">#f7f9f8</color>
+    <color name="blue_2_2">#1c61dd</color>
+    <color name="blue_2_2_1">#ff6b9aff</color>
+    <color name="blue_2_3">#89adea</color>
+    <color name="blue_2_4">#3e5d9d</color>
+    <color name="white_2_1">#ffffff</color>
+    <color name="white_2_2">#1affffff</color>
+    <color name="white_2_3">#34ffffff</color>
+
+    <color name="translate_2_1">#ffffff</color>
+    <color name="black_2_1">#000000</color>
+    <color name="black_2_2">#001133</color>
+    <color name="black_2_3">#1d1d26</color>
+    <color name="black_2_4">#66000000</color>
+    <color name="black_2_5">#10000000</color>
+    <color name="black_2_6">#2b2b2b</color>
+
+    <color name="gray_2_1">#f8f8f8</color>
+    <color name="gray_2_2">#888888</color>
+    <color name="gray_2_3">#e1e1e1</color>
+    <color name="gray_2_4">#c0c0c0</color>
+    <color name="gray_2_5">#4f4f4f</color>
+    <color name="gray_2_6">#a4afb1</color>
+    <color name="gray_2_7">#e3e3e3</color>
+    <color name="gray_2_8">#ff373737</color>
+    <color name="gray_2_9">#4f4f4f</color>
+    <color name="gray_2_10">#E0E0E0</color>
+
+    <color name="red_2_1">#ff5f5a</color>
+    <color name="red_2_2">#ff6e69</color>
+    <color name="tran_white_1">#5dffffff</color>
+
+    <!--||||||||||||||||||||||||||||||||||||||||||-->
+    <color name="white_1_1">#f7f9f8</color>
+    <color name="white_1_2">#ffffff</color>
+    <color name="white_1_3">#b1ffffff</color>
+
+    <color name="gray_1_1">#cccccc</color>
+    <color name="gray_1_2">#e3e3e3</color>
+    <color name="gray_1_3">#f1f1f1</color>
+    <color name="gray_1_4">#adadad</color>
+    <color name="gray_1_5">#c3c3c3</color>
+
+    <color name="pink_1_1">#ff5177</color>
+    <color name="pink_0_2">#FF9999</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="green_1_1">#39d6af</color>
+
+    <color name="orange_0_1">#e27800</color>
+
+
+    <color name="background_tab_pressed_1">#8833B5E5</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="dokitaPrimary">#b63235</color>
+    <color name="dokitaBlue">#7D889B</color>
+
+    <color name="defaultColor">#b63235</color>
+
+
+</resources>

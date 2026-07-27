@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+   <!-- <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="0dp">
+
+
+    </androidx.cardview.widget.CardView>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_outline_blue_immunization"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:padding="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/vaccine_name"
+                android:textColor="#8d6796"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/tv_vaccine_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/med_drug_info"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="normal" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/lin_dose"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/date_of_vaccination"
+                        android:textColor="#8d6796"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+                    <TextView
+                        android:id="@+id/tv_vaccine_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/med_drug_info"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text=""
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="normal" />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lin_dose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/dose_no"
+                        android:textColor="#8d6796"
+                        android:layout_gravity="right"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+                    <TextView
+                        android:id="@+id/tv_vaccine_dose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/med_drug_info"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="normal" />
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</layout>

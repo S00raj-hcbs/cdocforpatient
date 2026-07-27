@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white_0_2">
+<!--tools:context="com.example.application.fragmentexampleapp.FullScreenActivity"-->
+
+<ImageView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/rpm_top_blue_background2"
+    app:layout_constraintBottom_toTopOf="@+id/guideline157"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/my_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:elevation="4dp"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|start"
+        android:text="@string/iot_scale"
+        android:textColor="@color/white_0_2"
+        android:textSize="20sp" />
+</androidx.appcompat.widget.Toolbar>
+
+
+<TextView
+    android:id="@+id/ihealth_glucose_instruction"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:gravity="center"
+    android:text="@string/iot_glucometer_pair_title"
+    android:textSize="@dimen/bluetoothTitle"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/guideline160"
+    app:layout_constraintEnd_toStartOf="@+id/guideline14"
+    app:layout_constraintStart_toStartOf="@+id/guideline13"
+    app:layout_constraintTop_toTopOf="@+id/guideline157" />
+
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:gravity="center"
+    android:text="@string/iot_scale_bluetooth_pair"
+    android:textSize="@dimen/bluetoothInstruction"
+    app:layout_constraintBottom_toTopOf="@+id/guideline20"
+    app:layout_constraintEnd_toStartOf="@+id/guideline14"
+    app:layout_constraintStart_toStartOf="@+id/guideline13"
+    app:layout_constraintTop_toTopOf="@+id/guideline160" />
+
+<ImageView
+    android:id="@+id/ichoice_scale_image"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:src="@drawable/bg5_settings"
+    app:layout_constraintBottom_toTopOf="@+id/guideline18"
+    app:layout_constraintEnd_toStartOf="@+id/guideline14"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/guideline13"
+    app:layout_constraintTop_toTopOf="@+id/guideline54"
+    app:layout_constraintVertical_bias="0.0" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline13"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.1" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline52"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.15" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline67"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.85" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline53"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.34" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline14"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.9" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline18"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.84" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline54"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.41" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline19"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.9" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline42"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.98" />
+
+<TextView
+    android:id="@+id/btn_phone_settings"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@drawable/done_btn_selector"
+    android:gravity="center"
+    android:text="@string/iot_glucometer_settings"
+    android:textColor="@color/white_0_2"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/guideline42"
+    app:layout_constraintEnd_toStartOf="@+id/guideline14"
+    app:layout_constraintStart_toStartOf="@+id/guideline13"
+    app:layout_constraintTop_toTopOf="@+id/guideline19" />
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline157"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.17" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline160"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_16sdp"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/img_close_icon" />
+
+            <ImageView
+                android:id="@+id/frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_main_frame" />
+
+            <TextView
+                android:id="@+id/tv_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/leave_us_a_review_about_your_doctor"
+                android:textAlignment="center"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/frame" />
+
+            <TextView
+                android:id="@+id/tv_review_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:text="@string/reveiew_message"
+                android:textAlignment="center"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_review" />
+
+            <TextView
+                android:id="@+id/label_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:text="@string/appreciation_is_a_wonderful_thing"
+                android:textAlignment="center"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_review_message" />
+
+        <!--    <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_28sdp"
+                android:backgroundTint="@color/dark_slate_blue"
+                app:layout_constraintBottom_toTopOf="@id/ll"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/label_review"-->
+<!--                >-->
+
+                <EditText
+                    android:id="@+id/edtComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/write_here"
+                    android:maxLength="300"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textColorHint="@color/color_6896ae"
+                    android:textColorHighlight="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_28sdp"
+                    android:backgroundTint="@color/dark_slate_blue"
+                    app:layout_constraintBottom_toTopOf="@id/ll"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@id/label_review"
+
+                   />
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtComment">
+
+                <Button
+                    android:id="@+id/btn_later"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bg_outline_blue"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/i_will_do_it_later"
+                    android:textAllCaps="false"
+                    android:textColor="@color/azure"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@id/ll"
+                    app:layout_constraintTop_toBottomOf="@id/edtComment" />
+
+                <Button
+                    android:id="@+id/btn_done"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bg_login_btn_selector"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/done"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_later"
+                    app:layout_constraintTop_toBottomOf="@id/edtComment" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

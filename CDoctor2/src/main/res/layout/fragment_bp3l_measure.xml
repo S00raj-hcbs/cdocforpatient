@@ -1,0 +1,187 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <include
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp"
+            layout="@layout/custom_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/relative_measure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_below="@+id/toolbar"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/progressMeasure"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:indeterminateDrawable="@drawable/circle_progress_dark_slate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/measuring"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_measure"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/progressCircleBigger"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="@dimen/_235sdp"
+                android:layout_height="@dimen/_235sdp"
+                android:layout_centerHorizontal="true"
+                android:indeterminateDrawable="@drawable/progress_azure" />
+
+            <ProgressBar
+                android:id="@+id/progressCircleSmaller"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="@dimen/_190sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/_22sdp"
+                android:indeterminateDrawable="@drawable/progress_darkslatesgrey" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Pressure"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/bpMeasurement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0"
+                    android:textColor="@color/azure"
+                    android:textSize="@dimen/_28sdp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_measure"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/lay_resultbp"
+                layout="@layout/bp_result_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:id="@+id/linearPulse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lay_resultbp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:background="@drawable/ic_star_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_23sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Pulse:"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="28"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_22sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/vitals_bpm"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_38sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_start_measure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/bg_login_btn_selector"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/start_measuring"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_outline_blue"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/stop_measuring"
+                android:textAllCaps="false"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

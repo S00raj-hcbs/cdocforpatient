@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_ecf6fb">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_46sdp"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/white_0_2"
+        app:theme="@style/ThemeOverlay.AppCompat">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_back_btn"
+             />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/health_records"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ecf6fb">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:orientation="horizontal"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_28sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_5bcbfb"
+                >
+                <ImageView
+                    android:id="@+id/img_medical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_18sdp"
+                    android:src="@drawable/medical_folder_1"/>
+                <TextView
+                    android:id="@+id/tv_all_records"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/img_medical"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/dark_slate_blue"
+                    android:text="@string/all_records"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/img_medical"
+                    android:layout_below="@id/tv_all_records"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/white_0_2"
+                    android:text="@string/access_reports"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"/>
+
+
+</LinearLayout>
+</layout>

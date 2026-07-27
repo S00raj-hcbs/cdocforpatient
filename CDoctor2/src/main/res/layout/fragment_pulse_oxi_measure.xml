@@ -1,0 +1,76 @@
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_measurement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progressCircleBigger"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="@dimen/_235sdp"
+                    android:layout_height="@dimen/_235sdp"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminateDrawable="@drawable/progress_azure" />
+
+                <ProgressBar
+                    android:id="@+id/progressCircleSmaller"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="@dimen/_220sdp"
+                    android:layout_height="@dimen/_190sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/_22sdp"
+                    android:indeterminateDrawable="@drawable/progress_darkslatesgrey" />
+
+                <LinearLayout
+                    android:id="@+id/relative_measure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center">
+
+                    <ProgressBar
+                        android:id="@+id/progressMeasure"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:indeterminateDrawable="@drawable/circle_progress_dark_slate" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/measuring"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_14sdp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_quit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_measurement"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_outline_trans_blue"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/iot_quit"
+                android:textAllCaps="false"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_12sdp" />
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>

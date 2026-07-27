@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_14sdp"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/img"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/tick"-->
+            <!--                -->
+            <!--                android:layout_centerHorizontal="true"/>-->
+
+            <TextView
+                android:id="@+id/labelAppt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/cancel_appointment"
+                android:textColor="@color/dark_slate_blue"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="@dimen/_16sdp"
+
+                />
+
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rel_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtStatus">
+
+                <TextView
+                    android:id="@+id/txtMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:text="@string/add_details_dialogue_message"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:textColor="@color/black_2_1"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:id="@+id/lin_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="@dimen/_14sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/assistance_available"
+                        android:textColor="@color/dark_slate_blue"
+                        android:gravity="center"
+                        android:textSize="@dimen/_16sdp"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="@string/would_you_like_phone_call"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_13sdp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+            <View
+                android:id="@+id/view_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@+id/rel_message"
+                android:background="@color/gray_0_1"
+                android:layout_marginTop="@dimen/_18sdp"/>
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/view_bg"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/add_details"
+                android:textAllCaps="false"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_15sdp" />
+
+            <View
+                android:id="@+id/view_bg2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@+id/btnConfirm"
+                android:background="@color/gray_0_1"/>
+            <Button
+                android:id="@+id/btnSchudle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/view_bg2"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/confirm_appointment"
+                android:textAllCaps="false"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_15sdp" />
+            <View
+                android:id="@+id/view_bg3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@+id/btnSchudle"
+                android:background="@color/gray_0_1"/>
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/view_bg3"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/change_time_slot"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_15sdp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_0_1"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/defaultColor"
+        android:minHeight="?android:attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/my_vitals_header"
+            android:textColor="@color/white_0_2"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:background="@null"
+            android:minHeight="30dp"
+            android:text="@string/my_vitals_update"
+            android:textAllCaps="false"
+            android:textColor="@color/white_0_2"
+            android:textSize="18sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_0_5">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/vitals_patientOptional"
+                android:textColor="#635c5c"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/linear_layout_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/weight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/weight"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="14dp" />
+
+                    <Space
+                        android:layout_width="42dp"
+                        android:layout_height="match_parent" />
+
+                    <EditText
+                        android:id="@+id/weightEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_custom"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="14dp"
+                        android:focusable="false"/>
+
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtLb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_sex_male"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/vitals_lb" />
+
+                        <TextView
+                            android:id="@+id/txtKg"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_sex_female"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/vitals_kg" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/height" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vitals_height"
+                        android:maxLength="25"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <Space
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/heightEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/edit_text_custom"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black_2_1"
+                        android:textSize="14dp" />
+
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtFt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_sex_male"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/vitals_ft" />
+
+                        <TextView
+                            android:id="@+id/txtCm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_sex_female"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/vitals_cm" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/blood_pressure" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Blood\nPressure"
+                        android:maxLength="25"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="14dp" />
+
+                    <Space
+                        android:layout_width="32dp"
+                        android:layout_height="match_parent" />
+
+                    <EditText
+                        android:id="@+id/bloodPressureHighEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/edit_text_custom"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="14dp"
+                        android:focusable="false"/>
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:hint="/"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+
+                    <EditText
+                        android:id="@+id/bloodPressureLowEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/edit_text_custom"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="14dp"
+                        android:focusable="false" />
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:hint="@string/vitals_mmhg"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/sw_pulse" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/vitals_pulse"
+                        android:maxLength="25"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <Space
+                        android:layout_width="52dp"
+                        android:layout_height="match_parent" />
+
+                    <EditText
+                        android:id="@+id/pulseEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/edit_text_custom"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="14dp"
+                        android:focusable="false"/>
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vitals_bpm"
+                        android:maxLength="25"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20px"
+                android:layout_weight="1"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/vitals_allergiesOptional"
+                android:textColor="#635c5c"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/linear_layout_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/allergies" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Allergies"
+                        android:maxLength="25"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <Space
+                        android:layout_width="32dp"
+                        android:layout_height="match_parent" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edit_text_custom">
+
+                        <com.cybermed.cdoc_patient.MultiSpinner.MultiSelectionSpinner
+                            android:id="@+id/allergiesSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:autofillHints="@string/about_activity"
+                            android:spinnerMode="dropdown"
+                            />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/others" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Others"
+                        android:maxLength="25"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <Space
+                        android:layout_width="43dp"
+                        android:layout_height="match_parent" />
+
+                    <EditText
+                        android:id="@+id/allergiesEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/edit_text_custom"
+                        android:hint="please type your allergies"
+                        android:maxLength="200"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:textSize="14dp"
+                        android:focusable="false"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/vitals_smoking_status"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:textSize="14dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/linear_layout_border"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+
+                <Spinner
+                    android:id="@+id/smokeStatusSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

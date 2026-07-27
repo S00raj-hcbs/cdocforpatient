@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:id="@+id/img_circle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgCircleBigger"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_circle_azure" />
+
+    <ImageView
+        android:id="@+id/imgCircleSmaller"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_165sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_18sdp"
+        android:src="@drawable/ic_circle_dark_slate" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_sys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/sys"
+            android:textColor="@color/color_4f4f4f"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/txt_sys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="0"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/_28sdp" />
+
+        <TextView
+            android:id="@+id/labeldia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/dia"
+            android:textColor="@color/color_4f4f4f"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/txt_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="0"
+            android:textColor="@color/azure"
+            android:textSize="@dimen/_28sdp" />
+
+        <TextView
+            android:id="@+id/txt_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/vitals_mmhg"
+            android:textColor="@color/color_4f4f4f"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+</RelativeLayout>
+</layout>

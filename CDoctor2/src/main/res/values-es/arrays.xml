@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="state">
+        <item>All</item>
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RL</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+
+    <string-array name="state2">
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RL</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+
+    <string-array name="state_name">
+        <item>All</item>
+        <item>Alabama</item>
+        <item>Alaska</item>
+        <item>Arizona</item>
+        <item>Arkansas</item>
+        <item>California</item>
+        <item>Colorado</item>
+        <item>Connecticut</item>
+        <item>Delaware</item>
+        <item>Florida</item>
+        <item>Georgia</item>
+        <item>Hawaii</item>
+        <item>Idaho</item>
+        <item>Illinois</item>
+        <item>Indiana</item>
+        <item>Iowa</item>
+        <item>Kansas</item>
+        <item>Kentucky</item>
+        <item>Louisiana</item>
+        <item>Maine</item>
+        <item>Maryland</item>
+        <item>Massachusetts</item>
+        <item>Michigan</item>
+        <item>Minnesota</item>
+        <item>Mississippi</item>
+        <item>Missouri</item>
+        <item>Montana</item>
+        <item>Nebraska</item>
+        <item>Nevada</item>
+        <item>New Hampshire</item>
+        <item>New Jersey</item>
+        <item>New Mexico</item>
+        <item>New York</item>
+        <item>North Carolina</item>
+        <item>North Dakota</item>
+        <item>Ohio</item>
+        <item>Oklahoma</item>
+        <item>Oregon</item>
+        <item>Pennsylvania</item>
+        <item>Rhode Island</item>
+        <item>South Carolina</item>
+        <item>South Dakota</item>
+        <item>Tennessee</item>
+        <item>Texas</item>
+        <item>Utah</item>
+        <item>Vermont</item>
+        <item>Virginia</item>
+        <item>Washington</item>
+        <item>West Virginia</item>
+        <item>Wisconsin</item>
+        <item>Wyoming</item>
+    </string-array>
+
+    <string-array name="chiefComplaints">
+        <!-- <item>please choose your reason</item>-->
+        <item>Acné</item>
+        <item>Alergias</item>
+        <item>Estreñimiento</item>
+        <item>Tos</item>
+        <item>Depresión</item>
+        <item>Diarrea</item>
+        <item>Problemas de oído</item>
+        <item>Trastornos alimentarios</item>
+        <item>Fiebre</item>
+        <item>Prescripción médica</item>
+        <item>Gripe</item>
+        <item>Dolor de cabeza</item>
+        <item>Hipertensión</item>
+        <item>Picaduras de insectos</item>
+        <item>Marihuana</item>
+        <item>Náuseas</item>
+        <item>Conjuntivitis</item>
+        <item>Sarpullido</item>
+        <item>Renovar prescripción médica</item>
+        <item>Dolor de garganta</item>
+        <item>Dolor de estómago</item>
+        <item>Estrés</item>
+        <item>Trauma y TEPT</item>
+        <item>Dificultad para respirar</item>
+        <item>Problemas urinarios</item>
+        <item>Vómitos</item>
+    </string-array>
+
+    <string-array name="smokeStatus">
+        <item>Por favor, seleccione su estado de consumo de tabaco:</item>
+        <item>Fumador diario actual</item>
+        <item>Fumador ocasional actual</item>
+        <item>Exfumador</item>
+        <item>Nunca ha fumado</item>
+        <item>Fumador, estado actual desconocido</item>
+        <item>Fumador empedernido</item>
+        <item>Fumador ligero</item>
+        <item>Desconocido si ha fumado alguna vez</item>
+    </string-array>
+
+    <string-array name="allergies">
+        <item>Sin alergias conocidas</item>
+        <item>Inhibidores de la ECA</item>
+        <item>Picadura de abeja</item>
+        <item>Látex</item>
+        <item>Mariscos</item>
+        <item>Rinitis alérgica</item>
+        <item>Penicilinas</item>
+        <item>Codeína</item>
+        <item>Cacahuetes</item>
+        <item>Sulfas</item>
+        <item>Polvo doméstico</item>
+        <item>Frutos secos</item>
+
+    </string-array>
+
+    <string-array name="specialities">
+        <item>	All		</item>
+        <item>	Acupuncturist		</item>
+        <item>	Cardiology		</item>
+        <item>	Clinical Psychologist		</item>
+        <item>	Dermatology		</item>
+        <item>	Dental General practice		</item>
+        <item>	Endocrinology		</item>
+        <item>	Family Practice		</item>
+        <item>	General Practice		</item>
+        <item>	General Surgery		</item>
+        <item>	Internal Medicine		</item>
+        <item>	Licensed Clinical Social Worker		</item>
+        <item>	Nephrology		</item>
+        <item>	Nurse Practitioner		</item>
+        <item>	Obstetrics-Gynecology		</item>
+        <item>	Pediatric Medicine		</item>
+        <item>	Physical Medicine		</item>
+    </string-array>
+
+    <string-array name="appointment_status">
+        <item>Todos</item>
+        <item>Completadas</item>
+        <item>Facturadas</item>
+        <item>En sala de espera</item>
+        <item>Canceladas</item>
+        <item>Programadas</item>
+        <item>Solicitadas</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>	All	</item>
+        <item>	Burmese	</item>
+        <item>	Chinese	</item>
+        <item>	English	</item>
+        <item>	Russian	</item>
+        <item>	Spanish	</item>
+        <item>	Tagalog	</item>
+        <item>	Tamil	</item>
+        <item>	Yoruba	</item>
+    </string-array>
+
+
+    <string-array name="glucose_measure_time">
+        <item>Al despertar</item>
+        <item>Antes del desayuno</item>
+        <item>Después del desayuno</item>
+        <item>Antes de la comida</item>
+        <item>Después de la comida</item>
+        <item>Antes de la cena</item>
+        <item>Después de la cena</item>
+        <item>Antes de dormir</item>
+    </string-array>
+
+
+    <!--<string-array name="title">
+        <item>Lab Records</item>
+        <item>Immunizations</item>
+        <item>Allergies</item>
+        <item>Medications</item>
+        &lt;!&ndash; <item>Vital Check</item>&ndash;&gt;
+        <item>Referral</item>
+    </string-array>-->
+
+    <string-array name="title">
+        <item>Registros de laboratorio</item>
+        <item>Vacunaciones</item>
+        <item>Alergias</item>
+        <item>Medicaciones</item>
+        <!-- <item>Revisión de signos vitales</item>-->
+        <item>Derivación</item>
+    </string-array>
+
+    <!-- <string-array name="title_menus">
+         <item>Home</item>
+         &lt;!&ndash; <item>Health Records</item>&ndash;&gt;
+         <item>Support</item>
+         <item>Settings</item>
+         <item>Sign Out</item>
+     </string-array>-->
+    <string-array name="title_menus">
+        <item>Inicio</item>
+        <!-- <item>Historial de salud</item>-->
+        <item>Soporte</item>
+        <item>Ajustes</item>
+        <item>Cerrar sesión</item>
+    </string-array>
+
+   <!-- <string-array name="tabs_menus">
+        <item>  Year  </item>
+        <item>  Today  </item>
+        <item>  Week  </item>
+        <item> Month </item>
+        <item>Last 6 Month</item>
+    </string-array>-->
+    <string-array name="tabs_menus">
+        <item>    Año    </item>
+        <item>    Hoy    </item>
+        <item>  Semana  </item>
+        <item>   Mes   </item>
+        <item> Últimos 6 meses </item>
+    </string-array>
+</resources>

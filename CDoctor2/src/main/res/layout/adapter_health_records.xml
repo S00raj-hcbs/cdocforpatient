@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_8sdp"
+    app:cardElevation="4dp"
+    android:layout_marginStart="@dimen/_7sdp"
+    android:layout_marginEnd="@dimen/_7sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginVertical="@dimen/_15sdp">
+
+        <ImageView
+            android:id="@+id/imgItem"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp" />
+        <TextView
+            android:id="@+id/text_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Appointments"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/color_4f4f4f"
+            android:fontFamily="@font/roboto_bold"/>
+
+    </LinearLayout>
+   <!-- <TextView
+        android:id="@+id/tv_lab_records"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/_15sdp"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/medical_checkup_2"
+        android:fontFamily="@font/roboto_medium"
+        android:textStyle="normal"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/color_4f4f4f"
+        android:text="@string/lab_records"
+        tools:ignore="RtlSymmetry" />-->
+
+</androidx.cardview.widget.CardView>

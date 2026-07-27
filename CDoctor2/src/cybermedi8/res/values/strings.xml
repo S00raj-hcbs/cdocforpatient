@@ -1,0 +1,394 @@
+<resources>
+    <string name="agora_app_id">04ed50468ee74009b30ed96fd0ad5c5e</string>
+    <string name="agora_token_url">https://testehrapi.cybermedehr.com/agora/token</string>
+    <string name="one_signal_app_id">54c31771-25e5-4496-82c1-536e449b6eeb</string>
+
+    <string name="login_email">e-mail address</string>
+    <string name="login_password">password</string>
+    <string name="login_forgot">Forgot your password?</string>
+    <string name="login_signup">Sign Up</string>
+    <string name="login_confirm_title">Confirm Password Reset?</string>
+    <string name="login_confirm_message">A new password will be sent to the contact e-mail associated with </string>
+    <string name="login_confirm_positive_btn">Confirm</string>
+    <string name="login_confirm_negative_btn">Cancel</string>
+    <string name="login_password_reset">The password reset has been sent to your email</string>
+    <string name="login_failed">Login failed!</string>
+    <string name="login_fingerprint_hint">Touch sensor</string>
+    <string name="login_fingerprint_success">Fingerprint recognized</string>
+    <string name="login_fingerprint_not_recognized">Fingerprint not recognized. Try again</string>
+    <string name="login_sign_in">Sign in</string>
+    <string name="login_use_fingerprint_to_authenticate_key">use_fingerprint_to_authenticate_key</string>
+    <string name="login_fingerprint_description">Confirm fingerprint to continue</string>
+    <string name="login_fingerprint_hint_text">Touch sensor</string>
+    <string name="login_description_fingerprint_icon">Fingerprint icon</string>
+    <string name="login_fingerprint_not_recognized_text">Fingerprint not recognized. Try again</string>
+    <string name="login_fingerprint_success_text">Fingerprint recognized</string>
+
+    <string name="regist_signup">Sign Up</string>
+    <string name="regist_done">Done</string>
+    <string name="regist_account_label">Account</string>
+    <string name="regist_username_text">Your e-mail address will be your username</string>
+    <string name="regist_email">E-mail address</string>
+    <string name="regist_password">Password</string>
+    <string name="regist_confirm">Confirm Password</string>
+    <string name="regist_basic_label">Basic Information</string>
+    <string name="regist_firstname">First name</string>
+    <string name="regist_mi">Mi</string>
+    <string name="regist_lastname">Last name</string>
+    <string name="regist_male">Male</string>
+    <string name="regist_female">Female</string>
+    <string name="regist_dob">Date of Birth</string>
+    <string name="regist_contact_label">Contact Information</string>
+    <string name="regist_phone">Phone number</string>
+    <string name="regist_addr1">Address line 1</string>
+    <string name="regist_addr2">Address line 2</string>
+    <string name="regist_city">City</string>
+    <string name="regist_state">State</string>
+    <string name="regist_zip">Zip Code</string>
+    <string name="regist_next">Next</string>
+    <string name="regist_back">Back</string>
+    <string name="regist_complete">Complete</string>
+    <string name="regist_account_info">Account Information</string>
+
+    <string name="regist_error_email">Invalid email address</string>
+    <string name="regist_error_password">Please enter the password</string>
+    <string name="regist_error_password_short">Password must be more than 3 characters</string>
+    <string name="regist_error_confirm_password">Please confirm password</string>
+    <string name="regist_error_firstname">Please enter your first name</string>
+    <string name="regist_error_invalid_name">Invalid name</string>
+    <string name="regist_error_lastname">Please enter your last name</string>
+    <string name="regist_error_dob">Empty Date of Birth</string>
+    <string name="regist_error_invalid_dob">Invalid Date of Birth</string>
+    <string name="regist_error_phone">Please verify mobile phone number</string>
+    <string name="regist_error_addr1">Please enter address line 1</string>
+    <string name="regist_error_city">Please enter a City</string>
+    <string name="regist_error_state">Please enter a State</string>
+    <string name="regist_error_zip">Please enter a Zip Code</string>
+    <string name="regist_error_zip_verify">Please verify zip code</string>
+    <string name="regist_successful">Operation Successful!</string>
+    <string name="regist_successful_message">Thank you for registering! A
+        confirmation email has been sent to your email address. Please click
+        the action link to activate your account.</string>
+    <string name="regist_successful_ok">ok</string>
+
+    <string name="main_home">Home</string>
+    <string name="main_me">Me</string>
+
+    <string name="useractivity_profile_heading">Profile</string>
+    <string name="useractivity_account">Account</string>
+    <string name="useractivity_payment_options">Payment Options</string>
+    <string name="useractivity_my_vitals">My Vitals</string>
+    <string name="useractivity_call_logs">Call Logs</string>
+    <string name="useractivity_about">About</string>
+    <string name="useractivity_pharmacy_mode">Pharmacy Mode</string>
+    <string name="useractivity_logout_menu">Are you sure you want to logout?</string>
+    <string name="useractivity_cancel">Cancel</string>
+    <string name="useractivity_logout_bttn">Log Out</string>
+
+    <string name="account_information_heading">Account Information</string>
+    <string name="account_information">Account</string>
+    <string name="account_information_save">Save</string>
+    <string name="account_information_username">Username:</string>
+    <string name="account_information_change_password">Change Password</string>
+    <string name="account_information_prev_password">Current Password</string>
+    <string name="account_information_new_password">New Password</string>
+    <string name="account_information_confirm_password">Confirm Password</string>
+    <string name="account_information_password_incorrect">Password Incorrect</string>
+    <string name="account_information_please_enter_password">Please enter the password</string>
+    <string name="account_information_password_notmatch">The passwords do not match.</string>
+    <string name="account_information_skip_bttn">Skip</string>
+    <string name="account_information_lb_tggl">lb</string>
+    <string name="account_information_kg_tggl">kg</string>
+    <string name="account_information_ft_tggl">ft</string>
+    <string name="account_information_cm_tggl">cm</string>
+    <string name="account_information_mmHg">mmHg</string>
+    <string name="account_information_F_tggl">F</string>
+    <string name="account_information_C_tggl">C</string>
+    <string name="account_information_visit_reason">What is the primary reason for visit?</string>
+    <string name="account_information_others">others:</string>
+    <string name="account_information_smoking_status">Smoking Status:</string>
+    <string name="account_information_other_history">Other Social History:</string>
+    <string name="account_information_update">Update user information success</string>
+
+
+    <string name="my_vitals_header">My Vitals</string>
+    <string name="my_vitals_update">Update</string>
+
+    <string name="call_logs_heading">Call Logs</string>
+    <string name="call_logs_search_date">Search with Date: </string>
+    <string name="call_logs_click_date">Click for Date</string>
+    <string name="call_logs_to">To: </string>
+    <string name="call_logs_time">Time: </string>
+    <string name="call_logs_type">Type: </string>
+    <string name="call_logs_duration">Duration: </string>
+    <string name="call_logs_outgoing">Outgoing</string>
+    <string name="call_logs_min"> min</string>
+    <string name="call_logs_incoming">Incoming</string>
+    <string name="call_logs_from">From: </string>
+    <string name="call_logs_empty">No Records Found</string>
+
+    <string name="about_heading">About</string>
+    <string name="about_software_version">Software Version</string>
+    <string name="about_language">Language</string>
+    <string name="about_change_language">Change Language</string>
+    <string name="about_english">English</string>
+    <string name="about_chinese">Chinese</string>
+    <string name="about_select_lang">Please Select Language: </string>
+    <string name="about_cancel">Cancel</string>
+    <string name="about_change">Change</string>
+    <!-- Update -->
+    <string name="about_state">State</string>
+
+
+    <string name="pharmacy_mode_heading">Pharmacy Mode</string>
+    <string name="pharmacy_mode_paragraph">CDoc is currently running in personal mode.
+        To install this device in a pharmacy, please enter the six-digit pharmacy passcode. </string>
+    <string name="pharmacy_mode_ok">ok</string>
+    <string name="pharmacy_mode_cancel">cancel</string>
+    <string name="pharmacy_mode_code">Code</string>
+
+    <string name="my_pharmacies_heading">My Pharmacies</string>
+    <string name="my_pharmacies_city_search">Type in City</string>
+    <string name="my_pharmacies_show_pharm">Show Pharmacies</string>
+    <string name="my_pharmacies_saved_pharm">Saved Pharmacies: </string>
+    <string name="my_pharmacies_no_pharm">No Pharmacies</string>
+
+
+    <string name="signup_fail_heading">Account not created!</string>
+    <string name="signup_fail_paragraph">The e-mail you entered may already be registered. Please
+        check your information and try again.</string>
+    <string name="signup_fail_ok">ok</string>
+
+    <string name="home_heading">Matrimonial Mediation at your Fingertips</string>
+    <string name="home_see_doc">See a Mediator</string>
+    <string name="home_find_pharmacy">Find Pharmacy</string>
+    <string name="home_home_bttn">Home</string>
+    <string name="home_me_bttn">Me</string>
+
+    <string name="doclist_heading">Mediators</string>
+    <string name="doclist_end_no_more_doc">No More Mediators</string>
+    <string name="doclist_loading">Loading</string>
+
+    <string name="doclist_filter_heading">Filter Mediators By:</string>
+    <string name="doclist_filter_state">State:</string>
+    <string name="doclist_filter_specialty">Specialty:</string>
+    <string name="doclist_filter_language">Language:</string>
+    <string name="doclist_filter_reset_bttn">Reset Filter</string>
+    <string name="doclist_filter_cancel_bttn">Cancel</string>
+    <string name="doclist_filter_ok_bttn">OK</string>
+
+    <string name="doc_profile_heading">Mediator Profile</string>
+    <string name="doc_profile_specialty">Specialty:</string>
+    <string name="doc_profile_language_info">Language:</string>
+    <string name="doc_profile_first_min">First Minute(s)</string>
+    <string name="doc_profile_every_other_min">Every other Minute(s)</string>
+    <string name="doc_profile_first">First </string>
+    <string name="doc_profile_every">Every other </string>
+    <string name="doc_profile_minutes"> Minute(s)</string>
+    <!--<string name="doc_profile_consult_bttn">Consult Now</string>-->
+    <string name="doc_profile_address">Mediator Address</string>
+    <string name="doc_profile_info">Mediator Profile Information</string>
+    <string name="doc_profile_review">Reviews</string>
+    <string name="doc_profile_waiting_room">Join Waiting Room</string>
+    <string name="doc_profile_specialty_not_listed">Speciality Not Available</string>
+    <string name="doc_profile_language_not_specified">Language not specified</string>
+    <string name="doc_profile_coming_soon">Coming Soon</string>
+
+    <string name="doc_pay_heading">Payment Information</string>
+    <string name="doc_pay_add_bttn">Add</string>
+    <string name="doc_pay_agree_bttn">Agree to pay</string>
+    <string name="doc_pay_credit_card">Credit Card</string>
+    <string name="doc_pay_first_min1"> for first </string>
+    <string name="doc_pay_first_min2"> minute(s)</string>
+    <string name="doc_pay_every_other_min1"> every other </string>
+    <string name="doc_pay_every_other_min2"> minute(s)</string>
+    <string name="doc_pay_cvv"> Please enter CVV code:</string>
+    <string name="doc_pay_insurance">Insurance</string>
+
+    <string name="add_pay_heading">Add Payment</string>
+    <string name="add_pay_cc_num">credit card number</string>
+    <string name="add_pay_exp_date">MM/YY</string>
+    <string name="add_pay_name">cardholder name</string>
+    <string name="add_pay_pay_bttn">PayPal payment</string>
+    <string name="add_pay_menu_heading">Please enter a Paypal name for the account:</string>
+    <string name="add_pay_menu_cancel">Cancel</string>
+    <string name="add_pay_menu_ok">Ok</string>
+    <string name="add_pay_remove">Remove this Credit Card?</string>
+    <string name="add_pay_remove_msg">Are you sure you want to remove this credit card?</string>
+    <string name="add_pay_edit">Edit Payment</string>
+    <string name="add_pay_add">Add</string>
+    <string name="add_pay_edit_btn">Edit</string>
+    <string name="add_pay_insurance_comp">Choose Insurance Company: </string>
+    <string name="add_pay_insurance_subsriber_id">Member ID</string>
+    <string name="add_pay_insurance_firstname">First Name</string>
+    <string name="add_pay_insurance_lastname">Last Name</string>
+    <string name="add_pay_insurance_relationship">Your Relationship to Primary Subscriber</string>
+    <string name="add_pay_insurance_tab">Insurance</string>
+    <string name="add_pay_creditcard_tab">Credit Card</string>
+    <string name="add_pay_paypal_hint">Paypal Account 1</string>
+    <string name="add_pay_insurance_memberid_error">Please enter a Member ID</string>
+    <string name="add_pay_insurance_firstname_error">Please enter First Name</string>
+    <string name="add_pay_insurance_lastname_error">Please enter Last Name</string>
+    <string name="add_pay_insurance_dob_error">Please enter Date of Birth</string>
+    <string name="add_pay_insurance_image">Click to Add Insurance Card Image:</string>
+    <string name="add_pay_insurance_image_error">Please add insurance card image</string>
+    <string name="add_pay_insurance_add_complete">Insurance Added</string>
+
+    <string name="mediation_info_party_two">Second Party\'s Information</string>
+    <string name="mediation_info_first_name">First Name</string>
+    <string name="mediation_info_last_name">Last Name</string>
+    <string name="mediation_info_email">Email Address</string>
+
+    <string name="vitals_title">Previsit Information</string>
+    <string name="vitals_skip">Skip</string>
+    <string name="vitals_personal_info">Personal Information: </string>
+    <string name="vitals_reason_for_visit">Reason for Visit(Required Field): </string>
+    <string name="vitals_smoking_status">Smoking Status: </string>
+    <string name="vitals_social_hist">Social History: </string>
+    <string name="vitals_allergies">Allergies: </string>
+    <string name="vitals_med_hist">Medical History: </string>
+    <string name="vitals_lb">lb</string>
+    <string name="vitals_kg">kg</string>
+    <string name="vitals_ft">ft</string>
+    <string name="vitals_cm">cm</string>
+    <string name="vitals_mmhg">mmHg</string>
+    <string name="vitals_bpm">bpm</string>
+    <string name="vitals_f">F</string>
+    <string name="vitals_c">C</string>
+    <string name="vitals_others">Others:</string>
+    <string name="vitals_weight">Weight</string>
+    <string name="vitals_height">Height</string>
+    <string name="vitals_bp">Blood Pressure</string>
+    <string name="vitals_bph_error">High Blood Pressure</string>
+    <string name="vitals_bpl_error">Low Blood Pressure</string>
+    <string name="vitals_pulse">Pulse</string>
+    <string name="vitals_temp">Temperature</string>
+    <string name="vitals_waiting_room">Enter Waiting Room</string>
+    <string name="vitals_consult">Go To Meeting</string>
+    <string name="vitals_social_dialog_title">Social History</string>
+    <string name="vitals_social_dialog_msg">Such as drinking, caffeine intake, exercise regularity, drugs etc.</string>
+    <string name="vitals_social_dialog_ok">OK</string>
+    <string name="vitals_phone_number">Contact Phone Number</string>
+    <string name="vitals_busy_dialog">(Optional) Message to Provider</string>
+
+    <string name="consultation_mute">Mute</string>
+    <string name="consultation_live">Live</string>
+    <string name="consultation_rate_title">Please Rate the Mediator: </string>
+    <string name="consultation_rate_comment">Comments: </string>
+    <string name="consultation_rate_cancel">Cancel</string>
+    <string name="consultation_rate_ok">OK</string>
+    <string name="consultation_left_title">The Mediator Has Left The Call</string>
+    <string name="consultation_left_msg">The video window will be closed</string>
+    <string name="consultation_left_ok">OK</string>
+    <string name="consultation_busy_title">The Mediator is Currently Busy</string>
+    <string name="consultation_busy_msg">Do you want to be in the waiting room for the Mediator to call you back?</string>
+    <string name="consultation_busy_yes">Yes</string>
+    <string name="consultation_busy_no">No</string>
+
+    <string-array name="lang_select">
+        <item>English</item>
+        <item>Chinese</item>
+    </string-array>
+
+    <string name="consult_filter_city">City</string>
+    <string name="consult_over_time">Out of the time</string>
+    <string name="consult_minute">minutes</string>
+    <string name="consult_per">Every Other</string>
+    <string name="consult_in_line">InLine #</string>
+    <string name="consult_in_line_2"></string>
+    <string name="consult_waiting">Waiting</string>
+    <string name="consult_doctor_offline">Offline</string>
+    <string name="consult_phar_offline">Offline</string>
+    <string name="consult_no_doctor">There is no Mediator</string>
+    <string name="consult_no_phar">There is no Mediator</string>
+    <string name="consult_over">Finish</string>
+    <string name="consult_connection">Connecting...</string>
+    <string name="consult_connection_success">Connect Successfully</string>
+    <string name="consult_connection_fail">Connection Failed</string>
+    <string name="consult_disconnection">Disconnected</string>
+    <string name="consult_consulting">Consulting</string>
+    <string name="consult_function">Running</string>
+    <string name="consult_no_voice">Open mic failed</string>
+    <string name="consult_profil">Profile</string>
+    <string name="consult_specialty">Specialty</string>
+    <string name="consult_education">Education</string>
+    <string name="consult_comment">Reviews</string>
+
+    <string name="record_health_record">Medical Records</string>
+    <string name="record_health_detail">Record Detail</string>
+    <string name="please_select_card_brand">Please Choose Credit Card Type</string>
+    <string name="select_card">Choose Credit</string>
+    <string name="add_card">Add Card</string>
+    <string name="edit_card">Edit Card</string>
+    <string name="please_write_advice_content">Please enter the advices for us</string>
+    <string name="evaluate_server_charge">Check the bill from the mail</string>
+
+
+    <string name="record_characteristic">Vital Signs</string>
+    <string name="record_temp">Temperature</string>
+    <string name="record_pulse">Pulse Rate</string>
+    <string name="record_bph">Blood Pressure</string>
+    <string name="record_resp">Respiration Rate</string>
+    <string name="record_glucose">Blood Glucose Level</string>
+    <string name="record_height">Height</string>
+    <string name="record_weight">Weight</string>
+    <string name="record_hpi">Chief Complaint</string>
+    <string name="record_drugs">MEDICINES</string>
+    <string name="record_dosage">Dosage：</string>
+    <string name="record_freq">Freq：</string>
+    <string name="record_route">Route：</string>
+    <string name="record_dispense">Dispense As Written：</string>
+    <string name="record_pharmacy">Pharmacy</string>
+    <string name="record_lab">LAB</string>
+    <string name="record_code">Code：</string>
+    <string name="record_lab_info">Lab Info</string>
+    <string name="record_telephone">Telephone</string>
+
+    <string name="private_add">Choose My Mediator</string>
+    <string name="private_overdue">Contract Be Overdue</string>
+    <string name="private_pay">Contract To Be Paid</string>
+    <string name="private_time">Due Date</string>
+    <string name="private_free">Free Consultations</string>
+    <string name="private_pay_per">Pay-per-view</string>
+    <string name="private_unlimited">Unlimited</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="date_expiration">Please select expiration date</string>
+    <string name="wrong_password">Incorrect Password</string>
+    <string name="card_number_no_input">Enter Card Number</string>
+    <string name="holdername_no_input">Enter Name on Card</string>
+    <string name="payment">Credit Card Information</string>
+    <string name="no_credit_card">Please add a payment method</string>
+    <string name="card_number_invalid">Invalid Credit Card</string>
+    <string name="input_credit_again">Enter Credit Card Again</string>
+
+    <string name="bp">Blood Pressure</string>
+    <string name="temperature">Temperature</string>
+    <string name="pulse">Pulse</string>
+    <string name="intake_vital">Personal Information</string>
+
+    <string name="pharmacy_mode">Invalid Code</string>
+    <string name="rating_comment">Please leave a comment</string>
+
+    <string name="user_activity">Profile</string>
+    <string name="about_activity">About</string>
+    <string name="chief_complaint">Giving a primary reason will speed up your visit</string>
+
+    <string name="input_error">Input Invalid</string>
+    <string name="call_log">Call Logs</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="bpl">Should not be higher than blood pressure high</string>
+
+    <string name="language_setting">Change Language</string>
+    <string name="lang_dialog_title">Change Language</string>
+    <string name="lang_dialog_message">Please Select Language:</string>
+
+</resources>

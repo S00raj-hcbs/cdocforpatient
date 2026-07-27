@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_0_1">#1c61dd</color>
+    <color name="blue_0_5">#a11c61dd</color>
+    <color name="blue_0_4">#ecf6fb</color>
+
+    <color name="white_0_2">#ffffff</color>
+
+    <color name="gray_0_1">#e1e1e1</color>
+    <color name="gray_0_4">#888888</color>
+    <color name="gray_0_5">#f7f9f8</color>
+    <color name="gray_0_6">#cdcdcd</color>
+    <color name="gray_0_7">#c7c7c7</color>
+
+
+    <color name="blue_2_1">#f7f9f8</color>
+
+    <color name="translate_2_1">#ffffff</color>
+    <color name="black_2_1">#000000</color>
+
+    <color name="gray_2_5">#4f4f4f</color>
+
+    <color name="red_2_1">#ff5f5a</color>
+
+    <!--||||||||||||||||||||||||||||||||||||||||||-->
+
+    <color name="gray_1_1">#cccccc</color>
+    <color name="gray_1_4">#adadad</color>
+    <color name="gray_1_5">#c3c3c3</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="green_1_1">#39d6af</color>
+    <color name="green_2">#00C853</color>
+
+    <color name="orange_0_2">#FF9800</color>
+
+    <color name="colorPrimary">#3e5d9d</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="defaultColor">#3095e3</color>
+    <color name="loginDefaultColor">#1EB4FD</color>
+    <color name="disableBlueButton">#501EB4FD</color>
+    <!--<color name="defaultColor">#3e5d9d</color>-->
+
+    <color name="warning_color">#f4511e</color>
+    <color name="hint_color">#42000000</color>
+    <color name="success_color">#009688</color>
+
+    <color name="login_orange">#ffa93c</color>
+    <color name="login_orange_disable">#50ffa93c</color>
+    <color name="login_orange_selected">#FF9800</color>
+    <color name="login_gray_background">#e0e0e0</color>
+    <color name="login_back_orange">#ffa93c</color>
+
+    <color name="gray_background">#f0f0f0</color>
+
+    <color name="edit_text_background">#4Dffffff</color>
+
+    <color name="video_background">#3f3f3f</color>
+
+    <color name="family_option_gray">#f2f2f2</color>
+    <color name="family_option_title_gray">#c8c5c5</color>
+
+
+    <color name="sign_up_selected">#1e5798</color>
+    <color name="sign_up_unselected">#888888</color>
+
+
+    <color name="rpm_default_blue">#06bffa</color>
+    <!--smart watch colors-->
+
+    <color name="darker_blue">#ff0099cc</color>
+
+
+    <color name="dark_slate_blue_20_opacity">#173463</color>
+    <color name="dark_slate_blue">#173462</color>
+    <color name="dark_slate_blue_40_opacity">#40173462</color>
+    <color name="azure">#0295e2</color>
+    <color name="color_98b3c2">#98b3c2</color>
+    <color name="color_007ec0">#007ec0</color>
+    <color name="color_4f4f4f">#4f4f4f</color>
+    <color name="color_73848d">#73848d</color>
+    <color name="color_2499d5">#2499d5</color>
+
+    <color name="color_6896ae">#6896ae</color>
+    <color name="color_0295e2">#0295e2</color>
+    <color name="color_1782ba">#1782ba</color>
+    <color name="color_cb544c">#cb544c</color>
+    <color name="color_8f8f8f">#8f8f8f</color>
+    <color name="color_a4becc">#a4becc</color>
+    <color name="color_2d3962">#2d3962</color>
+    <color name="tangerine">#ff9900</color>
+    <color name="color_41c990">#41c990</color>
+    <color name="color_ecf6fb">#ecf6fb</color>
+    <color name="color_b7e4ff">#b7e4ff</color>
+    <color name="color_bfeeee">#bfeeee</color>
+
+    <color name="color_33ecf6fb">#33ecf6fb</color>
+    <color name="color_c4c4c4">#c4c4c4</color>
+    <color name="color_aed8f1">#aed8f1</color>
+    <color name="color_c7e5fc">#c7e5fc</color>
+    <color name="color_3ca7d6">#3ca7d6</color>
+    <color name="color_7bc6ec">#7bc6ec</color>
+    <color name="color_c0ddee">#c0ddee</color>
+    <color name="color_f1f1f1">#f1f1f1</color>
+    <color name="color_dceffd">#dceffd</color>
+    <color name="color_f8f3f3">#f8f3f3</color>
+    <color name="color_5bcbfb">#5bcbfb</color>
+    <color name="color_b6d2e2">#b6d2e2</color>
+    <color name="color_acbccd">#acbccd</color>
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
+    <color name="color_fae9d9">#fae9d9</color>
+
+    <color name="colorScheduled">#FF9300</color>
+    <color name="colorCancelled">#FF2600</color>
+    <color name="colorCompleted">#579F2B</color>
+</resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.cybermed.cdoc_patient.login.viewmodel.SignUpVM" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/double_btn_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_46sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/telehealth_switch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/bg_tele_remote"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/TeleHealth_Mode"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal" />
+
+
+            <Button
+                android:id="@+id/remote_monitoring_switch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/bg_tele_remote"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/Remote_Monitoring_Mode"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/double_btn_ll"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_28sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/sign_up_desc"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_desc"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_14sdp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_clinic_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_clinic_code"
+                android:textColorHint="@color/color_6896ae"
+                app:errorEnabled="false"
+                app:hintTextAppearance="@style/customHintApprearance">
+
+                <EditText
+                    android:id="@+id/serviceCodeEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890./!@#$%^"
+                    android:drawableStart="@drawable/ic_service_code"
+                    android:drawablePadding="@dimen/_13sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:paddingBottom="@dimen/_13sdp"
+                    android:singleLine="true"
+                    android:text="@={vm.clinicCode}"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textColorHighlight="@color/azure"
+                    android:textSize="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_clinic_code"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_42sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingEnd="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="@string/do_not_have_clinic_code"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="normal" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_38sdp"
+            android:background="@drawable/selector_blue_bg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@color/white_0_2"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+</layout>

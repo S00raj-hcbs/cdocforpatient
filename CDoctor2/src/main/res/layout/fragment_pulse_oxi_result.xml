@@ -1,0 +1,57 @@
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/lay_resultbp"
+                layout="@layout/bp_result_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp" />
+
+
+            <TextView
+                android:id="@+id/txtinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lay_resultbp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/ic_star_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/iot_remove_oximeter"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <Button
+                android:id="@+id/btn_view_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtinfo"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_login_btn_selector"
+                android:drawableEnd="@drawable/ic_white_arrow"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:text="@string/view_full_history"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</layout>

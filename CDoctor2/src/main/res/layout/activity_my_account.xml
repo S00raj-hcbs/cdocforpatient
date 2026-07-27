@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ecf6fb"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/doc_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azure"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azure"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:theme="@style/ThemeOverlay.AppCompat">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_back_btn"
+                app:tint="@color/white_0_2" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/my_account"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/logout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:background="@drawable/bg_outline_border"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_9sdp"
+                android:paddingEnd="@dimen/_9sdp"
+                android:text="@string/sign_out"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/azure"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            <RelativeLayout
+                android:id="@+id/doc_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:id="@+id/cardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_13sdp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_34sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_margin="@dimen/_2sdp"
+                        app:cardCornerRadius="@dimen/_17sdp">
+
+                        <ImageView
+                            android:id="@+id/dr_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/color_dceffd"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_doc" />
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/imgStatus"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/ic_green_online"
+                    android:layout_alignEnd="@id/cardView"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_1sdp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/doc_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:text=''
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@id/doc_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/doc_name"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text=""
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@id/doc_image"
+                app:layout_constraintTop_toBottomOf="@id/doc_name" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/doc_name"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Online"
+                android:visibility="gone"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/doc_image"
+                app:layout_constraintTop_toBottomOf="@id/email" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doc_details">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ecf6fb"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_my_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:orientation="horizontal"
+                app:cardCornerRadius="@dimen/_4sdp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_acc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_24sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/account_information_heading"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_person" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:orientation="horizontal"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+                <!--            <ImageView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_gravity="center_vertical"-->
+                <!--                android:layout_marginStart="@dimen/_16sdp"-->
+                <!--                android:src="@drawable/ic_credit_card" />-->
+
+                <TextView
+                    android:id="@+id/tv_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/payments"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_credit_card" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_family"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:orientation="horizontal"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+
+                <TextView
+                    android:id="@+id/tv_family"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/family_health_heading"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_family" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_call_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:orientation="horizontal"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+
+                <TextView
+                    android:id="@+id/tv_call_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/call_history"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_phone_call" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_Immunization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp">
+
+
+                <TextView
+                    android:id="@+id/tv_immunization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Immunization"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/immunization_ic" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_Allergies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp">
+
+
+                <TextView
+                    android:id="@+id/tv_Allergies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Allergies"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_allergies" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_medication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/tv_medications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_12sdp"
+                    android:text="@string/medications"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_medication" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_monitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+                <!--            <ImageView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_gravity="center_vertical"-->
+                <!--                android:layout_marginStart="@dimen/_16sdp"-->
+                <!--                android:src="@drawable/ic_vital" />-->
+
+                <TextView
+                    android:id="@+id/tv_vitalCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/vital_check"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_vital" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_refferal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:orientation="horizontal"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:visibility="gone"
+                app:cardElevation="0dp">
+
+                <!--            <ImageView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_gravity="center_vertical"-->
+                <!--                android:layout_marginStart="@dimen/_16sdp"-->
+                <!--                android:src="@drawable/ic_refferal" />-->
+
+                <TextView
+                    android:id="@+id/tv_refferal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_16sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/referral"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_refferal" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_vaciination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+
+                <TextView
+                    android:id="@+id/tv_messages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/messages"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_envelope" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_lab_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:orientation="horizontal"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+
+                <TextView
+                    android:id="@+id/tv_lab_records"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/lab_records"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_medical_checkup" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/tv_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/language_settings_title"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_settings" />
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

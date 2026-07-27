@@ -1,0 +1,310 @@
+package com.cybermed.cdoc_patient.me.vitalcheck.adapter;
+
+/*
+import static com.cybermed.cdoc.me.vitalcheck.VitalMonitorFragment.convertFtInToMeters;
+import static com.cybermed.cdoc.me.vitalcheck.VitalMonitorFragment.convertToKg;
+import static com.cybermed.cdoc.util.AppConstant.KEY_BMI;
+import static com.cybermed.cdoc.util.AppConstant.KEY_HEIGHT;
+import static com.cybermed.cdoc.util.AppConstant.KEY_WEIGHT;
+*/
+
+import android.content.Context;
+import android.graphics.Color;
+//import android.os.Bundle;
+//import android.text.SpannableStringBuilder;
+//import android.text.TextUtils;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.FragmentManager;
+import androidx.navigation.NavController;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.cybermed.cdoc_patient.R;
+import com.cybermed.cdoc_patient.common.videoui.Constant;
+import com.cybermed.cdoc_patient.databinding.VitalHcRecyclerAdapterLayoutBinding;
+
+import com.cybermed.cdoc_patient.me.vitalcheck.model.VitalDataNew;
+import com.cybermed.cdoc_patient.util.AppConstant;
+
+import java.util.List;
+import java.util.Random;
+
+
+public class VitalHCRecycleViewAdapter extends RecyclerView.Adapter<VitalHCRecycleViewAdapter.MyViewHolder>{
+    List<VitalDataNew> clinicVitalDataList;
+    Context context;
+    private final NavController navController;
+    String height="";
+    String weight="";
+    private final FragmentManager fragmentManager;
+
+    public VitalHCRecycleViewAdapter(List<VitalDataNew> clinicVitalData, Context context, @NonNull NavController navController, FragmentManager fragmentManager) {
+        this.clinicVitalDataList = clinicVitalData;
+        this.context = context;
+        this.navController = navController;
+        this.fragmentManager = fragmentManager;
+    }
+
+    @NonNull
+    @Override
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        VitalHcRecyclerAdapterLayoutBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.vital_hc_recycler_adapter_layout, parent, false);
+        return new MyViewHolder(binding);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        VitalDataNew vitalDataNew = clinicVitalDataList.get(position);
+        holder.binding.textVitalName.setText(vitalDataNew.getName());
+        Log.e(vitalDataNew.getName(),vitalDataNew.getValue());
+        holder.binding.textVitalReading.setText(vitalDataNew.getValue().equals("--")?"No data":vitalDataNew.getValue());
+        holder.binding.imgVital.setImageDrawable(vitalDataNew.getImage());
+        int[] colors = new int[] {
+                R.color.color_c7e5fc,
+        };
+
+// Pick a random color
+        int randomColor = colors[new Random().nextInt(colors.length)];
+        if (position==getItemCount()-1){
+            holder.binding.viewLine1.setVisibility(View.INVISIBLE);
+        }else {
+            holder.binding.viewLine1.setVisibility(View.VISIBLE);
+        }
+
+     /*   if (position % 2 == 0) {
+            holder.binding.cardView.setBackground(ContextCompat.getDrawable(context, R.color.color_c7e5fc)); // Light gray color
+        }
+        else if (position % 3 == 0) {
+            holder.binding.cardView.setBackground(ContextCompat.getDrawable(context, R.color.color_3ca7d6)); // Light gray color
+        } else {
+            holder.binding.cardView.setBackground(ContextCompat.getDrawable(context, R.color.white_0_2)); // White color
+        }*/
+        if (vitalDataNew.getType().contains("BP")){
+            if (vitalDataNew.getValue().equals("--")){
+                holder.binding.textVitalReading2.setText("");
+            }else {
+                holder.binding.textVitalReading2.setText("mmHg");
+            }
+        }
+
+
+        if (vitalDataNew.getType().contains("Glucose")){
+            if (vitalDataNew.getValue().equals("--")){
+                holder.binding.textVitalReading2.setText("");
+            }else {
+                holder.binding.textVitalReading2.setText("mg/dl");
+            }
+        }
+        /*holder.binding.constraintLayout.setBackground(ContextCompat.getDrawable(context, randomColor));*/
+
+/*        if (position%2==0){
+            *//*holder.binding.viewLine1.setVisibility(View.INVISIBLE);*//*
+            holder.binding.constraintLayout.setBackground(ContextCompat.getDrawable(context, randomColor));
+        }else {
+            *//*holder.binding.viewLine1.setVisibility(View.VISIBLE);*//*
+            holder.binding.constraintLayout.setBackground(ContextCompat.getDrawable(context, R.color.white_0_2));
+        }*/
+
+        Constant.istabselected="1";
+        if (vitalDataNew.getType().equals("Height")){
+            height=vitalDataNew.getValue();
+        } else if (vitalDataNew.getType().equals("hr")){
+            if (vitalDataNew.getValue().equals("--")){
+                holder.binding.textVitalReading.setText("No data");
+            }else {
+                AppConstant.getdataHRtextColor(Double.parseDouble(vitalDataNew.getValue()), holder.binding.textVitalReading);
+                holder.binding.textVitalReading.setTextColor(ContextCompat.getColor(context,R.color.black_2_1));
+            }
+        }else if (vitalDataNew.getType().equals("Temp")){
+            if (vitalDataNew.getValue().equals("--")){
+                holder.binding.textVitalReading.setText("No data");
+            }else {
+                AppConstant.getTemperatureColorInFahrenheit(Double.parseDouble(vitalDataNew.getValue().replace("°F","")), holder.binding.textVitalReading);
+                holder.binding.textVitalReading.setTextColor(ContextCompat.getColor(context,R.color.black_2_1));
+            }
+        }else if (vitalDataNew.getType().equals("Glucose")){
+            if (vitalDataNew.getValue().equals("--")){
+                holder.binding.textVitalReading.setText("No data");
+            }else {
+                AppConstant.getdataGlucosetextColor(Double.parseDouble(vitalDataNew.getValue()), holder.binding.textVitalReading);
+                holder.binding.textVitalReading.setTextColor(ContextCompat.getColor(context,R.color.black_2_1));
+            }
+        }
+        /*else if (vitalDataNew.getType().equals("BP")){
+            if (vitalDataNew.getValue().equals("--")){
+                holder.binding.textVitalReading.setText("No data");
+            }else {
+                String[] values = vitalDataNew.getValue().split("/");
+                AppConstant.getdataBPTextColor(Double.parseDouble(values[0]),Double.parseDouble(values[1]), holder.binding.textVitalReading);
+            }
+        }*/
+        else if (vitalDataNew.getType().equals("HC")){
+            if (vitalDataNew.getValue().equals("--")){
+                holder.binding.textVitalReading.setText("No data");
+            }else {
+                AppConstant.getHeadCircumferenceColor(Double.parseDouble(vitalDataNew.getValue()), holder.binding.textVitalReading);
+                holder.binding.textVitalReading.setTextColor(ContextCompat.getColor(context,R.color.black_2_1));
+            }
+        }else if (vitalDataNew.getType().equals("Weight")){
+            weight=vitalDataNew.getValue();
+        }else if (vitalDataNew.getType().equals("BMI")){
+            if (vitalDataNew.getValue().equals("--")){
+                holder.binding.textVitalReading.setText("No data");
+            }else {
+                dynamicTextForBMI(vitalDataNew.getValue(), holder.binding.textVitalReading);
+                holder.binding.textVitalReading.setTextColor(ContextCompat.getColor(context,R.color.black_2_1));
+            }
+        }
+        /*holder.binding.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(vitalDataNew.getType().equals("BMI")){
+                    if (vitalDataNew.getValue().equals("--")){
+
+                    }else {
+                        if (TextUtils.isEmpty(vitalDataNew.getType())){
+                            if (!TextUtils.isEmpty(height) && !TextUtils.isEmpty(weight)){
+                                float bmi = (float) convertToKg(weight) / ((float) convertFtInToMeters(height) * (float) convertFtInToMeters(height));
+                                Bundle args = new Bundle();
+                                args.putString(KEY_HEIGHT, height);
+                                args.putString(KEY_WEIGHT, weight);
+                                args.putString(KEY_BMI, String.format("%.1f",bmi));
+                                BMIGraphActivity bmiGraphActivity = new BMIGraphActivity();
+                                bmiGraphActivity.setArguments(args);
+                                bmiGraphActivity.show(fragmentManager, "BMIGraph Fragment");
+                            }
+                        }else {
+                            if (!TextUtils.isEmpty(height) && !TextUtils.isEmpty(weight)){
+                                Bundle args = new Bundle();
+                                args.putString(KEY_HEIGHT, height);
+                                args.putString(KEY_WEIGHT, weight);
+                                args.putString(KEY_BMI, vitalDataNew.getValue());
+                                BMIGraphActivity bmiGraphActivity = new BMIGraphActivity();
+                                bmiGraphActivity.setArguments(args);
+                                bmiGraphActivity.show(fragmentManager, "BMIGraph Fragment");
+                            }else {
+                          */
+        /*  Bundle args = new Bundle();
+                            args.putString(KEY_HEIGHT, height);
+                            args.putString(KEY_WEIGHT, weight);
+                            args.putString(KEY_BMI, vitalDataNew.getValue());
+                            BMIGraphActivity bmiGraphActivity = new BMIGraphActivity();
+                            bmiGraphActivity.setArguments(args);
+                            bmiGraphActivity.show(fragmentManager, "BMIGraph Fragment");*/
+        /*
+                            }
+                        }
+                    }
+
+
+
+                }else {
+                    Constant.isType=vitalDataNew.getType();
+                    navController.navigate(R.id.action_IOT_MainPage_Fragment_to_vitalGraph);
+                }
+            }
+        });*/
+        /*holder.binding.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(vitalDataNew.getType().equals("BMI")){
+                    if (vitalDataNew.getValue().equals("--")){
+
+                    }else {
+                        if (TextUtils.isEmpty(vitalDataNew.getType())){
+                            if (!TextUtils.isEmpty(height) && !TextUtils.isEmpty(weight)){
+                                float bmi = (float) convertToKg(weight) / ((float) convertFtInToMeters(height) * (float) convertFtInToMeters(height));
+                                Bundle args = new Bundle();
+                                args.putString(KEY_HEIGHT, height);
+                                args.putString(KEY_WEIGHT, weight);
+                                args.putString(KEY_BMI, String.format("%.1f",bmi));
+                                BMIGraphActivity bmiGraphActivity = new BMIGraphActivity();
+                                bmiGraphActivity.setArguments(args);
+                                bmiGraphActivity.show(fragmentManager, "BMIGraph Fragment");
+                            }
+                        }else {
+                            if (!TextUtils.isEmpty(height) && !TextUtils.isEmpty(weight)){
+                                Bundle args = new Bundle();
+                                args.putString(KEY_HEIGHT, height);
+                                args.putString(KEY_WEIGHT, weight);
+                                args.putString(KEY_BMI, vitalDataNew.getValue());
+                                BMIGraphActivity bmiGraphActivity = new BMIGraphActivity();
+                                bmiGraphActivity.setArguments(args);
+                                bmiGraphActivity.show(fragmentManager, "BMIGraph Fragment");
+                            }else {
+                          */
+        /*  Bundle args = new Bundle();
+                            args.putString(KEY_HEIGHT, height);
+                            args.putString(KEY_WEIGHT, weight);
+                            args.putString(KEY_BMI, vitalDataNew.getValue());
+                            BMIGraphActivity bmiGraphActivity = new BMIGraphActivity();
+                            bmiGraphActivity.setArguments(args);
+                            bmiGraphActivity.show(fragmentManager, "BMIGraph Fragment");*/
+        /*
+                            }
+                        }
+                    }
+
+
+                }else {
+                    Constant.isType=vitalDataNew.getType();
+                    navController.navigate(R.id.action_IOT_MainPage_Fragment_to_vitalGraph);
+                }
+            }
+        });*/
+
+    }
+    public void dynamicTextForBMI(String value, TextView textView){
+        float bmiValue;
+        try {
+            bmiValue = Float.parseFloat(value);
+        } catch (NumberFormatException e) {
+            bmiValue = 0.0f; // Default value if parsing fails
+        }
+        if(bmiValue<18.5){
+            textView.setTextColor(Color.parseColor("#34c85a"));
+        }else if (bmiValue>=18.5 && bmiValue<=25){
+            textView.setTextColor(Color.parseColor("#ffcc00"));
+        }else if (bmiValue>25 && bmiValue<=30){
+            textView.setTextColor(Color.parseColor("#ff9501"));
+        }else {
+            textView.setTextColor(Color.parseColor("#ff3b2f"));
+        }
+
+        /*  if(bmiValue<18.5){
+            textView.setTextColor(Color.parseColor("#32CD32"));
+        }else if (bmiValue>=18.5 && bmiValue<=25){
+            textView.setTextColor(Color.parseColor("#FFD700"));
+        }else if (bmiValue>25 && bmiValue<=30){
+            textView.setTextColor(Color.parseColor("#ff9501"));
+        }else {
+            textView.setTextColor(Color.parseColor("#FF4500"));
+        }*/
+
+
+        textView.setText(String.valueOf(bmiValue));
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return clinicVitalDataList.size();
+    }
+
+
+    class MyViewHolder extends RecyclerView.ViewHolder {
+        VitalHcRecyclerAdapterLayoutBinding binding = null;
+        MyViewHolder(VitalHcRecyclerAdapterLayoutBinding itemView) {
+            super(itemView.getRoot());
+            this.binding = itemView;
+
+        }
+    }
+}

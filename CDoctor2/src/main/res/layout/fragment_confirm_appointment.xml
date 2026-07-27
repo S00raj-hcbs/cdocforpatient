@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.cybermed.cdoc_patient.doctor.docDetail.DocBookingVm" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".doctor.docDetail.ConfirmAppointmentFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_14sdp"
+            android:background="@color/azure"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/back_btn"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_back_btn"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@id/title"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                android:padding="@dimen/_5sdp"-->
+            <!--                app:tint="@color/white_0_2" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/title"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/_14sdp"-->
+            <!--                android:fontFamily="@font/roboto_medium"-->
+            <!--                android:text="@string/previsit_information"-->
+            <!--                android:textColor="@color/white_0_2"-->
+            <!--                android:textSize="@dimen/_14sdp"-->
+            <!--                app:layout_constraintStart_toEndOf="@id/back_btn"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/custom_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_46sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!--<LinearLayout
+                android:id="@+id/dr_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/dr_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                android:layout_marginStart="@dimen/_14sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_34sdp"
+                    android:layout_height="@dimen/_34sdp"
+                    app:cardCornerRadius="@dimen/_18sdp">
+
+                    <ImageView
+                        profileImage="@{vm.docInfo.profileImage}"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/color_dceffd"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_doc" />
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+-->
+            <LinearLayout
+                android:id="@+id/dr_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_13sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dr_name"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    app:cardCornerRadius="@dimen/_25sdp">
+
+                    <ImageView
+                        profileImage="@{vm.docInfo.profileImage}"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/color_dceffd"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_doc" />
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_online_status"
+                onlineStatus="@{vm.docInfo.onlineStatus}"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                app:layout_constraintEnd_toEndOf="@id/dr_image"
+                app:layout_constraintTop_toTopOf="@id/dr_name" />
+
+
+
+            <TextView
+                android:id="@+id/dr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:text='@{ vm.docInfo.firstName + " " + vm.docInfo.lastName}'
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@id/dr_image"
+                app:layout_constraintTop_toTopOf="@id/dr_image" />
+
+          <!--  <ImageView
+                android:id="@+id/icon_online_status"
+                onlineStatus="@{vm.docInfo.onlineStatus}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                android:src="@drawable/ic_green_online"
+                app:layout_constraintEnd_toEndOf="@id/dr_image"
+                app:layout_constraintTop_toBottomOf="@id/dr_name"
+                app:layout_constraintTop_toTopOf="@id/dr_name" />-->
+
+            <LinearLayout
+                android:id="@+id/dr_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:background="@color/color_33ecf6fb"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_3sdp"
+                android:visibility="gone"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/dr_name"
+                app:layout_constraintStart_toEndOf="@id/dr_name"
+                app:layout_constraintTop_toTopOf="@id/dr_name">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@{TextUtils.isEmpty(vm.docInfo.reviewScore)?@drawable/star_grey:@drawable/white_star_line}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text='@{vm.docInfo.reviewScore}'
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+                    android:visibility="@{TextUtils.isEmpty(vm.docInfo.reviewScore)?View.GONE:View.VISIBLE}" />
+                <!--  android:text='@{vm.docInfo.reviewScore}'-->
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/dr_favourite"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:background="@color/color_33ecf6fb"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:src='@{vm.docFav?@drawable/ic_fav_white:@drawable/fav_outline}'
+                app:layout_constraintBottom_toBottomOf="@+id/dr_rating"
+                app:layout_constraintStart_toEndOf="@id/dr_rating"
+                app:layout_constraintTop_toTopOf="@id/dr_rating" />
+
+            <!--                android:src='@{vm.docInfo.favorite=="1"?@drawable/ic_fav_red:@drawable/heart_outline}'
+            -->
+            <TextView
+                android:id="@+id/dr_specialty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_regular"
+                android:text='@{vm.docInfo.specialties.equals("")?"Speciality Not Available":vm.docInfo.specialties}'
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@id/dr_name"
+                app:layout_constraintTop_toBottomOf="@id/dr_name" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/dr_specialty"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_72sdp">
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/ratingBar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    app:ratingValue="@{vm.docInfo.reviewScore}"
+                    android:scaleY="0.8"
+                    android:scaleX="0.8"
+                    android:isIndicator="true"
+                    tools:ignore="MissingConstraints"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/appointment_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:height="@dimen/_16sdp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="6 April, 2021"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_10sdp"
+                app:drawableStartCompat="@drawable/ic_calender"
+                app:drawableTint="@color/white_0_2"
+                app:layout_constraintStart_toStartOf="@id/dr_image"
+                app:layout_constraintTop_toBottomOf="@id/dr_image" />
+
+            <TextView
+                android:id="@+id/appt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:text="8:45 AM"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_10sdp"
+                app:drawableStartCompat="@drawable/ic_clock"
+                app:drawableTint="@color/white_0_2"
+                app:layout_constraintBottom_toBottomOf="@id/appointment_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/appointment_date" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".doctor.docDetail.ConfirmAppointmentFragment">
+
+                <TextView
+                    android:id="@+id/visitReasonTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_33sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/visit_reason"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/reasonSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:ellipsize="end"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="@string/select_reason"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableEndCompat="@drawable/down_arrow"
+                    app:layout_constraintBottom_toBottomOf="@id/visitReasonTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/visitReasonTitle"
+                    app:layout_constraintTop_toTopOf="@id/visitReasonTitle" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:background="@color/color_8f8f8f"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/reasonSpinner"
+                    app:layout_constraintTop_toBottomOf="@id/reasonSpinner" />
+
+
+                <TextView
+                    android:id="@+id/user_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/help_your_doctor_understand_your_condition_better"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/user_msg">
+                    <EditText
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_11sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="@string/write_here"
+                        android:paddingStart="4dp"
+                        android:paddingBottom="@dimen/_15sdp"
+                        android:maxLength="200"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textColorHint="@color/color_6896ae"
+                        android:textSize="@dimen/_10sdp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_minus2sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="(200 Character max)"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_below="@+id/description"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/upload_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:background="@drawable/upload_document_rectangle_bg"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/rel_description">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/upload_a_new_document"
+                        android:textColor="@color/azure"
+                        android:textSize="@dimen/_11sdp"
+                        app:drawableStartCompat="@drawable/add_plus" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_9sdp"
+                        android:layout_marginBottom="@dimen/_13sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/you_can_import_a_document_or_scan_with_your_camera"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textSize="@dimen/_9sdp" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/upload_btn" />
+
+                <Button
+                    android:id="@+id/btnAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:background="@drawable/bg_logout"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_9sdp"
+                    android:text="@string/confirm_appointment"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="@{vm.docInfo.waitingRoom==2?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerViewUpload" />
+
+                <Button
+                    android:id="@+id/btnConsult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:background="@drawable/bg_login_btn_selector"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_9sdp"
+                    android:text="@string/consult_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="@{vm.docInfo.waitingRoom==0?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerViewUpload" />
+
+                <Button
+                    android:id="@+id/btn_waiting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:background="@drawable/bg_logout"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_9sdp"
+                    android:text="@string/waiting_room"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="@{vm.docInfo.waitingRoom==1?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerViewUpload" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

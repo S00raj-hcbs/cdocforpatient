@@ -1,0 +1,24 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="font_size_12">20sp</dimen>
+    <dimen name="font_size_14">22sp</dimen>
+    <dimen name="font_size_15">15sp</dimen>
+    <dimen name="font_size_16">24sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="font_size_40">50sp</dimen>
+
+    <dimen name="login_setting_back">70dp</dimen>
+
+    <dimen name="family_option">250dp</dimen>
+    <dimen name="IOT_Result_Font">40sp</dimen>
+    <dimen name="bluetoothTitle">25sp</dimen>
+    <dimen name="bluetoothInstruction">16sp</dimen>
+    <dimen name="dimen_100dp">200dp</dimen>
+    <dimen name="minus_70dp">-120dp</dimen>
+    <dimen name="minus_60dp">-100dp</dimen>
+    <dimen name="minus_90dp">-140dp</dimen>
+    <dimen name="minus_100dp">-150dp</dimen>
+    <dimen name="dimen_7dp">7dp</dimen>
+</resources>

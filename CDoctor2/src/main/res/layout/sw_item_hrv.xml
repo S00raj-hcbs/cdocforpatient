@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="java.util.Map" />
+
+        <variable
+            name="DeviceKey"
+            type="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.smartwatch.swUtil.SWKeyConstant" />
+
+        <variable
+            name="map"
+            type="Map&lt;String, String&gt;" />
+
+        <variable
+            name="isConnected"
+            type="androidx.lifecycle.MutableLiveData&lt;Boolean&gt;" />
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginTop="@dimen/_28sdp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/parent_hrv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_hrv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/heart_rate_value"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/text_hrvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sw_title_bg_outline"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/stress"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableStartCompat="@drawable/sw_stress" />
+
+                <TextView
+                    android:id="@+id/text_stress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sw_data_bg_outline"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_15sdp"
+                    android:text="@{map.get(DeviceKey.Stress)}"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/ic_right_arrow_transparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_bp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sw_title_bg_outline"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:text="@string/blood_pressure"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableStartCompat="@drawable/blood_pressure_ic" />
+
+                <TextView
+                    android:id="@+id/txtbp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sw_data_bg_outline"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_15sdp"
+                    android:text='@{map.get(DeviceKey.highBP)+"/"+map.get(DeviceKey.lowBP)}'
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/ic_right_arrow_transparent" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sw_title_bg_outline"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/hrv"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableStartCompat="@drawable/sw_cardiogram" />
+
+                <TextView
+                    android:id="@+id/txt_hrv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sw_data_bg_outline"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_15sdp"
+                    android:text="@{map.get(DeviceKey.HRV)}"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/ic_right_arrow_transparent" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_heartrate"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sw_title_bg_outline"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/heart_rate"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableStartCompat="@drawable/sw_pulse" />
+
+                <TextView
+                    android:id="@+id/txtcal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sw_data_bg_outline"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/_15sdp"
+                    android:text='@{map.get(DeviceKey.HeartRate)+" bpm"}'
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/ic_right_arrow_transparent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

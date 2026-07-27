@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.cybermed.cdoc_patient.doctor.docDetail.DocBookingVm" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azure"
+            android:orientation="vertical">
+            <include
+                android:id="@+id/toolBar"
+                layout="@layout/custom_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_46sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolBar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/azure"-->
+<!--                android:minHeight="?attr/actionBarSize"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:theme="@style/ThemeOverlay.AppCompat">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/back_arrow"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/_14sdp"-->
+<!--                    android:layout_marginTop="@dimen/_16sdp"-->
+<!--                    android:padding="@dimen/_5sdp"-->
+<!--                    android:src="@drawable/ic_back_btn"-->
+<!--                    app:tint="@color/white_0_2" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/toolbar_title"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="@dimen/_14sdp"-->
+<!--                    android:layout_marginTop="@dimen/_14sdp"-->
+<!--                    android:fontFamily="@font/roboto_medium"-->
+<!--                    android:text="@string/previsit_information"-->
+<!--                    android:textColor="@color/white_0_2"-->
+<!--                    android:textSize="@dimen/_14sdp"-->
+<!--                    android:textStyle="normal" />-->
+
+<!--            </androidx.appcompat.widget.Toolbar>-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/doc_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/azure"
+                app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+                <LinearLayout
+                    android:id="@+id/doc_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_13sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_margin="@dimen/_2sdp"
+                        app:cardCornerRadius="@dimen/_25sdp">
+
+                        <ImageView
+                            android:id="@+id/dr_image"
+                            profileImage="@{vm.docInfo.profileImage}"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/color_dceffd"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_doc" />
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/icon_online_status"
+                    onlineStatus="@{vm.docInfo.onlineStatus}"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:src="@drawable/ic_grey_busy"
+                    app:layout_constraintEnd_toEndOf="@id/doc_image"
+                    app:layout_constraintTop_toTopOf="@id/doc_name" />
+
+                <TextView
+                    android:id="@+id/doc_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_13sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text='@{ vm.docInfo.firstName + " " + vm.docInfo.lastName}'
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/doc_image"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:background="@color/color_33ecf6fb"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:visibility="gone"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    app:layout_constraintStart_toEndOf="@id/doc_name"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@{TextUtils.isEmpty(vm.docInfo.reviewScore)?@drawable/star_grey:@drawable/white_star_line}" />
+                    <!---->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text='@{vm.docInfo.reviewScore}'
+                        android:textColor="@color/white_0_2"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="@{TextUtils.isEmpty(vm.docInfo.reviewScore)?View.GONE:View.VISIBLE}" />
+                    <!---->
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_toEndOf="@id/rating"
+                    android:background="@color/color_33ecf6fb"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:src='@{vm.docFav?@drawable/ic_fav_white:@drawable/fav_outline}'
+                    app:layout_constraintStart_toEndOf="@id/rating"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--
+-->
+
+                <TextView
+                    android:id="@+id/details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/doc_name"
+                    android:layout_marginStart="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text='@{vm.docInfo.specialties.equals("")?"Speciality Not Available":vm.docInfo.specialties}'
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/doc_image"
+                    app:layout_constraintTop_toBottomOf="@id/doc_name" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    app:layout_constraintTop_toBottomOf="@id/details"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginStart="@dimen/_71sdp">
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/ratingBar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        app:ratingValue="@{vm.docInfo.reviewScore}"
+                        android:scaleY="0.8"
+                        android:scaleX="0.8"
+                        android:isIndicator="true"
+                        tools:ignore="MissingConstraints"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/fees_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/consultation_fees"
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/doc_image" />
+
+
+                <TextView
+                    android:id="@+id/amount"
+                    charges="@{vm.docInfo}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/fees_title"
+                    app:layout_constraintTop_toBottomOf="@id/doc_image" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="per 0 min"
+                    android:textColor="@color/white_0_2"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/amount"
+                    app:layout_constraintTop_toBottomOf="@id/doc_image" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/view_cardlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/doc_details">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+               >
+                <TextView
+                    android:id="@+id/tv_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Pay with Card or Insurance"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:id="@+id/lin_insurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_pay"
+                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:orientation="vertical"
+                    android:background="@color/color_ecf6fb">
+                    <TextView
+                        android:id="@+id/tv_insurance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Available Insurance Options"
+                        android:textColor="@color/dark_slate_blue"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/insuranceRCView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_below="@id/tv_payment_method"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:scrollbars="none" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lin_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lin_insurance"
+                    android:background="@color/color_ecf6fb"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_payment_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:text="Explore Credit Card Options"
+                        android:textColor="@color/dark_slate_blue"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/paymentRCView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_payment_method"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:scrollbars="none" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lin_card"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_add_credit_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/ic_button_bg"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:drawableStart="@drawable/ic_vector_stroke"
+                        android:drawablePadding="@dimen/minus_100dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_90sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:text="@string/add_credit_card"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dark_slate_blue"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal" />
+
+                    <Button
+                        android:id="@+id/btn_confirm_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn_add_credit_card"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/bg_login_btn_selector"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="@string/confirm_payment_method"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white_0_2"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!--        </androidx.core.widget.NestedScrollView>-->
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/linear_emptyView"
+            layout="@layout/empty_payment_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doc_details"
+            />
+
+    </LinearLayout>
+</layout>

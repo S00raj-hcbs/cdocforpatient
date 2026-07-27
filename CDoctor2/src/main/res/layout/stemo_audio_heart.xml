@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/label_heart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/listen_your_heart_beat"
+            android:textColor="@color/color_4f4f4f"
+            android:layout_below="@+id/toolbar"
+            android:textSize="@dimen/_12sdp" />
+
+        <com.visualizer.amplitude.AudioRecordView
+            android:id="@+id/sound_wave_visualizer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_below="@+id/label_heart"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:src="@drawable/ic_stemo_wave"
+            app:chunkAlignTo="bottom"
+            app:chunkColor="@color/dark_slate_blue"
+            app:chunkMaxHeight="60dp"
+            app:chunkMinHeight="2dp"
+            app:chunkSpace="3dp"
+            app:chunkWidth="6dp" />
+
+        <TextView
+            android:id="@+id/txt_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sound_wave_visualizer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_42sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/color_4f4f4f"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/imgPlayPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_timer"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_pause"
+            android:tag="0"/>
+    </RelativeLayout>
+</layout>

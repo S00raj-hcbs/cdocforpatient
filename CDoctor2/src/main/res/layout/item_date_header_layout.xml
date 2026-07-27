@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/black_2_1"
+        android:gravity="center"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_gravity="center" />
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SlidingMenu">
+        <attr name="mode">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="viewAbove" format="reference" />
+        <attr name="viewBehind" format="reference" />
+        <attr name="behindOffset" format="dimension" />
+        <attr name="behindWidth" format="dimension" />
+        <attr name="behindScrollScale" format="float" />
+        <attr name="touchModeAbove">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+        </attr>
+        <attr name="touchModeBehind">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+        </attr>
+        <attr name="shadowDrawable" format="reference" />
+        <attr name="shadowWidth" format="dimension" />
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="fadeDegree" format="float" />
+        <attr name="selectorEnabled" format="boolean" />
+        <attr name="selectorDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="AppInputViewAttrs">
+        <attr name="isMandatory" format="boolean" />
+        <attr name="showDefault" format="boolean" />
+        <attr name="label" format="string" />
+        <attr name="hint" format="string" />
+        <attr name="inputText" format="string" />
+        <attr name="actionText" format="string" />
+        <attr name="tooltipDrawable" format="integer" />
+        <attr name="android:focusable" />
+        <attr name="android:editable" />
+        <attr name="android:inputType" />
+        <attr name="android:digits" />
+        <attr name="android:maxLength" />
+        <attr name="android:gravity" />
+        <attr name="errorMsg" format="string" />
+        <attr name="android:imeOptions" />
+        <attr name="android:singleLine" />
+        <attr name="android:textAlignment" />
+        <attr name="android:lines" />
+        <attr name="android:fontFamily" />
+        <attr name="android:maxLines" />
+    </declare-styleable>
+    <declare-styleable name="LoadingDots">
+        <attr name="LoadingDots_auto_play" format="boolean"/>
+
+        <attr name="LoadingDots_dots_color" format="color"/>
+        <attr name="LoadingDots_dots_count" format="integer"/>
+        <attr name="LoadingDots_dots_size" format="dimension"/>
+        <attr name="LoadingDots_dots_space" format="dimension"/>
+
+        <attr name="LoadingDots_loop_duration" format="integer"/>
+        <attr name="LoadingDots_loop_start_delay" format="integer"/>
+
+        <attr name="LoadingDots_jump_duration" format="integer"/>
+        <attr name="LoadingDots_jump_height" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="ProgressIndicator">
+        <attr name="defaultIcon" format="reference" />
+        <attr name="progressIcon" format="reference" />
+        <attr name="processedIcon" format="reference" />
+        <attr name="defaultProgressLine" format="reference" />
+        <attr name="max" format="integer" />
+    </declare-styleable>
+</resources>

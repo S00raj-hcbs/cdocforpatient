@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/IOT_MainPage_Fragment">
+
+    <fragment
+        android:id="@+id/iHealthBG5SetupFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Glucometer.BG5.Set_Up.iHealthBG5SetupFragment"
+        android:label="activity_i_health_bg5_setup"
+        tools:layout="@layout/activity_i_health_bg5_setup">
+
+        <action
+            android:id="@+id/action_iHealthBG5SetupFragment_to_iHealthBG5SetupBluetoothFragment"
+            app:destination="@id/iHealthBG5SetupBluetoothFragment" />
+        <action
+            android:id="@+id/action_iHealthBG5SetupFragment_to_IOTDeviceSetUpFragment"
+            app:destination="@id/IOTDeviceSetUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/IOTDeviceSetUpFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.IOTDeviceSetUpFragment"
+        android:label="fragment_iot_set_up"
+        tools:layout="@layout/fragment_iot_set_up">
+        <action
+            android:id="@+id/action_IOTDeviceSetup_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment" />
+        <action
+            android:id="@+id/action_IOTDeviceSetUpFragment_to_iHealthBG5SetupFragment"
+            app:destination="@id/iHealthBG5SetupFragment" />
+        <action
+            android:id="@+id/action_IOTDeviceSetUpFragment_to_iHealthScannedDeviceFragment"
+            app:destination="@id/iHealthScannedDeviceFragment" />
+        <action
+            android:id="@+id/action_IOTDeviceSetUpFragment_to_iHealthScaleSetupFragment"
+            app:destination="@id/iHealthScaleSetupFragment" />
+        <action
+            android:id="@+id/action_IOTDeviceSetUpFragment_to_QRCodeScannerFragment"
+            app:destination="@id/QRCodeScannerFragment" />
+        <action
+            android:id="@+id/action_IOTDeviceSetUpFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment" />
+        <action
+            android:id="@+id/action_IOTDEVICE_Setup_Devicescan"
+            app:destination="@id/watchItemScan" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthBG5SetupBluetoothFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Glucometer.BG5.Set_Up.iHealthBG5SetupBluetoothFragment"
+        android:label="fragment_bg5_bluetooth_setup"
+        tools:layout="@layout/fragment_bg5_bluetooth_setup">
+        <action
+            android:id="@+id/action_iHealthBG5SetupBluetoothFragment_to_iHealthScannedDeviceFragment"
+            app:destination="@id/iHealthScannedDeviceFragment" />
+        <action
+            android:id="@+id/action_iHealthBG5SetupBluetoothFragment_to_iHealthBG5SetUpFragment"
+            app:destination="@id/iHealthBG5SetupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthScannedDeviceFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealthScannedDeviceFragment"
+        android:label="fragment_configure_devices">
+        <action
+            android:id="@+id/action_iHealthScannedDeviceFragment_to_IOTDeviceSetUpFragment"
+            app:destination="@id/IOTDeviceSetUpFragment" />
+        <action
+            android:id="@+id/action_iHealthScannedDeviceFragment_to_IOTMain"
+            app:destination="@+id/IOT_MainPage_Fragment"
+            app:popUpTo="@+id/IOT_MainPage_Fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthScaleSetupFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Scale.Set_Up.iHealthScaleSetupFragment"
+        android:label="activity_i_health_scale_setup"
+        tools:layout="@layout/fragment_scale_setup">
+        <action
+            android:id="@+id/action_iHealthScaleSetupFragment_to_iHealthScaleSetupBluetoothFragment"
+            app:destination="@id/iHealthScaleSetupBluetoothFragment" />
+        <action
+            android:id="@+id/action_iHealthScaleSetupFragment_to_iHealthIOTDeviceSetUpFragment"
+            app:destination="@id/IOTDeviceSetUpFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthScaleSetupBluetoothFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Scale.Set_Up.iHealthScaleSetupBluetoothFragment"
+        android:label="fragment_scale_bluetooth_setup"
+        tools:layout="@layout/fragment_scale_bluetooth_setup">
+        <action
+            android:id="@+id/action_iHealthScaleSetupBluetoothFragment_to_iHealthScannedDeviceFragment"
+            app:destination="@id/iHealthScannedDeviceFragment" />
+        <action
+            android:id="@+id/action_iHealthScaleSetupBluetoothFragment_to_iHealthScaleSetupFragment"
+            app:destination="@id/iHealthScaleSetupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/IOT_MainPage_Fragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.IOT_MainPage_Fragment"
+        android:label="fragment_iot_main_page"
+        tools:layout="@layout/fragment_iot_main_page">
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_IOTDeviceSetUpFragment"
+            app:destination="@+id/IOTDeviceSetUpFragment"
+            />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iHealthPulseOxiFragment"
+            app:destination="@id/iHealthPulseOxiFragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iHealthBp3LFragment"
+            app:destination="@id/iHealthBp3LFragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iHealthScaleFragment"
+            app:destination="@id/iHealthScaleFragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iHealthBG5Fragment"
+            app:destination="@id/iHealthBG5Fragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iHealthBG1InstructionFragment"
+            app:destination="@id/iHealthBG1InstructionFragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_stemoscopeFragment"
+            app:destination="@id/stemoscopeFragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_stemoAudioFragment"
+            app:destination="@id/stemoAudioFragment"
+            />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_watchItemList"
+            app:destination="@id/watchItemList" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iotgraph"
+            app:destination="@id/IOTGraph" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_watchgraph"
+            app:destination="@id/watchGraph" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_vitalMonitor"
+            app:destination="@id/VitalMonitorFragment" />
+
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthPulseOxiFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Pulse_Oximeter.iHealthPulseOxiBaseContainer"
+        android:label="fragment_ihealth_pulse_oxi"
+        tools:layout="@layout/ihealthbg5_base" >
+        <argument
+            android:name="IHEALTH_MAC_ADDR"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_iHealthPulseOxiFragment_to_iHealthPulseOxiMeasurementFragment"
+            app:destination="@id/iHealthPulseOxiMeasurementFragment" />
+        <action
+            android:id="@+id/action_iHealthPulseOxiFragment_to_bluetoothTimeoutFragment"
+            app:destination="@id/bluetoothTimeoutFragment" />
+        <action
+            android:id="@+id/action_iHealthPulseOxiFragment_to_IOTMainPageFragment"
+            app:destination="@id/IOT_MainPage_Fragment" />
+        <action
+            android:id="@+id/action_iHealthPulseOxiFragment_to_IOTGraph"
+            app:destination="@id/IOTGraph" />
+        <action
+            android:id="@+id/action_iHealthPulseOxiFragment_to_TabletMainFragment"
+            app:destination="@id/tabletMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthPulseOxiMeasurementFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Pulse_Oximeter.iHealthPulseOxiMeasurementFragment"
+        android:label="fragment_pulse_oxi_measure"
+        tools:layout="@layout/fragment_pulse_oxi_measure" >
+        <action
+            android:id="@+id/action_iHealthPulseOxiMeasurementFragment_to_iHealthPulseOxiResultFragment"
+            app:destination="@id/iHealthPulseOxiResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthPulseOxiResultFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Pulse_Oximeter.iHealthPulseOxiResultFragment"
+        android:label="fragment_pulse_oxi_result"
+        tools:layout="@layout/fragment_pulse_oxi_result" >
+        <action
+            android:id="@+id/action_iHealthPulseOxiResultFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            app:popUpTo="@+id/IOT_MainPage_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_iHealthPulseOxiResultFragment_to_tabletMainFragment"
+            app:destination="@id/tabletMainFragment"
+            app:popUpTo="@+id/tabletMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthBp3LFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Blood_pressure.iHealthBPContainer"
+        android:label="fragment_ihealth_bp3l"
+        tools:layout="@layout/fragment_bp3l_start" >
+        <action
+            android:id="@+id/action_iHealthBp3LFragment_to_iHealthBP3LMeasurementFragment"
+            app:destination="@id/iHealthBP3LMeasurementFragment"
+           />
+        <argument
+            android:name="IHEALTH_MAC_ADDR"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_iHealthBp3LFragment_to_bluetoothTimeoutFragment"
+            app:destination="@id/bluetoothTimeoutFragment" />
+        <action
+            android:id="@+id/action_iHealthBp3LFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            app:popUpTo="@+id/IOT_MainPage_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_iHealthBp3LFragment_to_tabletMainFragment"
+            app:destination="@id/tabletMainFragment"
+            app:popUpTo="@+id/tabletMainFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_iHealthBPFragment_to_IOTGraph"
+            app:destination="@id/IOTGraph" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthBP3LMeasurementFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Blood_pressure.iHealthBP3LMeasurementFragment"
+        android:label="fragment_bp3l_measure"
+        tools:layout="@layout/fragment_bp3l_measure" >
+        <action
+            android:id="@+id/action_iHealthBP3LMeasurementFragment_to_iHealthBPResultFragment"
+            app:destination="@id/iHealthBPResultFragment" />
+        <action
+            android:id="@+id/action_iHealthBP3LMeasurementFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment" />
+        <action
+            android:id="@+id/action_iHealthBP3LMeasurementFragment_to_TabletMainFragment"
+            app:destination="@id/tabletMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthBPResultFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Blood_pressure.iHealthBPResultFragment"
+        android:label="fragment_bp_result"
+        tools:layout="@layout/fragment_bp_result" >
+        <action
+            android:id="@+id/action_iHealthBPResultFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            app:popUpTo="@+id/IOT_MainPage_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_iHealthBPResultFragment_to_tabletMainFragment"
+            app:destination="@id/tabletMainFragment"
+            app:popUpTo="@+id/tabletMainFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_iHealthBPResultFragment_to_BpInfoFrag"
+            app:destination="@id/iHealthBPInfoFragment"
+            />
+        <action
+            android:id="@+id/action_iHealthBPResultFragment_to_IOTGraph"
+            app:destination="@id/IOTGraph"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthBPInfoFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Blood_pressure.BPInfoFragment"
+        android:label="fragment_bp_info"
+        tools:layout="@layout/blood_presure_info" >
+        <action
+            android:id="@+id/action_iHealthBP_presureinfo_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            app:popUpTo="@+id/IOT_MainPage_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_iHealthBP_presureinfo_to_BpResultPage"
+            app:destination="@id/iHealthBPResultFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthScaleFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Scale.Measurement.iHealthScaleBaseContainer"
+        android:label="fragment_ihealth_scale"
+        tools:layout="@layout/ihealthbg5_base" >
+        <action
+            android:id="@+id/action_iHealthScaleFragment_to_iHealthScaleMeasurementFragment"
+            app:destination="@id/iHealthScaleMeasurementFragment" />
+        <action
+            android:id="@+id/action_iHealthScaleFragment_to_bluetoothTimeoutFragment"
+            app:destination="@id/bluetoothTimeoutFragment" />
+        <action
+            android:id="@+id/action_iHealthScaleFragment_to_iHealthScaleResultFragment"
+            app:destination="@id/iHealthScaleResultFragment" />
+        <action
+            android:id="@+id/action_iHealthScaleFragment_to_iHealthToIOTFragment"
+            app:destination="@id/IOT_MainPage_Fragment" />
+        <action
+            android:id="@+id/action_iHealthScaleFragment_to_iHealthIOTGraph"
+            app:destination="@id/IOTGraph" />
+        <action
+            android:id="@+id/action_iHealthScaleFragment_to_TabletMainFragment"
+            app:destination="@id/tabletMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthScaleMeasurementFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Scale.Measurement.iHealthScaleMeasurementFragment"
+        android:label="fragment_scale_measure"
+        tools:layout="@layout/fragment_scale_measure" >
+        <action
+            android:id="@+id/action_iHealthScaleMeasurementFragment_to_iHealthScaleResultFragment"
+            app:destination="@id/iHealthScaleResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthScaleResultFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Scale.Measurement.iHealthScaleResultFragment"
+        android:label="fragment_scale_result"
+        tools:layout="@layout/fragment_scale_result" >
+        <action
+            android:id="@+id/action_iHealthScaleResultFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            app:popUpTo="@+id/IOT_MainPage_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_iHealthScaleResultFragment_to_tabletMainFragment"
+            app:destination="@id/tabletMainFragment"
+            app:popUpTo="@+id/tabletMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthBG5Fragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Glucometer.BG5.Measurement.iHealthBG5BaseContainer"
+        android:label="fragment_ihealth_bg5"
+        tools:layout="@layout/ihealthbg5_base" >
+        <action
+            android:id="@+id/action_iHealthBG5Fragment_to_iHealthBG5InstructionFragment"
+            app:destination="@id/iHealthBG5InstructionFragment" />
+        <action
+            android:id="@+id/action_iHealthBG5Fragment_to_bluetoothTimeoutFragment"
+            app:destination="@id/bluetoothTimeoutFragment" />
+        <action
+            android:id="@+id/action_iHealthBG5Fragment_to_iHealthIotMainFragment"
+            app:destination="@id/IOT_MainPage_Fragment" />
+        <action
+            android:id="@+id/action_iHealthBG5Fragment_to_iHealthIotGraph"
+            app:destination="@id/IOTGraph" />
+        <action
+            android:id="@+id/action_iHealthBG5Fragment_to_iHealthTabletMain"
+            app:destination="@id/tabletMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthBG5InstructionFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Glucometer.BG5.Measurement.iHealthBG5InstructionFragment"
+        android:label="fragment_bg5_instructions"
+        tools:layout="@layout/fragment_bg5_instructions" >
+        <action
+            android:id="@+id/action_iHealthBG5InstructionFragment_to_iHealthBG5ResultFragment"
+            app:destination="@id/iHealthBG5ResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iHealthBG5ResultFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Glucometer.BG5.Measurement.iHealthBG5ResultFragment"
+        android:label="fragment_bg5_result"
+        tools:layout="@layout/fragment_bg5_result" >
+        <action
+            android:id="@+id/action_iHealthBG5ResultFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            app:popUpTo="@+id/IOT_MainPage_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_iHealthBG5ResultFragment_to_tabletMainFragment"
+            app:destination="@id/tabletMainFragment"
+            app:popUpTo="@+id/tabletMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/bluetoothTimeoutFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.BluetoothTimeoutFragment"
+        android:label="fragment_ihealth_timeout"
+        tools:layout="@layout/fragment_ihealth_timeout" >
+        <action
+            android:id="@+id/action_bluetoothTimeoutFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            app:popUpTo="@+id/IOT_MainPage_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_bluetoothTimeoutFragment_to_tabletMainFragment"
+            app:destination="@id/tabletMainFragment"
+            app:popUpTo="@+id/tabletMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/tabletMainFragment"
+        android:name="com.cybermed.cdoc_patient.Tablet_Mode.TabletMainFragment"
+        android:label="fragment_main_tablet"
+        tools:layout="@layout/fragment_main_tablet" >
+        <action
+            android:id="@+id/action_tabletMainFragment_to_iHealthScaleFragment"
+            app:destination="@id/iHealthScaleFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_iHealthBp3LFragment"
+            app:destination="@id/iHealthBp3LFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_iHealthPulseOxiFragment"
+            app:destination="@id/iHealthPulseOxiFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_iHealthBG5Fragment"
+            app:destination="@id/iHealthBG5Fragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_videoCall"
+            app:destination="@id/videoCall" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_monitorFragment"
+            app:destination="@id/monitorFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_iHealthBG1InstructionFragment"
+            app:destination="@id/iHealthBG1InstructionFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_stemoscopeFragment"
+            app:destination="@id/stemoscopeFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_IOtGraph"
+            app:destination="@id/IOTGraph" />
+    </fragment>
+
+    <activity
+        android:id="@+id/videoCall"
+        android:name="com.cybermed.cdoc_patient.doctor.VideoCallActivity"
+        android:label="activity_video_call"
+        tools:layout="@layout/activity_video_call" />
+    <fragment
+        android:id="@+id/iHealthBG1InstructionFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealth_Glucometer.BG1.iHealthBG1InstructionFragment"
+        android:label="fragment_bg1_instructions"
+        tools:layout="@layout/fragment_bg1_instructions" >
+        <action
+            android:id="@+id/action_iHealthBG1InstructionFragment_to_iHealthBG5ResultFragment"
+            app:destination="@id/iHealthBG5ResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/monitorFragment"
+        android:name="com.cybermed.cdoc_patient.me.MonitorFragment"
+        android:label="fragment_monitor"
+        tools:layout="@layout/fragment_monitor" />
+    <fragment
+        android:id="@+id/QRCodeScannerFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.Stemoscope.QRCodeScannerFragment"
+        android:label="QRCodeScannerFragment" >
+        <action
+            android:id="@+id/action_QRCodeScannerFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            app:popUpTo="@id/IOT_MainPage_Fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/stemoscopeFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.Stemoscope.StemoscopeFragment"
+        android:label="fragment_stemoscope"
+        tools:layout="@layout/fragment_stemoscope" >
+        <action
+            android:id="@+id/action_stemoscopeFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_stemoscopeFragment_to_tabletMainFragment"
+            app:destination="@id/tabletMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/stemoAudioFragment"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.Stemoscope.StemoAudioListnerFragment"
+        android:label="fragment_stemoAudio"
+        tools:layout="@layout/stemo_audio_heart">
+        <action
+            android:id="@+id/action_stemoAudioFragment_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+             />
+        <action
+            android:id="@+id/action_stemoAudioFragment_to_tabletMainFragment"
+            app:destination="@id/tabletMainFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/watchItemList"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.smartwatch.WatchItemList"
+        android:label="fragment_watchItem"
+        tools:layout="@layout/activity_watch_item">
+        <action
+            android:id="@+id/action_watchItemList_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+             />
+        <action
+            android:id="@+id/action_watchItemList_to_watchgraph"
+            app:destination="@id/watchGraph"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/watchGraph"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.smartwatch.vital_graph.SmartWatchGraphFragment"
+        android:label="fragment_graph"
+        tools:layout="@layout/smart_watch_graph_frag">
+        <action
+            android:id="@+id/action_watchGraph_to_watchItemList"
+            app:destination="@id/watchItemList"
+            />
+        <action
+            android:id="@+id/action_watchGraph_to_IOTFragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/watchItemScan"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.smartwatch.DeviceScanFragment"
+        android:label="fragment_watchItem"
+        tools:layout="@layout/activity_watch_item">
+        <action
+            android:id="@+id/action_watchItemScan_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+            />
+        <action
+            android:id="@+id/action_watchItemScan_to_device_Setup"
+            app:destination="@id/IOTDeviceSetUpFragment"
+            />
+        <action
+            android:id="@+id/action_watchItemScan_to_DeviceList"
+            app:destination="@id/watchItemList"
+             />
+    </fragment>
+    <fragment
+        android:id="@+id/IOTGraph"
+        android:name="com.cybermed.cdoc_patient.bluetooth.iHealth_Devices.iHealthGraph.IOTGraph"
+        android:label="fragment_iotgraph"
+        tools:layout="@layout/graph_history">
+        <action
+            android:id="@+id/action_iotgraph_to_IOT_MainPage_Fragment"
+            app:destination="@id/IOT_MainPage_Fragment"
+             />
+        <action
+            android:id="@+id/action_iotgraph_to_TabletMainFragment"
+            app:destination="@id/tabletMainFragment"
+            />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_iHealthScaleFragment"
+            app:destination="@id/iHealthScaleFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_iHealthBp3LFragment"
+            app:destination="@id/iHealthBp3LFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_iHealthPulseOxiFragment"
+            app:destination="@id/iHealthPulseOxiFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_iHealthBG5Fragment"
+            app:destination="@id/iHealthBG5Fragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_videoCall"
+            app:destination="@id/videoCall" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_monitorFragment"
+            app:destination="@id/monitorFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_iHealthBG1InstructionFragment"
+            app:destination="@id/iHealthBG1InstructionFragment" />
+        <action
+            android:id="@+id/action_tabletMainFragment_to_stemoscopeFragment"
+            app:destination="@id/stemoscopeFragment" />
+        <action
+            android:id="@+id/action_iotgraph_to_iotgraph"
+            app:destination="@id/IOTGraph" />
+    </fragment>
+    <fragment
+        android:id="@+id/VitalMonitorFragment"
+        android:name="com.cybermed.cdoc_patient.me.vitalcheck.VitalMonitorFragment"
+        android:label="fragment_iot_main_page"
+        tools:layout="@layout/fragment_new_vital_check_ui">
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_IOTDeviceSetUpFragment"
+            app:destination="@+id/IOTDeviceSetUpFragment"
+            />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iHealthPulseOxiFragment"
+            app:destination="@id/iHealthPulseOxiFragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iHealthBp3LFragment"
+            app:destination="@id/iHealthBp3LFragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iHealthScaleFragment"
+            app:destination="@id/iHealthScaleFragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iHealthBG5Fragment"
+            app:destination="@id/iHealthBG5Fragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iHealthBG1InstructionFragment"
+            app:destination="@id/iHealthBG1InstructionFragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_stemoscopeFragment"
+            app:destination="@id/stemoscopeFragment" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_stemoAudioFragment"
+            app:destination="@id/stemoAudioFragment"
+            />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_watchItemList"
+            app:destination="@id/watchItemList" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_iotgraph"
+            app:destination="@id/IOTGraph" />
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_watchgraph"
+            app:destination="@id/watchGraph" />
+
+
+        <action
+            android:id="@+id/action_IOT_MainPage_Fragment_to_vitalgraph"
+            app:destination="@id/VitalCheckFragmentNew" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/VitalCheckFragmentNew"
+        android:name="com.cybermed.cdoc_patient.me.vitalcheck.VitalCheckFragmentNew"
+        android:label="VitalCheckFragmentNew"
+        tools:layout="@layout/fragment_vital_check_ui">
+        <action
+            android:id="@+id/action_Vitalgraph_Fragment_to_vitalrecord"
+            app:destination="@id/VitalMonitorFragment"
+            />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/VitalChartFragment"
+        android:name="com.cybermed.cdoc_patient.me.vitalcheck.VitalChartFragment"
+        android:label="VitalChartFragment"
+        tools:layout="@layout/vital_check_fregment_new_layout">
+        <action
+            android:id="@+id/action_Vitalgraph_Fragment_to_vitalrecord"
+            app:destination="@id/VitalMonitorFragment"
+            />
+    </fragment>
+</navigation>

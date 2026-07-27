@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_0_2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/outer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_0_2"
+            android:paddingTop="@dimen/_9sdp"
+            android:paddingBottom="@dimen/_18sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/txtlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/routine"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/wake_up_iv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/rpm_routine_wakeup"
+                app:layout_constraintEnd_toStartOf="@id/breakfast_iv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtlabel" />
+
+            <TextView
+                android:id="@+id/wake_up_time"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_24sdp"
+                android:background="@drawable/ic_star_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/wake_up_iv"
+                app:layout_constraintStart_toStartOf="@id/wake_up_iv"
+                app:layout_constraintTop_toBottomOf="@+id/wake_up_iv" />
+
+            <ImageView
+                android:id="@+id/breakfast_iv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/rpmroutine_breakfast"
+                app:layout_constraintEnd_toStartOf="@id/lunch_iv"
+                app:layout_constraintStart_toEndOf="@id/wake_up_iv"
+                app:layout_constraintTop_toBottomOf="@id/txtlabel" />
+
+            <TextView
+                android:id="@+id/breakfast_time"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_24sdp"
+                android:background="@drawable/ic_star_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/breakfast_iv"
+                app:layout_constraintStart_toStartOf="@id/breakfast_iv"
+                app:layout_constraintTop_toBottomOf="@+id/breakfast_iv" />
+
+            <ImageView
+                android:id="@+id/lunch_iv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/rpm_routine_lunch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/breakfast_iv"
+                app:layout_constraintTop_toBottomOf="@id/txtlabel" />
+
+            <TextView
+                android:id="@+id/lunch_time"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_24sdp"
+                android:background="@drawable/ic_star_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/lunch_iv"
+                app:layout_constraintStart_toStartOf="@id/lunch_iv"
+                app:layout_constraintTop_toBottomOf="@+id/lunch_iv" />
+
+
+            <ImageView
+                android:id="@+id/dinner_iv"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:src="@drawable/rpm_routine_dinner"
+                app:layout_constraintEnd_toStartOf="@id/bed_iv"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/breakfast_time" />
+
+            <ImageView
+                android:id="@+id/bed_iv"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:src="@drawable/rpm_routine_bedtime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dinner_iv"
+                app:layout_constraintTop_toBottomOf="@+id/breakfast_time" />
+
+            <TextView
+                android:id="@+id/dinner_time"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_24sdp"
+                android:background="@drawable/ic_star_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/dinner_iv"
+                app:layout_constraintStart_toStartOf="@id/dinner_iv"
+                app:layout_constraintTop_toBottomOf="@+id/dinner_iv" />
+
+            <TextView
+                android:id="@+id/bed_time"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_24sdp"
+                android:background="@drawable/ic_star_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/bed_iv"
+                app:layout_constraintStart_toStartOf="@id/bed_iv"
+                app:layout_constraintTop_toBottomOf="@id/bed_iv" />
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_outline_blue_selector"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@id/okayBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/okayBtn"
+                app:layout_constraintBottom_toBottomOf="@id/okayBtn"/>
+
+            <Button
+                android:id="@+id/okayBtn"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_36sdp"
+                android:background="@drawable/selector_blue_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/okay"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cancel_btn"
+                app:layout_constraintTop_toBottomOf="@id/dinner_time" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

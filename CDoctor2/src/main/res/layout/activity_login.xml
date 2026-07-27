@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="vm"
+            type="com.cybermed.cdoc_patient.login.viewmodel.LoginVM" />
+    </data>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_login"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:orientation="horizontal"
+           >
+
+
+            <TextView
+                android:id="@+id/tv_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_outine_blue_corner"
+                android:fontFamily="@font/roboto_medium"
+                android:enabled="true"
+                android:gravity="center"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_10sdp" />
+
+            <ImageView
+                android:id="@+id/img_cdoc"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/logo_small"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/linear_doc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_below="@+id/img_cdoc"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cdoc_logo" />
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txt_healthcare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_doc"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/healthcare_at_ur_fingertip"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal"
+                android:visibility="gone"/>
+
+
+            <include
+                android:id="@+id/layout_logo"
+                layout="@layout/logo_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_17sdp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_below="@+id/lay1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:layout_weight="1"
+           >
+            <TextView
+                android:id="@+id/login_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/we_do_not_recognize_the_username_or_password"
+                android:gravity="center"
+                android:background="@color/color_f8f3f3"
+                android:textColor="@color/color_cb544c"
+                android:padding="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:textColorHint="@color/color_6896ae"
+                app:errorEnabled="false"
+                app:errorTextAppearance="@style/errorTextApprearance"
+                app:hintTextAppearance="@style/customHintApprearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_user_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_user_login"
+                    android:drawablePadding="@dimen/_13sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="@string/user_name"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:paddingBottom="@dimen/_13sdp"
+                    android:singleLine="true"
+                    android:text="@={vm.email}"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textColorHighlight="@color/azure"
+                    android:textColorHint="@color/color_6896ae"
+                    android:textSize="@dimen/_11sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_14sdp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textColorHint="@color/color_6896ae"
+                    app:errorEnabled="false"
+                    app:hintTextAppearance="@style/customHintApprearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_user_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890./!@#$%^"
+                        android:drawableStart="@drawable/ic_password"
+                        android:drawablePadding="@dimen/_13sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="@string/enter_your_password"
+                        android:inputType="textPassword"
+                        android:maxLength="13"
+                        android:paddingBottom="@dimen/_13sdp"
+                        android:singleLine="true"
+                        android:text="@={vm.password}"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textColorHighlight="@color/azure"
+                        android:textColorHint="@color/color_6896ae"
+                        android:textSize="@dimen/_11sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/password_hide_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:paddingTop="@dimen/_13sdp"
+                    android:paddingEnd="@dimen/_13sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:tag="0"
+                    android:src="@{vm.passwordView?@drawable/pass_show:@drawable/pass_hide}" />
+                <ImageView
+                    android:id="@+id/fingerprint_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="@dimen/_13sdp"
+                    android:paddingEnd="@dimen/_13sdp"
+                    android:src="@drawable/scan_logo" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_forget_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/login_forgot"
+                android:textAllCaps="false"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_8sdp" />
+
+
+            <Button
+                android:id="@+id/txt_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_38sdp"
+                android:background="@drawable/selector_bg_orange_selector"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="@string/sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_12sdp"
+                app:email="@{vm.email}"
+                app:password="@{vm.password}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center|bottom">
+
+            <ImageView
+                android:id="@+id/img_cybermed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_13sdp"
+                app:srcCompat="@drawable/ic_cybermed_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/label_cdoc_emergency"
+                android:textColor="@color/color_73848d"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txt_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_13sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/term_of_use"
+                android:textColor="@color/azure"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/txt_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/version2_0"
+                android:textColor="@color/color_73848d"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</layout>

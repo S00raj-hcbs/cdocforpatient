@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="state">
+        <item>All</item>
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RL</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+
+    <string-array name="state2">
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RL</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+
+    <string-array name="state_name">
+        <item>All</item>
+        <item>Alabama</item>
+        <item>Alaska</item>
+        <item>Arizona</item>
+        <item>Arkansas</item>
+        <item>California</item>
+        <item>Colorado</item>
+        <item>Connecticut</item>
+        <item>Delaware</item>
+        <item>Florida</item>
+        <item>Georgia</item>
+        <item>Hawaii</item>
+        <item>Idaho</item>
+        <item>Illinois</item>
+        <item>Indiana</item>
+        <item>Iowa</item>
+        <item>Kansas</item>
+        <item>Kentucky</item>
+        <item>Louisiana</item>
+        <item>Maine</item>
+        <item>Maryland</item>
+        <item>Massachusetts</item>
+        <item>Michigan</item>
+        <item>Minnesota</item>
+        <item>Mississippi</item>
+        <item>Missouri</item>
+        <item>Montana</item>
+        <item>Nebraska</item>
+        <item>Nevada</item>
+        <item>New Hampshire</item>
+        <item>New Jersey</item>
+        <item>New Mexico</item>
+        <item>New York</item>
+        <item>North Carolina</item>
+        <item>North Dakota</item>
+        <item>Ohio</item>
+        <item>Oklahoma</item>
+        <item>Oregon</item>
+        <item>Pennsylvania</item>
+        <item>Rhode Island</item>
+        <item>South Carolina</item>
+        <item>South Dakota</item>
+        <item>Tennessee</item>
+        <item>Texas</item>
+        <item>Utah</item>
+        <item>Vermont</item>
+        <item>Virginia</item>
+        <item>Washington</item>
+        <item>West Virginia</item>
+        <item>Wisconsin</item>
+        <item>Wyoming</item>
+    </string-array>
+
+
+    <string-array name="chiefComplaints">
+      <!--  <item>请选择您的病因</item>-->
+        <item>粉刺</item>
+        <item>过敏</item>
+        <item>便秘</item>
+        <item>咳嗽</item>
+        <item>抑郁症</item>
+        <item>腹泻</item>
+        <item>耳科相关</item>
+        <item>饮食失调</item>
+        <item>发热</item>
+        <item>填写处方</item>
+        <item>流感</item>
+        <item>头痛</item>
+        <item>高血压</item>
+        <item>虫咬</item>
+        <item>大麻</item>
+        <item>反胃</item>
+        <item>红眼病</item>
+        <item>皮疹</item>
+        <item>补充处方</item>
+        <item>咽喉痛</item>
+        <item>腹痛</item>
+        <item>压力过大</item>
+        <item>创伤和创伤后应激障碍</item>
+        <item>呼吸困难</item>
+        <item>泌尿问题</item>
+        <item>呕吐</item>
+    </string-array>
+
+    <string-array name="smokeStatus">
+        <item>请选择吸烟状态:</item>
+        <item>日常吸烟者</item>
+        <item>偶尔吸烟者</item>
+        <item>前吸烟者</item>
+        <item>从不吸烟</item>
+        <item>吸烟者，目前状况不明</item>
+        <item>大量吸烟者</item>
+        <item>轻度吸烟者</item>
+        <item>不知道是否吸过烟</item>
+    </string-array>
+
+    <string-array name="allergies">
+        <item>无已知过敏症状</item>
+        <item>ACE抑制剂过敏</item>
+        <item>蜜蜂蜇过敏</item>
+        <item>胶乳过敏</item>
+        <item>海鲜过敏</item>
+        <item>花粉过敏</item>
+        <item>青霉素过敏</item>
+        <item>可待因过敏</item>
+        <item>花生过敏</item>
+        <item>硫磺过敏</item>
+        <item>屋尘过敏</item>
+        <item>坚果类过敏</item>
+
+    </string-array>
+
+    <!--<string-array name="specialities">
+        <item>	全部		</item>
+        <item>	针灸师		</item>
+        <item>	心脏科		</item>
+        <item>	临床心理学家		</item>
+        <item>	皮肤科		</item>
+        <item>	牙科普通科		</item>
+        <item>	内分泌科		</item>
+        <item>	家庭执业		</item>
+        <item>	普通执业			</item>
+        <item>	普通外科		</item>
+        <item>	内科		</item>
+        <item>	执照的临床社会工作者	</item>
+        <item>	肾脏科		</item>
+        <item>	执业护士		</item>
+        <item>	妇产科		</item>
+        <item>	儿科		</item>
+        <item>	物理医学		</item>
+
+
+    </string-array>-->
+    <string-array name="specialities">
+        <item>	All		</item>
+        <item>	Acupuncturist		</item>
+        <item>	Cardiology		</item>
+        <item>	Clinical Psychologist		</item>
+        <item>	Dermatology		</item>
+        <item>	Dental General practice		</item>
+        <item>	Endocrinology		</item>
+        <item>	Family Practice		</item>
+        <item>	General Practice		</item>
+        <item>	General Surgery		</item>
+        <item>	Internal Medicine		</item>
+        <item>	Licensed Clinical Social Worker		</item>
+        <item>	Nephrology		</item>
+        <item>	Nurse Practitioner		</item>
+        <item>	Obstetrics-Gynecology		</item>
+        <item>	Pediatric Medicine		</item>
+        <item>	Physical Medicine		</item>
+    </string-array>
+
+    <string-array name="appointment_status">
+        <item>全部</item>
+        <item>已完成</item>
+        <item>已付款</item>
+        <item>等候中</item>
+        <item>已取消</item>
+        <item>已预约</item>
+        <item>已请求</item>
+    </string-array>
+
+   <!-- <string-array name="languages">
+        <item>	无指定	</item>
+        <item>	缅甸语	</item>
+        <item>	中文	</item>
+        <item>	英语	</item>
+        <item>	俄语	</item>
+        <item>	西班牙语	</item>
+        <item>	他加禄语	</item>
+        <item>	泰米尔语	</item>
+        <item>	约鲁巴语	</item>
+    </string-array>-->
+    <string-array name="languages">
+        <item>	All	</item>
+        <item>	Burmese	</item>
+        <item>	Chinese	</item>
+        <item>	English	</item>
+        <item>	Russian	</item>
+        <item>	Spanish	</item>
+        <item>	Tagalog	</item>
+        <item>	Tamil	</item>
+        <item>	Yoruba	</item>
+    </string-array>
+
+
+    <string-array name="glucose_measure_time">
+        <item>起床后</item>
+        <item>早餐前</item>
+        <item>早餐后</item>
+        <item>午餐前</item>
+        <item>午餐后</item>
+        <item>晚餐前</item>
+        <item>晚餐后</item>
+        <item>睡前</item>
+    </string-array>
+    <string-array name="title">
+        <item>化验记录</item>
+        <item>免疫接种</item>
+        <item>过敏史</item>
+        <item>药物信息</item>
+        <!--  <item>生命体征检测</item> -->
+        <item>转诊记录</item>
+    </string-array>
+    <string-array name="title_menus">
+        <item>首页</item>
+        <!--  <item>健康记录</item> -->
+        <item>支持</item>
+        <item>设置</item>
+        <item>退出登录</item>
+    </string-array>
+
+    <string-array name="tabs_menus">
+        <item>    年    </item>
+        <item>   今天   </item>
+        <item>    周    </item>
+        <item>    月    </item>
+        <item> 最近6个月 </item>
+    </string-array>
+</resources>

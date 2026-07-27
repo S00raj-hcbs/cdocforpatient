@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/userActivityLayout"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/ToolBarStyle"
+        android:background="@color/defaultColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:text="Me"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/settings" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/btn_my_profile"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_fragment_buttons"
+            android:src="@drawable/btn_account_selector"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/btn_call_log"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/btn_vitals"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_fragment_buttons"
+            android:src="@drawable/btn_vitals_selector"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/btn_family_add"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_fragment_buttons"
+            android:src="@drawable/btn_family_member_selector"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btn_call_log"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_fragment_buttons"
+            android:src="@drawable/btn_call_history_selector"
+            app:layout_constraintEnd_toStartOf="@+id/btn_payment"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_my_profile" />
+
+        <ImageView
+            android:id="@+id/btn_medication"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_fragment_buttons"
+            android:src="@drawable/btn_medication_selector"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btn_lab_report"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_fragment_buttons"
+            android:src="@drawable/btn_lab_report_selector"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btn_payment"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_fragment_buttons"
+            android:src="@drawable/btn_payment_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_call_log" />
+
+        <ImageView
+            android:id="@+id/btn_vaccination"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_fragment_buttons"
+            android:src="@drawable/btn_vaccination_selector"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btn_monitor"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_fragment_buttons"
+            android:src="@drawable/btn_monitor_selector"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/useractivity_logout_bttn"
+        android:textColor="@color/white"
+        android:background="@drawable/selector_btn_blue_corner"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

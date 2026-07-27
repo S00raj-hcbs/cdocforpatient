@@ -1,0 +1,81 @@
+<layout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/relative_measure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/progressMeasure"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:indeterminateDrawable="@drawable/circle_progress_dark_slate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/measuring"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_measure"
+            android:visibility="visible">
+
+
+            <ProgressBar
+                android:id="@+id/progressCircleSmaller"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="@dimen/_190sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/_22sdp"
+                android:indeterminateDrawable="@drawable/progress_darkslatesgrey" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/weight"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/weight_graph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="--"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/_28sdp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.philjay'
+
+android {
+    compileSdk 36
+    defaultConfig {
+        minSdkVersion 14
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+        targetSdk 36// this prevents "not mocked" error
+    }
+    namespace 'com.github.mikephil.charting'
+    lint {
+        targetSdk 36
+    }
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.8.2'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+task sourcesJar(type: Jar) {
+   /* from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'*/
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier.set('sources')
+}
+
+task javadoc(type: Javadoc) {
+    options.charSet = 'UTF-8'
+    failOnError  false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    /*classifier = 'javadoc'
+    from javadoc.destinationDir*/
+    from javadoc
+    archiveClassifier.set('javadoc')
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}

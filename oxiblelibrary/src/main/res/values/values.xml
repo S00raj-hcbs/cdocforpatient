@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bind_device_fail">蓝牙绑定失败，请检查设备蓝牙是否可见！</string>
+    <string name="error_ble_not_supported">设备不支持蓝牙低功耗技术</string>
+    <string name="error_bluetooth_not_open">请检查设备的蓝牙开关是否打开</string>
+    <string name="error_bluetooth_not_supported">设备不支持蓝牙</string>
+    <string name="error_connect_timeout">蓝牙连接超时</string>
+    <string name="error_device_exception">设备异常</string>
+    <string name="error_null_device_data">设备中没有数据，请先检测。</string>
+    <string name="error_response_data">接收下位机回传数据格式异常</string>
+    <string name="error_scan_timeout">未找到设备，请检查设备是否打开。</string>
+    <string name="exception_match_fail">蓝牙绑定失败，密码配对失败！</string>
+    <string name="exception_read_device_ID">蓝牙绑定失败，获取设备ID异常！</string>
+    <string name="exception_read_device_sn">蓝牙绑定失败，获取设备SN异常！</string>
+    <string name="exception_scan_timeout">蓝牙扫描超时，请检查蓝牙是否可见！</string>
+</resources>

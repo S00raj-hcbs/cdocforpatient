@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_0_2"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_0_2"
+            android:fitsSystemWindows="true">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_0_2"
+                android:orientation="vertical"
+                android:layout_above="@+id/btnSend">
+
+
+                <TextView
+                    android:id="@+id/toTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_27sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/to"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/txvReceipnt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_72sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_2sdp"
+                    android:singleLine="true"
+                    android:text="@string/select_recipient"
+                    android:textColorHint="@color/color_6896ae"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:drawableEndCompat="@drawable/down_arrow"
+                    app:layout_constraintBottom_toBottomOf="@id/toTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/toTitle" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:background="@color/color_8f8f8f"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txvReceipnt"
+                    app:layout_constraintTop_toBottomOf="@id/txvReceipnt" />
+
+
+                <TextView
+                    android:id="@+id/txtedtSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_27sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/subject"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/toTitle" />
+
+
+                <EditText
+                    android:id="@+id/edtSubject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_68sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:paddingBottom="@dimen/_13sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_2sdp"
+                    android:singleLine="true"
+                    android:hint="@string/type_here"
+                    android:textColorHint="@color/color_6896ae"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/txtedtSubject"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtedtSubject" />
+
+
+                <EditText
+                    android:id="@+id/edtBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_36sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/enter_your_text_here"
+                    android:paddingStart="@dimen/_7sdp"
+                    android:paddingBottom="@dimen/_25sdp"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textColorHint="@color/color_6896ae"
+                    android:textSize="@dimen/_10sdp"
+                    android:maxLength="300"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtSubject" />
+                <TextView
+                    android:id="@+id/txtedtlength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="(0/300)"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textAlignment="viewEnd"
+                    android:gravity="end"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtBody" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_38sdp"
+                android:background="@drawable/bg_login_btn_selector"
+                android:enabled="false"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="@dimen/_9sdp"
+                android:text="@string/send"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_12sdp"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+</layout>

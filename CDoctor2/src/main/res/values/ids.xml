@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- For video use-->
+    <item name="small_video_view_dock" type="id" />
+
+</resources>

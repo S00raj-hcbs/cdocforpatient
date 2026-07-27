@@ -1,0 +1,22 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+
+    <dimen name="font_size_12">20.4sp</dimen>
+    <dimen name="font_size_14">23.8sp</dimen>
+    <dimen name="font_size_15">25.5sp</dimen>
+    <dimen name="font_size_16">27.2sp</dimen>
+    <dimen name="font_size_18">30.6sp</dimen>
+    <dimen name="font_size_40">68sp</dimen>
+
+    <dimen name="login_setting_back">70dp</dimen>
+
+    <dimen name="family_option">300dp</dimen>
+    <dimen name="IOT_Result_Font">60sp</dimen>
+    <dimen name="bluetoothTitle">30sp</dimen>
+    <dimen name="bluetoothInstruction">20sp</dimen>
+    <dimen name="dimen_100dp">100dp</dimen>
+    <dimen name="minus_100dp">-100dp</dimen>
+    <dimen name="dimen_7dp">10f</dimen>
+</resources>

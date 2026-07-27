@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.cybermed.cdoc_patient.login.viewmodel.SignUpVM" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:hint="@string/regist_addr"
+                android:textColorHint="@color/color_6896ae"
+                app:errorEnabled="false"
+                app:errorTextAppearance="@style/errorTextApprearance"
+                app:hintTextAppearance="@style/customHintApprearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/infoAddr1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#., "
+                    android:drawablePadding="@dimen/_13sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:maxLength="55"
+                    android:paddingBottom="@dimen/_13sdp"
+                    android:singleLine="true"
+                    android:text="@={vm.addressLine1}"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textColorHighlight="@color/azure"
+                    android:textSize="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_Address2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_Address"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:hint="@string/regist_addr2"
+                android:textColorHint="@color/color_6896ae"
+                app:errorEnabled="false"
+                app:errorTextAppearance="@style/errorTextApprearance"
+                app:hintTextAppearance="@style/customHintApprearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/infoAddr2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#., "
+                    android:drawablePadding="@dimen/_13sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:maxLength="55"
+                    android:paddingBottom="@dimen/_13sdp"
+                    android:singleLine="true"
+                    android:text="@={vm.addressLine2}"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textColorHighlight="@color/azure"
+                    android:textSize="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_Address2"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginEnd="@dimen/_13sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:hint="@string/regist_city"
+                android:textColorHint="@color/color_6896ae"
+                app:errorEnabled="false"
+                app:errorTextAppearance="@style/errorTextApprearance"
+                app:hintTextAppearance="@style/customHintApprearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawablePadding="@dimen/_13sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:paddingBottom="@dimen/_13sdp"
+                    android:singleLine="true"
+                    android:text="@={vm.city}"
+                    android:textColor="@color/color_4f4f4f"
+                    android:textColorHighlight="@color/azure"
+                    android:textSize="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_city"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:layout_weight="1"
+                    android:hint="@string/regist_state"
+                    android:textColorHint="@color/color_6896ae"
+                    app:errorEnabled="false"
+                    app:errorTextAppearance="@style/errorTextApprearance"
+                    app:hintTextAppearance="@style/customHintApprearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#., "
+                        android:drawableEnd="@drawable/down_arrow"
+                        android:drawablePadding="@dimen/_13sdp"
+                        android:focusable="false"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="text"
+                        android:maxLength="2"
+                        android:paddingBottom="@dimen/_13sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textColorHighlight="@color/azure"
+                        android:textSize="@dimen/_10sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_zipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/regist_zip"
+                    android:textColorHint="@color/color_6896ae"
+                    app:errorEnabled="false"
+                    app:errorText="@{vm.zipCodeError}"
+                    app:errorTextAppearance="@style/errorTextApprearance"
+                    app:hintTextAppearance="@style/customHintApprearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editZipCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:drawablePadding="@dimen/_13sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:paddingBottom="@dimen/_13sdp"
+                        android:singleLine="true"
+                        android:text="@={vm.zipCode}"
+                        android:textColor="@color/color_4f4f4f"
+                        android:textColorHighlight="@color/azure"
+                        android:textSize="@dimen/_10sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/getStartedBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/selector_bg_orange_selector"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:paddingStart="@dimen/_25sdp"
+                android:paddingEnd="@dimen/_25sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="@string/get_started"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_12sdp"
+                app:addressLine1="@{vm.addressLine1}"
+                app:city="@{vm.city}"
+                app:drawableEndCompat="@drawable/ic_white_arrow"
+                app:state="@{vm.state}"
+                app:zip="@{vm.zipCode}" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</layout>
+

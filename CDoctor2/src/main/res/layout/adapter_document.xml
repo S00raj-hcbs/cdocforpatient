@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_document"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_6sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/img_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/img_labreport" />
+
+            <TextView
+                android:id="@+id/lab_TestName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/img_pdf"
+                android:textColor="@color/color_4f4f4f"
+                android:text=""
+                android:textSize="@dimen/_10sdp"
+                android:gravity="start"
+                android:includeFontPadding="false"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_toStartOf="@+id/txt_view_pdf"
+                />
+
+            <Button
+                android:id="@+id/txt_view_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@color/azure"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/view"
+                android:textAllCaps="false"
+                android:textColor="@color/white_0_2"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/lab_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lab_TestName"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textColor="@color/color_8f8f8f"
+                android:text=""
+                android:fontFamily="@font/roboto_regular"
+                android:layout_toEndOf="@id/img_pdf"
+                android:textStyle="normal"
+                android:textSize="@dimen/_10sdp"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

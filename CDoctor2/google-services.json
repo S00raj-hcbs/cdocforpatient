@@ -1,0 +1,214 @@
+{
+  "project_info": {
+    "project_number": "307198509854",
+    "firebase_url": "https://cdoc-759b6.firebaseio.com",
+    "project_id": "cdoc-759b6",
+    "storage_bucket": "cdoc-759b6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307198509854:android:6082b603796e1c11",
+        "android_client_info": {
+          "package_name": "com.cybermed.cdoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307198509854-r33oo05q5tqmlf4subpniq8ov3f3tru4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cybermed.cdoc",
+            "certificate_hash": "6c602bdee02c994aa51efb45343cc8688c6c01cc"
+          }
+        },
+        {
+          "client_id": "307198509854-vrns5p89maer0bu9kf1u8p3fmjuoiob2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBapdwbignPLDTMCvH5zuGQCvgdIm_8VdE"
+        },
+        {
+          "current_key": "AIzaSyBAQq2AxWKmt-0Kq_pHXYfVtbZWOBZFSi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307198509854-vrns5p89maer0bu9kf1u8p3fmjuoiob2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "307198509854-30q8esa79h4mnugdsoiflo83lp3c38d6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cybermed.cdoctor"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307198509854:android:0b6edaeed212418f91ff0f",
+        "android_client_info": {
+          "package_name": "com.cybermed.cdoc_patient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307198509854-vrns5p89maer0bu9kf1u8p3fmjuoiob2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBapdwbignPLDTMCvH5zuGQCvgdIm_8VdE"
+        },
+        {
+          "current_key": "AIzaSyBAQq2AxWKmt-0Kq_pHXYfVtbZWOBZFSi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307198509854-vrns5p89maer0bu9kf1u8p3fmjuoiob2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "307198509854-30q8esa79h4mnugdsoiflo83lp3c38d6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cybermed.cdoctor"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307198509854:android:e0ec166f985902ce",
+        "android_client_info": {
+          "package_name": "com.cybermed.cdocprovider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307198509854-vrns5p89maer0bu9kf1u8p3fmjuoiob2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBapdwbignPLDTMCvH5zuGQCvgdIm_8VdE"
+        },
+        {
+          "current_key": "AIzaSyBAQq2AxWKmt-0Kq_pHXYfVtbZWOBZFSi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307198509854-vrns5p89maer0bu9kf1u8p3fmjuoiob2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "307198509854-30q8esa79h4mnugdsoiflo83lp3c38d6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cybermed.cdoctor"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307198509854:android:b7eff971d7eaa8f9",
+        "android_client_info": {
+          "package_name": "com.dokita247.dokitaandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307198509854-vrns5p89maer0bu9kf1u8p3fmjuoiob2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBapdwbignPLDTMCvH5zuGQCvgdIm_8VdE"
+        },
+        {
+          "current_key": "AIzaSyBAQq2AxWKmt-0Kq_pHXYfVtbZWOBZFSi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307198509854-vrns5p89maer0bu9kf1u8p3fmjuoiob2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "307198509854-30q8esa79h4mnugdsoiflo83lp3c38d6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cybermed.cdoctor"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307198509854:android:5e16b91a6d58c487",
+        "android_client_info": {
+          "package_name": "com.dokita247.dokitaandroidprovider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307198509854-vrns5p89maer0bu9kf1u8p3fmjuoiob2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBapdwbignPLDTMCvH5zuGQCvgdIm_8VdE"
+        },
+        {
+          "current_key": "AIzaSyBAQq2AxWKmt-0Kq_pHXYfVtbZWOBZFSi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307198509854-vrns5p89maer0bu9kf1u8p3fmjuoiob2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "307198509854-30q8esa79h4mnugdsoiflo83lp3c38d6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cybermed.cdoctor"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

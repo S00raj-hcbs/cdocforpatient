@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- <androidx.appcompat.widget.Toolbar
+             android:id="@+id/toolBar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/azure"
+             android:minHeight="?attr/actionBarSize"
+             app:theme="@style/ThemeOverlay.AppCompat">
+
+             <ImageView
+                 android:id="@+id/imgBack"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="@dimen/_14sdp"
+                 android:layout_marginTop="@dimen/_14sdp"
+                 android:padding="@dimen/_5sdp"
+                 android:src="@drawable/ic_back_btn"
+                 app:tint="@color/white_0_2" />
+
+             <TextView
+                 android:id="@+id/toolbar_title"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/_14sdp"
+                 android:layout_marginTop="@dimen/_14sdp"
+                 android:fontFamily="@font/roboto_medium"
+                 android:textColor="@color/white_0_2"
+                 android:textSize="@dimen/_14sdp"
+                 android:textStyle="normal" />
+
+         </androidx.appcompat.widget.Toolbar>-->
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolBar">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolBar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <include
+                        android:id="@+id/graph_divider"
+                        layout="@layout/graph_info_layout" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_graph_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@id/graph_divider"
+
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_ecf6fb"
+                            android:padding="@dimen/_5sdp">
+
+                            <TextView
+                                android:id="@+id/main_header"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="400"
+                                android:textColor="@color/dark_slate_blue"
+                                android:textSize="@dimen/_22sdp"
+                                android:textStyle="normal"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/main_header_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_1sdp"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:layout_toRightOf="@id/main_header"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="Step Count"
+                                android:textColor="@color/color_4f4f4f"
+                                android:textSize="@dimen/_10sdp"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/main_header"
+                                android:gravity="center">
+
+
+                                <TextView
+                                    android:id="@+id/left_header"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:layout_marginBottom="@dimen/_9sdp"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center"
+                                    android:text="3 kcal"
+                                    android:textColor="#4f4f4f"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="normal"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/right_header"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:layout_marginBottom="@dimen/_9sdp"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center"
+                                    android:text="0 km"
+                                    android:textColor="#4f4f4f"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tv_step_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_28sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:text="@string/total_step"
+                        android:textColor="#4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/card_graph_details" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/stepsChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_252sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_step_unit" />
+
+                    <TextView
+                        android:id="@+id/tv_distance_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:text="@string/distance"
+                        android:textColor="#4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/stepsChart" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/distanceChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_252sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_distance_unit" />
+
+                    <TextView
+                        android:id="@+id/tv_calorie_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:text="@string/calories"
+                        android:textColor="#4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/distanceChart" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/calorieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_252sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_calorie_unit" />
+
+                    <TextView
+                        android:id="@+id/tv_bp_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:text="@string/blood_pressure"
+                        android:textColor="#4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/calorieChart" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/bloodPressureChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_252sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_bp_unit" />
+
+                    <TextView
+                        android:id="@+id/tv_bo_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:text="@string/blood_oxygen"
+                        android:textColor="#4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/bloodPressureChart" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/bloodOxygenChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_252sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_bo_unit" />
+
+                    <TextView
+                        android:id="@+id/tv_temp_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:text="@string/temperature"
+                        android:textColor="#4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/bloodOxygenChart" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/tempCHart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_252sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_temp_unit" />
+
+                    <TextView
+                        android:id="@+id/tv_hr_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:text="@string/heart_rate"
+                        android:textColor="#4f4f4f"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tempCHart" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/heartRateChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_252sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_hr_unit" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </RelativeLayout>
+</layout>
